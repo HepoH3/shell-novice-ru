@@ -1,112 +1,59 @@
 ---
-title: Introducing the Shell
-teaching: 5
-exercises: 0
+title: Введение в командную оболочку
+# teaching: 5
+# exercises: 0
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how the shell relates to the keyboard, the screen, the operating system, and users' programs.
-- Explain when and why command-line interfaces should be used instead of graphical interfaces.
+- Объяснить, как командная оболочка взаимодействует с клавиатурой, экраном, операционной системой и пользовательскими программами.
+- Объяснить, когда и почему следует использовать интерфейсы командной строки вместо графических интерфейсов.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- What is a command shell and why would I use one?
+- Что такое командная оболочка и зачем она может понадобиться?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Background
+### Введение
 
-Humans and computers commonly interact in many different ways, such as through a keyboard and mouse,
-touch screen interfaces, or using speech recognition systems.
-The most widely used way to interact with personal computers is called a
-**graphical user interface** (GUI).
-With a GUI, we give instructions by clicking a mouse and using menu-driven interactions.
+Люди и компьютеры обычно взаимодействуют различными способами: с помощью клавиатуры и мыши, сенсорных экранов или систем распознавания речи. Наиболее распространённым способом взаимодействия с персональными компьютерами является **графический пользовательский интерфейс** (**graphical user interface**, **GUI**). В GUI команды передаются через клики мышью и меню.
 
-While the visual aid of a GUI makes it intuitive to learn,
-this way of delivering instructions to a computer scales very poorly.
-Imagine the following task:
-for a literature search, you have to copy the third line of one thousand text files in one thousand
-different directories and paste it into a single file.
-Using a GUI, you would not only be clicking at your desk for several hours,
-but you could potentially also commit an error in the process of completing this repetitive task.
-This is where we take advantage of the Unix shell.
-The Unix shell is both a **command-line interface** (CLI) and a scripting language,
-allowing such repetitive tasks to be done automatically and fast.
-With the proper commands, the shell can repeat tasks with or without some modification
-as many times as we want.
-Using the shell, the task in the literature example can be accomplished in seconds.
+Несмотря на то, что GUI интуитивно понятен, такой способ взаимодействия плохо масштабируется. Представьте задачу: вам нужно скопировать третью строку из тысячи текстовых файлов, расположенных в разных папках, и вставить их в один файл. Используя GUI, вы бы кликами потратили часы и могли бы совершить ошибку. В таких случаях приходит на помощь командная оболочка Unix. Она является **интерфейсом командной строки** (**command-line interface**, **CLI**) и языком сценариев (скриптов), что позволяет выполнять повторяющиеся задачи быстро и в автоматическом режиме. С правильными командами оболочка может повторять операции с необходимыми изменениями столько раз, сколько потребуется. В приведённом примере с файлами задача выполняется за секунды.
 
-### The Shell
+### Оболочка
 
-The shell is a program where users can type commands.
-With the shell, it's possible to invoke complicated programs like climate modeling software
-or simple commands that create an empty directory with only one line of code.
-The most popular Unix shell is Bash (the Bourne Again SHell ---
-so-called because it's derived from a shell written by Stephen Bourne).
-Bash is the default shell on most modern implementations of Unix and in most packages that provide
-Unix-like tools for Windows.
-Note that 'Git Bash' is a piece of software that enables Windows users to use a Bash like interface
-when interacting with Git.
+**Оболочка** (**Shell**) — это программа, в которой пользователи вводят команды. С её помощью всего одной строкой кода можно запускать как сложные программы, наподобие программы для моделирования климата, так и простые команды для создания пустых папок. Самая популярная оболочка Unix — это **Bash** (**Bourne Again SHell**), которая создана на основе оболочки Стивена Борна. Bash — это оболочка по умолчанию во многих системах Unix, а также в пакетах Unix-подобных инструментов для Windows (например, Git Bash).
 
-Using the shell will take some effort and some time to learn.
-While a GUI presents you with choices to select, CLI choices are not automatically presented to you,
-so you must learn a few commands like new vocabulary in a language you're studying.
-However, unlike a spoken language, a small number of "words" (i.e. commands) gets you a long way,
-and we'll cover those essential few today.
+Работа с оболочкой требует времени на изучение. В отличие от графического интерфейса, где доступные операции находятся на виду у пользователя, в интерфейсе командной строки они не показываются автоматически, поэтому команды учатся подобно новым словам в незнакомом языке. Однако, даже небольшой набор команд позволяет выполнять широкий спектр задач, и сегодня мы рассмотрим самые важные из них.
 
-The grammar of a shell allows you to combine existing tools into powerful
-pipelines and handle large volumes of data automatically. Sequences of
-commands can be written into a *script*, improving the reproducibility of
-workflows.
+Синтаксис командной оболочки позволяет комбинировать существующие инструменты в мощные последовательности операций и обрабатывать большие объёмы данных автоматически. Последовательности команд могут быть сохранены в виде скриптов, что повышает воспроизводимость рабочих процессов.
 
-In addition, the command line is often the easiest way to interact with remote machines
-and supercomputers.
-Familiarity with the shell is near essential to run a variety of specialized tools and resources
-including high-performance computing systems.
-As clusters and cloud computing systems become more popular for scientific data crunching,
-being able to interact with the shell is becoming a necessary skill.
-We can build on the command-line skills covered here
-to tackle a wide range of scientific questions and computational challenges.
+Кроме того, командная строка — это часто самый простой способ взаимодействия с удалёнными машинами и суперкомпьютерами. Знание оболочки является ключевым при работы с специализированными инструментами и высокопроизводительными системами. По мере распространения облачных и кластерных вычислений, навыки работы с оболочкой становятся всё более востребованными для решения научных и вычислительных задач.
 
-Let's get started.
+Итак, приступим.
 
-When the shell is first opened, you are presented with a **prompt**,
-indicating that the shell is waiting for input.
+Когда оболочка запускается, появляется приглашение (**prompt**), которое показывает, что оболочка ожидает ввода:
 
 ```bash
 $
 ```
 
-The shell typically uses `$ ` as the prompt, but may use a different symbol.
-In the examples for this lesson, we'll show the prompt as `$ `.
-Most importantly, *do not type the prompt* when typing commands.
-Only type the command that follows the prompt.
-This rule applies both in these lessons and in lessons from other sources.
-Also note that after you type a command, you have to press the <kbd>Enter</kbd> key to execute it.
+Обычно в качестве приглашения используется символ `$`, но это может быть другой символ. В примерах этого урока приглашение будет показано как `$`. Важно **не вводить** сам символ `$`, когда вы набираете команды, а только то, что следует за ним. Это правило действует как в данном уроке, так и в других материалах. Также стоит отметить, что после ввода команды, необходимо нажать на клавишу <kbd>Enter</kbd>, чтобы исполнить её.
 
-The prompt is followed by a **text cursor**, a character that indicates the position where your
-typing will appear.
-The cursor is usually a flashing or solid block, but it can also be an underscore or a pipe.
-You may have seen it in a text editor program, for example.
+Приглашение сопровождается **текстовым курсором**, который показывает, где будет появляться ваш ввод. Курсор может быть мигающим блоком, подчёркиванием или вертикальной чертой. Вы могли видеть его в текстовых редакторах.
 
-Note that your prompt might look a little different. In particular, most popular shell
-environments by default put your user name and the host name before the `$`. Such
-a prompt might look like, e.g.:
+Ваше приглашение может выглядеть иначе, например, может содержать имя пользователя и хоста (имени компьютера в используемой сети):
 
 ```bash
 nelle@localhost $
 ```
 
-The prompt might even include more than this. Do not worry if your prompt is not
-just a short `$ `. This lesson does not depend on this additional information and it
-should also not get in your way. The only important item to focus on is the `$ `
-character itself and we will see later why.
+Приглашение может включать и большее количество информации (и даже располагаться в несколько строк). Не беспокойтесь, если приглашение представляет собой не просто символ `$`. Данный урок не будет полагаться на эту дополнительную информацию. Единственное на что пока стоит обращать внимание в приглашении — это непосредственно символ `$` и позже мы разберёмся почему.
 
-So let's try our first command, `ls`, which is short for listing.
-This command will list the contents of the current directory:
+Теперь попробуем нашу первую команду ls, которая выводит список содержимого текущей директории:
 
 ```bash
 $ ls
@@ -119,10 +66,9 @@ Documents   Library     Music       Public
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Command not found
+## Команда не найдена
 
-If the shell can't find a program whose name is the command you typed, it
-will print an error message such as:
+Если оболочка не может найти программу с введённым именем команды, она выведет сообщение об ошибке:
 
 ```bash
 $ ks
@@ -132,62 +78,36 @@ $ ks
 ks: command not found
 ```
 
-This might happen if the command was mis-typed or if the program corresponding to that command
-is not installed.
-
+Это может произойти, если команда введена неправильно или соответствующая программа не установлена.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Nelle's Pipeline: A Typical Problem
+## Пример задачи Нелли
 
-Nelle Nemo, a marine biologist,
-has just returned from a six-month survey of the
-[North Pacific Gyre](https://en.wikipedia.org/wiki/North_Pacific_Gyre),
-where she has been sampling gelatinous marine life in the
-[Great Pacific Garbage Patch](https://en.wikipedia.org/wiki/Great_Pacific_Garbage_Patch).
-She has 1520 samples that she's run through an assay machine to measure the relative abundance
-of 300 proteins.
-She needs to run these 1520 files through an imaginary program called `goostats.sh`.
-In addition to this huge task, she has to write up results by the end of the month, so her paper
-can appear in a special issue of *Aquatic Goo Letters*.
+Нелли Немо, морской биолог, вернулась после шестимесячного исследования [Северо-Тихоокеанского течения](https://ru.wikipedia.org/wiki/Северо-Тихоокеанское_течение), где она собирала образцы медуз в [Большом тихоокеанском мусорном пятне](https://ru.wikipedia.org/wiki/Большое_тихоокеанское_мусорное_пятно). У неё есть 1520 образцов, которые она исследовала на анализаторе, измеряющем относительное содержание 300 белков. Ей нужно обработать полученные файлы с помощью программы `goostats.sh`, но у неё также есть статья, которую нужно написать до конца месяца для публикации в спец-выпуске журнала _"Записки о жиже"_.
 
-If Nelle chooses to run `goostats.sh` by hand using a GUI,
-she'll have to select and open a file 1520 times.
-If `goostats.sh` takes 30 seconds to run each file, the whole process will take more than 12 hours
-of Nelle's attention.
-With the shell, Nelle can instead assign her computer this mundane task while she focuses
-her attention on writing her paper.
+Если бы Нелли запускала `goostats.sh` вручную через GUI, ей пришлось бы открывать файлы 1520 раз. Исходя из того, что `goostats.sh` требуется порядка 30с для обработки каждого файла, весь этот процесс потребовал бы более 12 часов внимания Нелли. С использованием оболочки она может автоматизировать этот процесс и сосредоточиться на написании статьи.
 
-The next few lessons will explore the ways Nelle can achieve this.
-More specifically,
-the lessons explain how she can use a command shell to run the `goostats.sh` program,
-using loops to automate the repetitive steps of entering file names,
-so that her computer can work while she writes her paper.
+Далее будет рассмотрено, как Нелли может использовать оболочку для автоматизации этой задачи. В частности, как использовать оболочку для запуска программы `goostats.sh`, использовать циклы для автоматизации повторяющихся этапов ввода имён файлов так, чтобы поручить выполнение этой задачи компьютеру, пока Нелли сможет сосредоточиться на написании её статьи.
 
-As a bonus,
-once she has put a processing pipeline together,
-she will be able to use it again whenever she collects more data.
+И в качестве бонуса: однажды автоматизировав этот процесс, Нелли сможет повторить его когда угодно, в случае, если у нее получится собрать новые образцы.
 
-In order to achieve her task, Nelle needs to know how to:
+Чтобы выполнить задачу, Нелли нужно уметь:
 
-- navigate to a file/directory
-- create a file/directory
-- check the length of a file
-- chain commands together
-- retrieve a set of files
-- iterate over files
-- run a shell script containing her pipeline
-
-
+- перемещаться по файловой системе
+- создавать файлы/каталоги
+- проверять длину файла
+- объединять команды в цепочки
+- извлекать набор файлов
+- использовать циклы для повторения команд
+- запускать скрипты
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- A shell is a program whose primary purpose is to read commands and run other programs.
-- This lesson uses Bash, the default shell in many implementations of Unix.
-- Programs can be run in Bash by entering commands at the command-line prompt.
-- The shell's main advantages are its high action-to-keystroke ratio, its support for automating repetitive tasks, and its capacity to access networked machines.
-- A significant challenge when using the shell can be knowing what commands need to be run and how to run them.
+- Оболочка — это программа, основная задача которой — обработка команд и запуск других программ.
+- Этот урок использует Bash — оболочку, используемую по умолчанию во многих Unix-системах.
+- Программы в Bash запускаются через интерфейс командной строки.
+- Основные преимущества оболочки — высокая эффективность ввода команд, автоматизация повторяющихся задач и доступ к удалённым компьютерам.
+- Одной из сложностей работы с оболочкой является знание нужных команд и их правильного использования.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
