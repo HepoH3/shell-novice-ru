@@ -1,37 +1,33 @@
 ---
-title: Working With Files and Directories
+title: Работа с файлами и каталогами
 teaching: 30
 exercises: 20
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Create a directory hierarchy that matches a given diagram.
-- Create files in that hierarchy using an editor or by copying and renaming existing files.
-- Delete, copy and move specified files and/or directories.
+- Создать иерархию каталогов, соответствующую заданной схеме.
+- Создать файлы в этой иерархии с помощью редактора или путем копирования и переименования существующих файлов.
+- Удалить, скопировать и переместить указанные файлы и/или каталоги.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- How can I create, copy, and delete files and directories?
-- How can I edit files?
+- Как я могу создать, скопировать и удалить файлы и каталоги?
+- Как я могу редактировать файлы?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
+## Создание каталогов
 
-## Creating directories
+Теперь мы знаем, как исследовать файлы и каталоги, но как их создать?
 
-We now know how to explore files and directories,
-but how do we create them in the first place?
+В этом разделе мы узнаем, как создавать и перемещать файлы и каталоги, используя каталог `exercise-data/writing` в качестве примера.
 
-In this episode we will learn about creating and moving files and directories,
-using the `exercise-data/writing` directory as an example.
+### Шаг первый: проверим, где мы находимся и что у нас уже есть
 
-### Step one: see where we are and what we already have
-
-We should still be in the `shell-lesson-data` directory on the Desktop,
-which we can check using:
+Мы всё ещё должны находиться в каталоге `shell-lesson-data`, расположенном на рабочем столе, в чём можно убедиться с помощью:
 
 ```bash
 $ pwd
@@ -41,7 +37,7 @@ $ pwd
 /Users/nelle/Desktop/shell-lesson-data
 ```
 
-Next we'll move to the `exercise-data/writing` directory and see what it contains:
+Далее перейдём в каталог `exercise-data/writing` и посмотрим, что в нём содержится:
 
 ```bash
 $ cd exercise-data/writing/
@@ -52,20 +48,15 @@ $ ls -F
 haiku.txt  LittleWomen.txt
 ```
 
-### Create a directory
+### Создание каталога
 
-Let's create a new directory called `thesis` using the command `mkdir thesis`
-(which has no output):
+Создадим новый каталог под названием `thesis`, используя команду `mkdir thesis` (которая не выведет никакого результата):
 
 ```bash
 $ mkdir thesis
 ```
 
-As you might guess from its name,
-`mkdir` means 'make directory'.
-Since `thesis` is a relative path
-(i.e., does not have a leading slash, like `/what/ever/thesis`),
-the new directory is created in the current working directory:
+Как можно догадаться по названию, `mkdir` означает '**m**a**k**e **dir**ectory ('создать каталог'). Так как `thesis` — это относительный путь (т.е. не имеет ведущего слэша, как в `/what/ever/thesis`), новый каталог создаётся в текущем рабочем каталоге:
 
 ```bash
 $ ls -F
@@ -75,23 +66,19 @@ $ ls -F
 haiku.txt  LittleWomen.txt  thesis/
 ```
 
-Since we've just created the `thesis` directory, there's nothing in it yet:
+Поскольку мы только что создали каталог `thesis`, в нём пока ничего нет:
 
 ```bash
 $ ls -F thesis
 ```
 
-Note that `mkdir` is not limited to creating single directories one at a time.
-The `-p` option allows `mkdir` to create a directory with nested subdirectories
-in a single operation:
+Обратите внимание, что `mkdir` не ограничивается созданием одного каталога за раз. Опция -p позволяет `mkdir` создать каталог с вложенными подкаталогами за одну операцию:
 
 ```bash
 $ mkdir -p ../project/data ../project/results
 ```
 
-The `-R` option to the `ls` command will list all nested subdirectories within a directory.
-Let's use `ls -FR` to recursively list the new directory hierarchy we just created in the
-`project` directory:
+Опция `-R` для команды `ls` выведет все вложенные подкаталоги внутри каталога. Давайте используем команду `ls -FR`, чтобы рекурсивно вывести новую иерархию каталогов, которую мы только что создали в каталоге `project`:
 
 ```bash
 $ ls -FR ../project
@@ -108,65 +95,43 @@ data/  results/
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Two ways of doing the same thing
+## Два способа сделать одно и то же
 
-Using the shell to create a directory is no different than using a file explorer.
-If you open the current directory using your operating system's graphical file explorer,
-the `thesis` directory will appear there too.
-While the shell and the file explorer are two different ways of interacting with the files,
-the files and directories themselves are the same.
+Использование оболочки для создания каталога ничем не отличается от использования файлового менеджера. Если вы откроете текущий каталог с помощью графического файлового менеджера вашей операционной системы, каталог `thesis` также появится там. Хотя оболочка и файловый менеджер — это два разных способа взаимодействия с файлами, сами файлы и каталоги остаются одними и теми же.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Good names for files and directories
+## Хорошие имена для файлов и каталогов
 
-Complicated names of files and directories can make your life painful
-when working on the command line. Here we provide a few useful
-tips for the names of your files and directories.
+Сложные имена файлов и каталогов могут сильно усложнить вашу работу в командной строке. Вот несколько полезных советов по именованию файлов и каталогов.
 
-1. Don't use spaces.
+1. Не используйте пробелы.
 
-Spaces can make a name more meaningful,
-but since spaces are used to separate arguments on the command line
-it is better to avoid them in names of files and directories.
-You can use `-` or `_` instead (e.g. `north-pacific-gyre/` rather than `north pacific gyre/`).
-To test this out, try typing `mkdir north pacific gyre` and see what directory (or directories!)
-are made when you check with `ls -F`.
+Пробелы могут делать имена более понятными, но так как пробелы используются для разделения аргументов в командной строке, лучше избегать их в именах файлов и каталогов. Вместо этого можно использовать `-` или `_` (например, `north-pacific-gyre/` вместо `north pacific gyre/`). Попробуйте ввести `mkdir north pacific gyre` и посмотрите, какой каталог (а точнее, каталоги!) будут созданы, когда вы проверите результат командой `ls -F`.
 
-2. Don't begin the name with `-` (dash).
+2. Не начинайте имя с дефиса (символа `-`).
 
-Commands treat names starting with `-` as options.
+Команды интерпретируют имена, начинающиеся с -, как опции команды.
 
-3. Stick with letters, numbers, `.` (period or 'full stop'), `-` (dash) and `_` (underscore).
+3. Ограничьтесь использованием букв, цифр и символов `.`, `-` и `_`.
 
-Many other characters have special meanings on the command line.
-We will learn about some of these during this lesson.
-There are special characters that can cause your command to not work as
-expected and can even result in data loss.
+Многие другие символы имеют особые значения в командной строке. Мы изучим некоторые из них в этом уроке. Существуют специальные символы, которые могут привести к тому, что ваша команда не сработает так, как ожидалось, и даже могут вызвать потерю данных.
 
-If you need to refer to names of files or directories that have spaces
-or other special characters, you should surround the name in single
-[quotes](https://www.gnu.org/software/bash/manual/html_node/Quoting.html) (`''`).
+Если вам нужно обратиться к файлам или каталогам с пробелами или другими специальными символами в именах, окружите имя в одинарные [кавычки](https://www.gnu.org/software/bash/manual/html_node/Quoting.html) (`''`).
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::::  instructor
 
-Learners can sometimes get trapped within command-line text editors
-such as Vim, Emacs, or Nano. Closing the terminal emulator and opening
-a new one can be frustrating as learners will have to navigate to the
-correct folder again. Our recommendation to mitigate this problem is that
-instructors should use the same text editor as the learners during workshops
-(in most cases Nano).
+Учащиеся иногда могут застрять в текстовых редакторах командной строки, таких как Vim, Emacs или Nano. Закрытие и повторное открытие терминала может быть удручающим, так как им придется снова переходить в нужную папку. Мы рекомендуем инструкторам использовать тот же текстовый редактор, что и учащиеся, во время занятий (в большинстве случаев Nano).
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Create a text file
+### Создание текстового файла
 
-Let's change our working directory to `thesis` using `cd`,
-then run a text editor called Nano to create a file called `draft.txt`:
+Давайте изменим наш рабочий каталог на `thesis`, используя команду `cd`, а затем запустим текстовый редактор под названием Nano, чтобы создать файл с именем `draft.txt`:
 
 ```bash
 $ cd thesis
@@ -175,52 +140,27 @@ $ nano draft.txt
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Which Editor?
+## Какой редактор?
 
-When we say, '`nano` is a text editor' we really do mean 'text'. It can
-only work with plain character data, not tables, images, or any other
-human-friendly media. We use it in examples because it is one of the
-least complex text editors. However, because of this trait, it may
-not be powerful enough or flexible enough for the work you need to do
-after this workshop. On Unix systems (such as Linux and macOS),
-many programmers use [Emacs](https://www.gnu.org/software/emacs/) or
-[Vim](https://www.vim.org/) (both of which require more time to learn),
-or a graphical editor such as [Gedit](https://projects.gnome.org/gedit/)
-or [VScode](https://code.visualstudio.com/). On Windows, you may wish to
-use [Notepad++](https://notepad-plus-plus.org/).  Windows also has a built-in
-editor called `notepad` that can be run from the command line in the same
-way as `nano` for the purposes of this lesson.
+Когда мы говорим, что nano — это текстовый редактор, мы действительно имеем в виду именно "текстовый". Он может работать только с текстовыми данными, а не с таблицами, изображениями или другими типами медиа. Мы используем его в примерах, потому что это один из самых простых текстовых редакторов. Однако из-за этой простоты он может оказаться недостаточно мощным или гибким для работы, которую вам нужно будет выполнять после этого урока. На Unix-системах (таких как Linux и macOS) многие программисты используют [Emacs](https://www.gnu.org/software/emacs/) или [Vim](https://www.vim.org/) (оба требуют больше времени для изучения), или графический редактор, такой как [Gedit](https://projects.gnome.org/gedit/) или [VScode](https://code.visualstudio.com/). На Windows вы можете использовать [Notepad++](https://notepad-plus-plus.org/). В Windows также есть встроенный редактор `notepad`, который можно запустить из командной строки так же, как и `nano`, для целей этого урока.
 
-No matter what editor you use, you will need to know where it searches
-for and saves files. If you start it from the shell, it will (probably)
-use your current working directory as its default location. If you use
-your computer's start menu, it may want to save files in your Desktop or
-Documents directory instead. You can change this by navigating to
-another directory the first time you 'Save As...'
+Независимо от того, какой редактор вы используете, вам нужно знать, где он сохраняет файлы. Если вы запускаете его из оболочки, он (вероятно) будет использовать ваш текущий рабочий каталог в качестве места по умолчанию. Если вы используете меню "Пуск" на компьютере, редактор может захотеть сохранить файлы на вашем рабочем столе или в папке "Документы". Это можно изменить, перейдя в другой каталог при первом сохранении файла с помощью команды "Сохранить как...".
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-Let's type in a few lines of text.
+Давайте наберём несколько строк текста.
 
-![](fig/nano-screenshot.png){alt="screenshot of nano text editor in action with the text It's not publish or perish any more, it's share and thrive"}
+![Скриншот работы в текстовом редакторе nano с текстом 'It's not publish or perish any more, it's share and thrive'](fig/nano-screenshot.png)
 
-Once we're happy with our text, we can press <kbd>Ctrl</kbd>\+<kbd>O</kbd>
-(press the <kbd>Ctrl</kbd> or <kbd>Control</kbd> key and, while
-holding it down, press the <kbd>O</kbd> key) to write our data to disk. We will be asked
-to provide a name for the file that will contain our text. Press <kbd>Return</kbd> to accept
-the suggested default of `draft.txt`.
+Когда мы будем довольны нашим текстом, мы можем нажать <kbd>Ctrl</kbd>+<kbd>O</kbd> (удерживая клавишу <kbd>Ctrl</kbd>, нажмите клавишу <kbd>O</kbd>), чтобы записать данные на диск. Нам будет предложено ввести имя файла, в котором будет сохранён текст. Нажмите <kbd>Return</kbd>, чтобы подтвердить предлагаемое имя `draft.txt`.
 
-Once our file is saved, we can use <kbd>Ctrl</kbd>\+<kbd>X</kbd> to quit the editor and
-return to the shell.
+После того как файл будет сохранён, мы можем использовать <kbd>Ctrl</kbd>+<kbd>X</kbd>, чтобы выйти из редактора и вернуться в оболочку.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Control, Ctrl, or ^ Key
+## Клавиша Control (Ctrl или ^)
 
-The Control key is also called the 'Ctrl' key. There are various ways
-in which using the Control key may be described. For example, you may
-see an instruction to press the <kbd>Control</kbd> key and, while holding it down,
-press the <kbd>X</kbd> key, described as any of:
+Клавиша Control также называется клавишей 'Ctrl'. Существует несколько способов обозначить использование клавиши Control. Например, вы можете увидеть инструкцию нажать <kbd>Control</kbd>, удерживая ее, нажать клавишу <kbd>X</kbd>. Это можно обозначить как:
 
 - `Control-X`
 - `Control+X`
@@ -229,14 +169,11 @@ press the <kbd>X</kbd> key, described as any of:
 - `^X`
 - `C-x`
 
-In nano, along the bottom of the screen you'll see `^G Get Help ^O WriteOut`.
-This means that you can use `Control-G` to get help and `Control-O` to save your
-file.
+В nano внизу экрана вы увидите `^G Get Help ^O WriteOut`. Это означает, что вы можете использовать `Control-G` для получения справки и `Control-O` для сохранения файла.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-`nano` doesn't leave any output on the screen after it exits,
-but `ls` now shows that we have created a file called `draft.txt`:
+После выхода, `nano` не выводит какие-либо сообщения на экран, но команда `ls` теперь покажет, что мы создали файл под названием `draft.txt`:
 
 ```bash
 $ ls
@@ -248,50 +185,33 @@ draft.txt
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Creating Files a Different Way
+## Создание файлов другим способом
 
-We have seen how to create text files using the `nano` editor.
-Now, try the following command:
+Мы уже увидели, как создавать текстовые файлы с помощью редактора `nano`. Теперь попробуйте следующую команду:
 
 ```bash
 $ touch my_file.txt
 ```
 
-1. What did the `touch` command do?
-  When you look at your current directory using the GUI file explorer,
-  does the file show up?
+1. Что делает команда `touch`? Появляется ли файл в вашем текущем каталоге при просмотре через графический файловый менеджер?
 
-2. Use `ls -l` to inspect the files.  How large is `my_file.txt`?
+2. Используйте `ls -l`, чтобы исследовать файлы. Какого размера файл `my_file.txt`?
 
-3. When might you want to create a file this way?
+3. Когда может быть полезно создать файл таким способом?
 
 :::::::::::::::  solution
 
-## Solution
+## Решение
 
-1. The `touch` command generates a new file called `my_file.txt` in
-  your current directory.  You
-  can observe this newly generated file by typing `ls` at the
-  command line prompt.  `my_file.txt` can also be viewed in your
-  GUI file explorer.
+1. Команда `touch` создает новый файл под названием `my_file.txt` в вашем текущем каталоге. Вы можете увидеть этот созданный файл, набрав команду `ls` в командной строке. Файл `my_file.txt` также будет виден в вашем графическом файловом менеджере.
 
-2. When you inspect the file with `ls -l`, note that the size of
-  `my_file.txt` is 0 bytes.  In other words, it contains no data.
-  If you open `my_file.txt` using your text editor it is blank.
+2. Если вы исследуете файл с помощью команды `ls -l`, то заметите, что размер файла `my_file.txt` равен 0 байтам. Другими словами, он не содержит данных. Если вы откроете файл `my_file.txt` в текстовом редакторе, он будет пуст.
 
-3. Some programs do not generate output files themselves, but
-  instead require that empty files have already been generated.
-  When the program is run, it searches for an existing file to
-  populate with its output.  The touch command allows you to
-  efficiently generate a blank text file to be used by such
-  programs.
+3. Некоторые программы не создают выходные файлы самостоятельно, а требуют, чтобы пустые файлы уже были созданы. Когда программа запускается, она ищет существующий файл, чтобы заполнить его своими данными. Команда `touch` позволяет эффективно создавать пустой текстовый файл, который можно использовать такими программами.
 
 :::::::::::::::::::::::::
 
-To avoid confusion later on,
-we suggest removing the file you've just created before proceeding with the rest
-of the episode, otherwise future outputs may vary from those given in the lesson.
-To do this, use the following command:
+Чтобы избежать путаницы в дальнейшем, рекомендуем удалить только что созданный файл перед продолжением урока, иначе дальнейшие выводы могут отличаться от приведённых в примере. Для этого используйте следующую команду:
 
 ```bash
 $ rm my_file.txt
@@ -301,57 +221,31 @@ $ rm my_file.txt
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## What's In A Name?
+## Что в имени?
 
-You may have noticed that all of Nelle's files are named 'something dot
-something', and in this part of the lesson, we always used the extension
-`.txt`.  This is just a convention; we can call a file `mythesis` or
-almost anything else we want. However, most people use two-part names
-most of the time to help them (and their programs) tell different kinds
-of files apart. The second part of such a name is called the
-**filename extension** and indicates
-what type of data the file holds: `.txt` signals a plain text file, `.pdf`
-indicates a PDF document, `.cfg` is a configuration file full of parameters
-for some program or other, `.png` is a PNG image, and so on.
+Вы могли заметить, что все файлы Нелли названы по шаблону 'что-то точка что-то', и в этой части урока мы всегда использовали расширение `.txt`. Это всего лишь соглашение; мы можем назвать файл `mythesis` или как угодно иначе. Однако большинство людей используют двухсоставные имена, чтобы помочь себе (и своим программам) различать разные типы файлов. Вторая часть такого имени называется **расширением файла** и указывает на тип данных, которые содержит файл: `.txt` обозначает простой текстовый файл, `.pdf` указывает на PDF-документ, `.cfg` — это файл конфигурации, полный параметров для какой-либо программы, `.png` — это изображение в формате PNG и так далее.
 
-This is just a convention, albeit an important one. Files merely contain
-bytes; it's up to us and our programs to interpret those bytes
-according to the rules for plain text files, PDF documents, configuration
-files, images, and so on.
+Это всего лишь соглашение, хотя и важное. Файлы содержат только байты; нам и нашим программам предстоит интерпретировать эти байты в соответствии с правилами для текстовых файлов, PDF-документов, конфигурационных файлов, изображений и так далее.
 
-Naming a PNG image of a whale as `whale.mp3` doesn't somehow
-magically turn it into a recording of whale song, though it *might*
-cause the operating system to associate the file with a music player
-program. In this case, if someone double-clicked `whale.mp3` in a file
-explorer program, the music player will automatically (and erroneously)
-attempt to open the `whale.mp3` file.
+Назвав PNG-изображение кита как `whale.mp3`, вы не превратите его в запись звуков китов, хотя это _может_ привести к тому, что операционная система свяжет файл с музыкальным плеером. В этом случае, если кто-то дважды щёлкнет на `whale.mp3` в файловом менеджере, музыкальный плеер автоматически (и ошибочно) попытается открыть файл `whale.mp3`.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Moving files and directories
+## Перемещение файлов и каталогов
 
-Returning to the `shell-lesson-data/exercise-data/writing` directory,
+Возвращаемся в каталог `shell-lesson-data/exercise-data/writing`:
 
 ```bash
 $ cd ~/Desktop/shell-lesson-data/exercise-data/writing
 ```
 
-In our `thesis` directory we have a file `draft.txt`
-which isn't a particularly informative name,
-so let's change the file's name using `mv`,
-which is short for 'move':
+В нашем каталоге `thesis` есть файл `draft.txt`, который не очень информативно назван, поэтому давайте изменим имя файла с помощью команды `mv`, которая сокращённо означает '**m**o**v**e' (переместить):
 
 ```bash
 $ mv thesis/draft.txt thesis/quotes.txt
 ```
 
-The first argument tells `mv` what we're 'moving',
-while the second is where it's to go.
-In this case,
-we're moving `thesis/draft.txt` to `thesis/quotes.txt`,
-which has the same effect as renaming the file.
-Sure enough,
-`ls` shows us that `thesis` now contains one file called `quotes.txt`:
+Первый аргумент указывает `mv`, что мы перемещаем, а второй — куда. В данном случае мы перемещаем `thesis/draft.txt` в `thesis/quotes.txt`, что фактически равносильно переименованию файла. Как и ожидалось, команда `ls` показывает, что теперь в каталоге `thesis` находится один файл под названием `quotes.txt`:
 
 ```bash
 $ ls thesis
@@ -361,29 +255,17 @@ $ ls thesis
 quotes.txt
 ```
 
-One must be careful when specifying the target file name, since `mv` will
-silently overwrite any existing file with the same name, which could
-lead to data loss. By default, `mv` will not ask for confirmation before overwriting files.
-However, an additional option, `mv -i` (or `mv --interactive`), will cause `mv` to request
-such confirmation.
+Будьте осторожны при указании имени целевого файла, так как команда `mv` без лишних слов перезапишет любой существующий файл с тем же именем, что может привести к потере данных. По умолчанию `mv` не запрашивает подтверждения перед перезаписью файлов. Однако дополнительная опция, `mv -i` (или `mv --interactive`), заставит команду `mv` запрашивать такое подтверждение.
 
-Note that `mv` also works on directories.
+Обратите внимание, что команда `mv` также работает и с каталогами.
 
-Let's move `quotes.txt` into the current working directory.
-We use `mv` once again,
-but this time we'll use just the name of a directory as the second argument
-to tell `mv` that we want to keep the filename
-but put the file somewhere new.
-(This is why the command is called 'move'.)
-In this case,
-the directory name we use is the special directory name `.` that we mentioned earlier.
+Давайте переместим файл `quotes.txt` в текущий рабочий каталог. Мы снова используем команду `mv`, но на этот раз укажем только имя каталога в качестве второго аргумента, чтобы сообщить `mv`, что мы хотим сохранить имя файла, но поместить файл в новое место. (Именно поэтому команда называется 'move'.) В данном случае каталог, который мы укажем, — это специальный каталог `.`, который мы упоминали ранее.
 
 ```bash
 $ mv thesis/quotes.txt .
 ```
 
-The effect is to move the file from the directory it was in to the current working directory.
-`ls` now shows us that `thesis` is empty:
+В результате этой команды файл переместится из каталога, в котором он находился, в текущий рабочий каталог. Теперь команда `ls` показывает, что каталог `thesis` пуст:
 
 ```bash
 $ ls thesis
@@ -393,8 +275,7 @@ $ ls thesis
 $
 ```
 
-Alternatively, we can confirm the file `quotes.txt` is no longer present in the `thesis` directory
-by explicitly trying to list it:
+Кроме того, мы можем убедиться, что файл quotes.txt больше не находится в каталоге thesis, пытаясь вывести его с помощью `ls` в явном виде:
 
 ```bash
 $ ls thesis/quotes.txt
@@ -404,9 +285,7 @@ $ ls thesis/quotes.txt
 ls: cannot access 'thesis/quotes.txt': No such file or directory
 ```
 
-`ls` with a filename or directory as an argument only lists the requested file or directory.
-If the file given as the argument doesn't exist, the shell returns an error as we saw above.
-We can use this to see that `quotes.txt` is now present in our current directory:
+Команда `ls` с указанием имени файла или каталога в качестве аргумента выводит только запрашиваемый файл или содержимое каталога. Если файл, указанный в аргументе, не существует, оболочка вернёт ошибку, как показано выше. Мы можем использовать это, чтобы убедиться, что файл `quotes.txt` теперь находится в нашем текущем каталоге:
 
 ```bash
 $ ls quotes.txt
@@ -418,11 +297,9 @@ quotes.txt
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Moving Files to a new folder
+## Перемещение файлов в новую папку
 
-After running the following commands,
-Jamie realizes that she put the files `sucrose.dat` and `maltose.dat` into the wrong folder.
-The files should have been placed in the `raw` folder.
+После выполнения следующих команд Джейми понимает, что она поместила файлы `sucrose.dat` и `maltose.dat` не в ту папку. Эти файлы должны были быть помещены в папку `raw`.
 
 ```bash
 $ ls -F
@@ -432,8 +309,7 @@ fructose.dat glucose.dat maltose.dat sucrose.dat
 $ cd analyzed
 ```
 
-Fill in the blanks to move these files to the `raw/` folder
-(i.e. the one she forgot to put them in)
+Заполните пропуски, чтобы переместить эти файлы в папку `raw/` (ту, куда Джейми забыла их поместить).
 
 ```bash
 $ mv sucrose.dat maltose.dat ____/____
@@ -441,26 +317,21 @@ $ mv sucrose.dat maltose.dat ____/____
 
 :::::::::::::::  solution
 
-## Solution
+## Решение
 
 ```bash
 $ mv sucrose.dat maltose.dat ../raw
 ```
 
-Recall that `..` refers to the parent directory (i.e. one above the current directory)
-and that `.` refers to the current directory.
+Напомним, что `..` ссылается на родительский каталог (т.е. на один уровень выше текущего каталога), а `.` ссылается на текущий каталог.
 
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Copying files and directories
+## Копирование файлов и каталогов
 
-The `cp` command works very much like `mv`,
-except it copies a file instead of moving it.
-We can check that it did the right thing using `ls`
-with two paths as arguments --- like most Unix commands,
-`ls` can be given multiple paths at once:
+Команда `cp` работает так же, как и `mv`, за исключением того, что она копирует файл вместо его перемещения. Мы можем проверить, что она сработала правильно, используя команду `ls` с двумя путями в качестве аргументов — как и большинство команд Unix, `ls` может принимать несколько путей сразу:
 
 ```bash
 $ cp quotes.txt thesis/quotations.txt
@@ -471,15 +342,13 @@ $ ls quotes.txt thesis/quotations.txt
 quotes.txt   thesis/quotations.txt
 ```
 
-We can also copy a directory and all its contents by using the
-[recursive](https://en.wikipedia.org/wiki/Recursion) option `-r`,
-e.g. to back up a directory:
+Мы также можем скопировать каталог со всем его содержимым, используя опцию [рекурсии](https://ru.wikipedia.org/wiki/Рекурсия) `-r`, например, для создания резервной копии каталога:
 
 ```bash
 $ cp -r thesis thesis_backup
 ```
 
-We can check the result by listing the contents of both the `thesis` and `thesis_backup` directory:
+Мы можем проверить результат, перечислив содержимое обоих каталогов `thesis` и `thesis_backup`:
 
 ```bash
 $ ls thesis thesis_backup
@@ -493,24 +362,20 @@ thesis_backup:
 quotations.txt
 ```
 
-It is important to include the `-r` flag. If you want to copy a directory and you omit this option
-you will see a message that the directory has been omitted because `-r not specified`.
+Важно включить флаг `-r`. Если вы хотите скопировать каталог и не укажете эту опцию, вы увидите сообщение, что каталог пропущен, потому что `-r` не указано.
 
 ``` bash
 $ cp thesis thesis_backup
 cp: -r not specified; omitting directory 'thesis'
 ```
 
-
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Renaming Files
+## Переименование файлов
 
-Suppose that you created a plain-text file in your current directory to contain a list of the
-statistical tests you will need to do to analyze your data, and named it `statstics.txt`
+Предположим, вы создали текстовый файл в вашем текущем каталоге, чтобы содержать список статистических тестов, которые вам нужно будет провести для анализа данных, и назвали его `statstics.txt`.
 
-After creating and saving this file you realize you misspelled the filename! You want to
-correct the mistake, which of the following commands could you use to do so?
+После создания и сохранения файла вы понимаете, что ошиблись в названии! Вы хотите исправить ошибку. Какую из следующих команд можно использовать для этого?
 
 1. `cp statstics.txt statistics.txt`
 2. `mv statstics.txt statistics.txt`
@@ -519,17 +384,12 @@ correct the mistake, which of the following commands could you use to do so?
 
 :::::::::::::::  solution
 
-## Solution
+## Решение
 
-1. No.  While this would create a file with the correct name,
-  the incorrectly named file still exists in the directory
-  and would need to be deleted.
-2. Yes, this would work to rename the file.
-3. No, the period(.) indicates where to move the file, but does not provide a new file name;
-  identical file names
-  cannot be created.
-4. No, the period(.) indicates where to copy the file, but does not provide a new file name;
-  identical file names cannot be created.
+1. Нет. Хотя это создаст файл с правильным именем, файл с неправильным именем всё ещё останется в каталоге, и его нужно будет удалить.
+2. Да, это сработает для переименования файла.
+3. Нет, точка (`.`) указывает, куда переместить файл, но не предоставляет новое имя файла, программа не будет работать, если имя конечного файла совпадает с исходным.
+4. Нет, точка (`.`) указывает, куда копировать файл, но не предоставляет новое имя файла, программа не будет работать, если имя конечного файла совпадает с исходным.
 
 :::::::::::::::::::::::::
 
@@ -537,9 +397,9 @@ correct the mistake, which of the following commands could you use to do so?
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Moving and Copying
+## Перемещение и копирование
 
-What is the output of the closing `ls` command in the sequence shown below?
+Каков результат выполнения заключительной команды `ls` в приведённой ниже последовательности?
 
 ```bash
 $ pwd
@@ -571,37 +431,28 @@ $ ls
 
 :::::::::::::::  solution
 
-## Solution
+## Решение
 
-We start in the `/Users/jamie/data` directory, and create a new folder called `recombined`.
-The second line moves (`mv`) the file `proteins.dat` to the new folder (`recombined`).
-The third line makes a copy of the file we just moved.
-The tricky part here is where the file was copied to.
-Recall that `..` means 'go up a level', so the copied file is now in `/Users/jamie`.
-Notice that `..` is interpreted with respect to the current working
-directory, **not** with respect to the location of the file being copied.
-So, the only thing that will show using ls (in `/Users/jamie/data`) is the recombined folder.
+Мы начинаем в каталоге `/Users/jamie/data` и создаём новую папку под названием `recombined`. Вторая строка перемещает (`mv`) файл `proteins.dat` в новую папку (`recombined`). Третья строка создаёт копию файла, который мы только что переместили. Сложность здесь заключается в том, куда был скопирован файл. Напомним, что `..` означает 'подняться на уровень выше', поэтому скопированный файл теперь находится в `/Users/jamie`. Обратите внимание, что `..` интерпретируется относительно текущего рабочего каталога, а не относительно местоположения копируемого файла. Таким образом, единственное, что покажет `ls` в каталоге `/Users/jamie/data`, — это папка `recombined`.
 
-1. No, see explanation above.  `proteins-saved.dat` is located at `/Users/jamie`
-2. Yes
-3. No, see explanation above.  `proteins.dat` is located at `/Users/jamie/data/recombined`
-4. No, see explanation above.  `proteins-saved.dat` is located at `/Users/jamie`
+1. Нет, см. объяснение выше. `proteins-saved.dat` находится в `/Users/jamie`.
+2. Да.
+3. Нет, см. объяснение выше. Файл `proteins.dat` находится в `/Users/jamie/data/recombined`.
+4. Нет, см. объяснение выше. `proteins-saved.dat` находится в `/Users/jamie`.
 
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Removing files and directories
+## Удаление файлов и каталогов
 
-Returning to the `shell-lesson-data/exercise-data/writing` directory,
-let's tidy up this directory by removing the `quotes.txt` file we created.
-The Unix command we'll use for this is `rm` (short for 'remove'):
+Возвращаемся в каталог `shell-lesson-data/exercise-data/writing`. Давайте приведём этот каталог в порядок, удалив файл `quotes.txt`, который мы создали. Команда Unix, которую мы будем использовать для этого, — это `rm` (сокращение от '**r**e**m**ove' — удалить):
 
 ```bash
 $ rm quotes.txt
 ```
 
-We can confirm the file has gone using `ls`:
+Мы можем проверить, что файл был удалён, с помощью команды ls:
 
 ```bash
 $ ls quotes.txt
@@ -613,45 +464,33 @@ ls: cannot access 'quotes.txt': No such file or directory
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Deleting Is Forever
+## Удаление безвозвратно
 
-The Unix shell doesn't have a trash bin that we can recover deleted
-files from (though most graphical interfaces to Unix do).  Instead,
-when we delete files, they are unlinked from the file system so that
-their storage space on disk can be recycled. Tools for finding and
-recovering deleted files do exist, but there's no guarantee they'll
-work in any particular situation, since the computer may recycle the
-file's disk space right away.
+В Unix-оболочке нет корзины, из которой можно было бы восстановить удалённые файлы (хотя большинство графических интерфейсов для Unix её имеют). Вместо этого, когда мы удаляем файлы, они отвязываются от файловой системы, чтобы их место на диске можно было перераспределить. Существуют инструменты для поиска и восстановления удалённых файлов, но нет никакой гарантии, что они сработают в каждом конкретном случае, так как компьютер может сразу перераспределить место на диске, где был файл.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Using `rm` Safely
+## Безопасное использование `rm`
 
-What happens when we execute `rm -i thesis_backup/quotations.txt`?
-Why would we want this protection when using `rm`?
+Что произойдёт, когда мы выполним команду `rm -i thesis_backup/quotations.txt`? Зачем может понадобиться эта защита при использовании `rm`?
 
 :::::::::::::::  solution
 
-## Solution
+## Решение
 
 ```output
 rm: remove regular file 'thesis_backup/quotations.txt'? y
 ```
 
-The `-i` option will prompt before (every) removal (use <kbd>Y</kbd> to confirm deletion
-or <kbd>N</kbd> to keep the file).
-The Unix shell doesn't have a trash bin, so all the files removed will disappear forever.
-By using the `-i` option, we have the chance to check that we are deleting only the files
-that we want to remove.
+Опция `-i` перед каждым удалением запрашивает подтверждение (используйте <kbd>Y</kbd>, чтобы подтвердить удаление, или <kbd>N</kbd>, чтобы сохранить файл). Поскольку в Unix-оболочке нет корзины, все удалённые файлы исчезают навсегда. Используя опцию `-i`, у нас есть шанс проверить, удаляем ли мы только те файлы, которые действительно хотим удалить.
 
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-If we try to remove the `thesis` directory using `rm thesis`,
-we get an error message:
+Если мы попробуем удалить каталог `thesis` с помощью команды `rm thesis`, то получим сообщение об ошибке:
 
 ```bash
 $ rm thesis
@@ -661,41 +500,34 @@ $ rm thesis
 rm: cannot remove 'thesis': Is a directory
 ```
 
-This happens because `rm` by default only works on files, not directories.
+Это происходит потому, что по умолчанию команда `rm` работает только с файлами, а не с каталогами.
 
-`rm` can remove a directory *and all its contents* if we use the
-recursive option `-r`, and it will do so *without any confirmation prompts*:
+Команда `rm` может удалить каталог _вместе со всем его содержимым_, если мы используем опцию рекурсии `-r`, и сделает это _без запросов подтверждения_:
 
 ```bash
 $ rm -r thesis
 ```
 
-Given that there is no way to retrieve files deleted using the shell,
-`rm -r` *should be used with great caution*
-(you might consider adding the interactive option `rm -r -i`).
+Учитывая, что в оболочке нет возможности восстановить удалённые файлы, команду `rm -r` нужно использовать с большой осторожностью (можно рассмотреть вариант использования интерактивной опции `rm -r -i`).
 
-## Operations with multiple files and directories
+## Операции с несколькими файлами и каталогами
 
-Oftentimes one needs to copy or move several files at once.
-This can be done by providing a list of individual filenames,
-or specifying a naming pattern using wildcards. Wildcards are
-special characters that can be used to represent unknown characters
-or sets of characters when navigating the Unix file system.
+Часто возникает необходимость скопировать или переместить сразу несколько файлов. Это можно сделать, указав список отдельных имён файлов или задать шаблон с использованием символов подстановки. Подстановочные символы — это специальные символы, которые можно использовать для обозначения неизвестных символов или наборов символов при работе с файловой системой Unix.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Copy with Multiple Filenames
+## Копирование нескольких файлов
 
-For this exercise, you can test the commands in the `shell-lesson-data/exercise-data` directory.
+Для этого упражнения можно протестировать команды в каталоге `shell-lesson-data/exercise-data`.
 
-In the example below, what does `cp` do when given several filenames and a directory name?
+В приведённом ниже примере, что делает команда `cp`, когда ей передают несколько имён файлов и имя каталога?
 
 ```bash
 $ mkdir backup
 $ cp creatures/minotaur.dat creatures/unicorn.dat backup/
 ```
 
-In the example below, what does `cp` do when given three or more file names?
+В следующем примере, что делает команда `cp`, когда ей передают три или более имён файлов?
 
 ```bash
 $ cd creatures
@@ -712,14 +544,11 @@ $ cp minotaur.dat unicorn.dat basilisk.dat
 
 :::::::::::::::  solution
 
-## Solution
+## Решение
 
-If given more than one file name followed by a directory name
-(i.e. the destination directory must be the last argument),
-`cp` copies the files to the named directory.
+Если команде `cp` передаются несколько имён файлов, а затем имя каталога (т.е. каталог назначения должен быть последним аргументом), `cp` копирует файлы в указанный каталог.
 
-If given three file names, `cp` throws an error such as the one below,
-because it is expecting a directory name as the last argument.
+Если команде передать три имени файлов, она выдаст ошибку, как показано ниже, потому что команда ожидает последним аргументом имя каталога.
 
 ```error
 cp: target 'basilisk.dat' is not a directory
@@ -729,47 +558,27 @@ cp: target 'basilisk.dat' is not a directory
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Using wildcards for accessing multiple files at once
+### Использование подстановочных символов для работы с несколькими файлами одновременно
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Wildcards
+## Подстановочные символы
 
-`*` is a **wildcard**, which represents zero or more other characters.
-Let's consider the `shell-lesson-data/exercise-data/alkanes` directory:
-`*.pdb` represents `ethane.pdb`, `propane.pdb`, and every
-file that ends with '.pdb'. On the other hand, `p*.pdb` only represents
-`pentane.pdb` and `propane.pdb`, because the 'p' at the front can only
-represent filenames that begin with the letter 'p'.
+`*` — это **подстановочный символ** (**wildcard**), который представляет **ноль или более** других символов. Рассмотрим каталог `shell-lesson-data/exercise-data/alkanes`: `*.pdb` обозначает `ethane.pdb`, `propane.pdb` и любой файл, который оканчивается на `.pdb`. С другой стороны, `p*.pdb` обозначает только `pentane.pdb` и `propane.pdb`, так как символ 'p' в начале может представлять только те имена файлов, которые начинаются с буквы 'p'.
 
-`?` is also a wildcard, but it represents exactly one character.
-So `?ethane.pdb` could represent `methane.pdb` whereas
-`*ethane.pdb` represents both `ethane.pdb` and `methane.pdb`.
+`?` также является подстановочным символом, но он обозначает **ровно один** символ. Таким образом, `?ethane.pdb` может обозначать `methane.pdb`, в то время как `*ethane.pdb` обозначает и `ethane.pdb`, и `methane.pdb`.
 
-Wildcards can be used in combination with each other. For example,
-`???ane.pdb` indicates three characters followed by `ane.pdb`,
-giving `cubane.pdb  ethane.pdb  octane.pdb`.
+Подстановочные символы могут использоваться в сочетании друг с другом. Например, `???ane.pdb` указывает три любых символа, за которыми следует `ane.pdb`, что даёт `cubane.pdb`, `ethane.pdb`, `octane.pdb`.
 
-When the shell sees a wildcard, it expands the wildcard to create a
-list of matching filenames *before* running the preceding command.
-As an exception, if a wildcard expression does not match
-any file, Bash will pass the expression as an argument to the command
-as it is. For example, typing `ls *.pdf` in the `alkanes` directory
-(which contains only files with names ending with `.pdb`) results in
-an error message that there is no file called `*.pdf`.
-However, generally commands like `wc` and `ls` see the lists of
-file names matching these expressions, but not the wildcards
-themselves. It is the shell, not the other programs, that expands
-the wildcards.
+Когда оболочка видит подстановочный символ, она разворачивает его в список совпадающих имён файлов до выполнения команды. Исключением является случай, когда выражение с подстановочными символами не соответствует ни одному файлу: в этом случае Bash передаёт выражение как аргумент команды без изменений. Например, если ввести `ls *.pdf` в каталоге `alkanes` (где содержатся только файлы с именами, оканчивающимися на `.pdb`), то вы получите сообщение с ошибкой о том, что файл с именем `*.pdf` не найден. Однако обычно команды, такие как `wc` и `ls`, видят списки имён файлов, соответствующих этим выражениям, но не видят сами подстановочные символы. Разворачивает подстановочные символы именно оболочка, а не другие программы.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## List filenames matching a pattern
+## Список имён файлов, соответствующих шаблону
 
-When run in the `alkanes` directory, which `ls` command(s) will
-produce this output?
+Какая команда `ls`, запущенная в каталоге `alkanes`, выведет следующий результат?
 
 `ethane.pdb   methane.pdb`
 
@@ -780,25 +589,17 @@ produce this output?
 
 :::::::::::::::  solution
 
-## Solution
+## Решение
 
-The solution is `3.`
+Решением является вариант №3.
 
-`1.` shows all files whose names contain zero or more characters (`*`)
-followed by the letter `t`,
-then zero or more characters (`*`) followed by `ane.pdb`.
-This gives `ethane.pdb  methane.pdb  octane.pdb  pentane.pdb`.
+1. Выводит все файлы, имена которых содержат ноль или более символов (`*`), за которыми следует буква `t`, затем ноль или более символов (`*`), за которыми следует `ane.pdb`. Это даст `ethane.pdb`, `methane.pdb`, `octane.pdb`, `pentane.pdb`.
 
-`2.` shows all files whose names start with zero or more characters (`*`) followed by
-the letter `t`,
-then a single character (`?`), then `ne.` followed by zero or more characters (`*`).
-This will give us `octane.pdb` and `pentane.pdb` but doesn't match anything
-which ends in `thane.pdb`.
+2. Выводит все файлы, имена которых начинаются с нуля или более символов (`*`), за которыми следует буква `t`, затем один символ (`?`), затем `ne.`, за которыми следуют ноль или более символов (`*`). Это даст `octane.pdb` и `pentane.pdb`, но не совпадёт с именами, оканчивающимися на `thane.pdb`.
 
-`3.` fixes the problems of option 2 by matching two characters (`??`) between `t` and `ne`.
-This is the solution.
+3. Исправляет проблему варианта 2, совпадая с двумя символами (`??`) между `t` и `ne`. Это правильное решение.
 
-`4.` only shows files starting with `ethane.`.
+4. Выводит только файлы, начинающиеся с `ethane.`.
 
 :::::::::::::::::::::::::
 
@@ -806,10 +607,9 @@ This is the solution.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## More on Wildcards
+## Ещё о подстановочных символах
 
-Sam has a directory containing calibration data, datasets, and descriptions of
-the datasets:
+У Сэма есть каталог, содержащий данные калибровки (calibration), наборы данных (dataset) и описания этих наборов (dataset_overview):
 
 ```bash
 .
@@ -833,9 +633,7 @@ the datasets:
     └── all_november_files
 ```
 
-Before heading off to another field trip, she wants to back up her data and
-send some datasets to her colleague Bob. Sam uses the following commands
-to get the job done:
+Перед тем как отправиться в новую экспедицию, Сэм хочет сделать резервную копию данных и отправить некоторые наборы данных своему коллеге Бобу. Сэм использует следующие команды для выполнения задачи:
 
 ```bash
 $ cp *dataset* backup/datasets
@@ -844,9 +642,9 @@ $ cp 2015-____-____ send_to_bob/all_november_files/
 $ cp ____ send_to_bob/all_datasets_created_on_a_23rd/
 ```
 
-Help Sam by filling in the blanks.
+Помогите Сэму заполнить пропуски.
 
-The resulting directory structure should look like this
+Окончательная структура каталогов должна выглядеть так:
 
 ```bash
 .
@@ -894,7 +692,7 @@ The resulting directory structure should look like this
 
 :::::::::::::::  solution
 
-## Solution
+## Решение
 
 ```bash
 $ cp *calibration.txt backup/calibration
@@ -908,10 +706,9 @@ $ cp *-23-dataset* send_to_bob/all_datasets_created_on_a_23rd/
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Organizing Directories and Files
+## Организация каталогов и файлов
 
-Jamie is working on a project, and she sees that her files aren't very well
-organized:
+Джейми работает над проектом и замечает, что её файлы не очень хорошо организованы:
 
 ```bash
 $ ls -F
@@ -921,9 +718,7 @@ $ ls -F
 analyzed/  fructose.dat    raw/   sucrose.dat
 ```
 
-The `fructose.dat` and `sucrose.dat` files contain output from her data
-analysis. What command(s) covered in this lesson does she need to run
-so that the commands below will produce the output shown?
+Файлы `fructose.dat` и `sucrose.dat` содержат результаты её анализа данных. Какие команды, рассмотренные в этом уроке, она должна выполнить, чтобы получить следующий результат?
 
 ```bash
 $ ls -F
@@ -943,15 +738,13 @@ fructose.dat    sucrose.dat
 
 :::::::::::::::  solution
 
-## Solution
+## Решение
 
 ```bash
 mv *.dat analyzed
 ```
 
-Jamie needs to move her files `fructose.dat` and `sucrose.dat` to the `analyzed` directory.
-The shell will expand \*.dat to match all .dat files in the current directory.
-The `mv` command then moves the list of .dat files to the 'analyzed' directory.
+Джейми нужно переместить файлы `fructose.dat` и `sucrose.dat` в каталог `analyzed`. Оболочка развернёт `*.dat`, чтобы совпадать со всеми файлами, заканчивающимися на `.dat` в текущем каталоге. Затем команда `mv` переместит список файлов `.dat` в каталог `analyzed`.
 
 :::::::::::::::::::::::::
 
@@ -959,16 +752,11 @@ The `mv` command then moves the list of .dat files to the 'analyzed' directory.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Reproduce a folder structure
+## Воспроизведение структуры каталогов
 
-You're starting a new experiment and would like to duplicate the directory
-structure from your previous experiment so you can add new data.
+Вы начинаете новый эксперимент и хотите дублировать структуру каталогов из предыдущего эксперимента, чтобы добавить новые данные.
 
-Assume that the previous experiment is in a folder called `2016-05-18`,
-which contains a `data` folder that in turn contains folders named `raw` and
-`processed` that contain data files.  The goal is to copy the folder structure
-of the `2016-05-18` folder into a folder called `2016-05-20`
-so that your final directory structure looks like this:
+Предположим, что предыдущий эксперимент находится в каталоге `2016-05-18`, который содержит папку `data`, которая, в свою очередь, содержит папки с именами `raw` и `processed`, в которых находятся файлы данных. Цель — скопировать структуру каталогов из папки `2016-05-18` в папку `2016-05-20`, чтобы ваша окончательная структура каталогов выглядела так:
 
 ```output
 2016-05-20/
@@ -977,8 +765,7 @@ so that your final directory structure looks like this:
    └── raw
 ```
 
-Which of the following set of commands would achieve this objective?
-What would the other commands do?
+Какой из следующих наборов команд позволит достичь этой цели? Что делают остальные команды?
 
 ```bash
 $ mkdir 2016-05-20
@@ -1014,22 +801,15 @@ $ mkdir raw processed
 
 :::::::::::::::  solution
 
-## Solution
+## Решение
 
-The first two sets of commands achieve this objective.
-The first set uses relative paths to create the top-level directory before
-the subdirectories.
+Первые два набора команд достигают цели.
 
-The third set of commands will give an error because the default behavior of `mkdir`
-won't create a subdirectory of a non-existent directory:
-the intermediate level folders must be created first.
+Третий набор команд вызовет ошибку, так как по умолчанию команда `mkdir` не создаёт подкаталоги в несуществующем каталоге: сначала должны быть созданы промежуточные уровни каталогов.
 
-The fourth set of commands achieve this objective. Remember, the `-p` option,
-followed by a path of one or more
-directories, will cause `mkdir` to create any intermediate subdirectories as required.
+Четвёртый набор команд достигает цели. Напомним, что опция `-p`, за которой следует путь из одного или нескольких каталогов, заставляет `mkdir` создавать все необходимые промежуточные подкаталоги.
 
-The final set of commands generates the 'raw' and 'processed' directories at the same level
-as the 'data' directory.
+Последний набор команд создаст каталоги `raw` и `processed` на том же уровне, что и каталог `data`.
 
 :::::::::::::::::::::::::
 
@@ -1037,15 +817,15 @@ as the 'data' directory.
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- `cp [old] [new]` copies a file.
-- `mkdir [path]` creates a new directory.
-- `mv [old] [new]` moves (renames) a file or directory.
-- `rm [path]` removes (deletes) a file.
-- `*` matches zero or more characters in a filename, so `*.txt` matches all files ending in `.txt`.
-- `?` matches any single character in a filename, so `?.txt` matches `a.txt` but not `any.txt`.
-- Use of the Control key may be described in many ways, including `Ctrl-X`, `Control-X`, and `^X`.
-- The shell does not have a trash bin: once something is deleted, it's really gone.
-- Most files' names are `something.extension`. The extension isn't required, and doesn't guarantee anything, but is normally used to indicate the type of data in the file.
-- Depending on the type of work you do, you may need a more powerful text editor than Nano.
+- `cp [старое] [новое]` копирует файл.
+- `mkdir [путь]` создаёт новый каталог.
+- `mv [старое] [новое]` перемещает (переименовывает) файл или каталог.
+- `rm [путь]` удаляет (удаляет) файл.
+- `*` соответствует **нулю или более** символам в имени файла, например `*.txt` соответствует всем файлам, заканчивающимся на `.txt`.
+- ё соответствует любому **одному** символу в имени файла, например `?.txt` соответствует `a.txt`, но не `any.txt`.
+- Использование клавиши Control может быть описано разными способами, включая `Ctrl-X`, `Control-X` и `^X`.
+- В оболочке нет корзины: если что-то удалено, оно действительно исчезло навсегда.
+- Большинство имён файлов имеют формат `что-то.расширение`. Расширение не обязательно, и оно не гарантирует ничего, но обычно используется для указания типа данных в файле.
+- В зависимости от типа вашей работы вам может понадобиться более мощный текстовый редактор, чем Nano.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
