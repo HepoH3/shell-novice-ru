@@ -272,7 +272,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="04-pipefilter.html">4. Pipes and Filters</a>
+        <a href="04-pipefilter.html">4. Каналы и фильтры</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -444,31 +444,29 @@
 используется для указания типа данных в файле.</li>
 <li>В зависимости от типа вашей работы вам может понадобиться более
 мощный текстовый редактор, чем Nano.</li>
-</ul></section><section id="04-pipefilter"><h2 class="section-heading"><a href="04-pipefilter.html">Pipes and Filters</a></h2>
+</ul></section><section id="04-pipefilter"><h2 class="section-heading"><a href="04-pipefilter.html">Каналы и фильтры</a></h2>
 <hr class="half-width">
 <ul>
 <li>
-<code>wc</code> counts lines, words, and characters in its
-inputs.</li>
+<code>wc</code> подсчитывает количество строк, слов и символов во
+входных данных.</li>
 <li>
-<code>cat</code> displays the contents of its inputs.</li>
+<code>cat</code> отображает содержимое входных данных.</li>
 <li>
-<code>sort</code> sorts its inputs.</li>
+<code>sort</code> сортирует входные данные.</li>
 <li>
-<code>head</code> displays the first 10 lines of its input.</li>
+<code>head</code> отображает первые 10 строк входных данных.</li>
 <li>
-<code>tail</code> displays the last 10 lines of its input.</li>
+<code>tail</code> отображает последние 10 строк входных данных.</li>
+<li>command <code>&gt; [file]</code> перенаправляет вывод команды в файл
+(перезаписывая его содержимое).</li>
+<li>command <code>&gt;&gt; [file]</code> добавляет вывод команды в конец
+файла.</li>
 <li>
-<code>command &gt; [file]</code> redirects a command’s output to a
-file (overwriting any existing content).</li>
-<li>
-<code>command &gt;&gt; [file]</code> appends a command’s output to a
-file.</li>
-<li>
-<code>[first] | [second]</code> is a pipeline: the output of the
-first command is used as the input to the second.</li>
-<li>The best way to use the shell is to use pipes to combine simple
-single-purpose programs (filters).</li>
+<code>[first] | [second]</code> — это конвейер: вывод первой команды
+используется в качестве ввода для второй команды.</li>
+<li>Лучший способ использования оболочки — это использование каналов для
+объединения простых однопрофильных программ (фильтров).</li>
 </ul></section><section id="05-loop"><h2 class="section-heading"><a href="05-loop.html">Loops</a></h2>
 <hr class="half-width">
 <ul>

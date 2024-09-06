@@ -271,7 +271,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="04-pipefilter.html">4. Pipes and Filters</a>
+        <a href="04-pipefilter.html">4. Каналы и фильтры</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -411,11 +411,17 @@
 <figure><img src="fig/nano-screenshot.png" alt="Скриншот работы в текстовом редакторе nano с текстом ‘It’s not publish or perish any more, it’s share and thrive’" class="figure mx-auto d-block"><div class="figcaption">Скриншот работы в текстовом редакторе nano с
 текстом ‘It’s not publish or perish any more, it’s share and
 thrive’</div>
-</figure><hr></section><section id="04-pipefilter"><h2 class="section-heading"><a href="04-pipefilter.html">Pipes and Filters</a></h2>
+</figure><hr></section><section id="04-pipefilter"><h2 class="section-heading"><a href="04-pipefilter.html">Каналы и фильтры</a></h2>
 <hr class="half-width">
 <h3 id="04-pipefilter-figure-1">Figure 1</h3>
-<p aria-hidden="true">Image 1 of 1: ‘Redirects and Pipes of different commands: "wc -l *.pdb" will direct theoutput to the shell. "wc -l *.pdb &gt; lengths" will direct output to the file"lengths". "wc -l *.pdb | sort -n | head -n 1" will build a pipeline where theoutput of the "wc" command is the input to the "sort" command, the output ofthe "sort" command is the input to the "head" command and the output of the"head" command is directed to the shell’</p>
-<figure><img src="fig/redirects-and-pipes.svg" alt='Redirects and Pipes of different commands: "wc -l *.pdb" will direct theoutput to the shell. "wc -l *.pdb &gt; lengths" will direct output to the file"lengths". "wc -l *.pdb | sort -n | head -n 1" will build a pipeline where theoutput of the "wc" command is the input to the "sort" command, the output ofthe "sort" command is the input to the "head" command and the output of the"head" command is directed to the shell' class="figure mx-auto d-block"></figure><hr></section><section id="05-loop"><h2 class="section-heading"><a href="05-loop.html">Loops</a></h2>
+<p aria-hidden="true">Image 1 of 1: ‘Перенаправления и каналы для различных команд: “wc -l .pdb” отправляет вывод в оболочку. ”wc -l .pdb &gt; lengths” перенаправляет вывод в файл “lengths”. “wc -l *.pdb | sort -n | head -n 1” создаёт конвейер, где вывод команды “wc” становится вводом для команды “sort”, вывод команды “sort” становится вводом для команды “head”, а вывод команды “head” отправляется в оболочку’</p>
+<figure><img src="fig/redirects-and-pipes.svg" alt="Перенаправления и каналы для различных команд: “wc -l .pdb” отправляет вывод в оболочку. ”wc -l .pdb &gt; lengths” перенаправляет вывод в файл “lengths”. “wc -l *.pdb | sort -n | head -n 1” создаёт конвейер, где вывод команды “wc” становится вводом для команды “sort”, вывод команды “sort” становится вводом для команды “head”, а вывод команды “head” отправляется в оболочку" class="figure mx-auto d-block"><div class="figcaption">Перенаправления и каналы для различных команд:
+“wc -l <em>.pdb” отправляет вывод в оболочку. ”wc -l </em>.pdb &gt;
+lengths” перенаправляет вывод в файл “lengths”. “wc -l *.pdb | sort -n |
+head -n 1” создаёт конвейер, где вывод команды “wc” становится вводом
+для команды “sort”, вывод команды “sort” становится вводом для команды
+“head”, а вывод команды “head” отправляется в оболочку</div>
+</figure><hr></section><section id="05-loop"><h2 class="section-heading"><a href="05-loop.html">Loops</a></h2>
 <hr class="half-width">
 <h3 id="05-loop-figure-1">Figure 1</h3>
 <p aria-hidden="true">Image 1 of 1: ‘The for loop "for filename in .dat; do echo cp $filename original-$filename;done" will successively assign the names of all ".dat" files in your currentdirectory to the variable "$filename" and then execute the command. With thefiles "basilisk.dat", "minotaur.dat" and "unicorn.dat" in the current directorythe loop will successively call the echo command three times and print threelines: "cp basislisk.dat original-basilisk.dat", then "cp minotaur.datoriginal-minotaur.dat" and finally "cp unicorn.datoriginal-unicorn.dat"’</p>
