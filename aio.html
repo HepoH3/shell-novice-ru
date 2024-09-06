@@ -259,7 +259,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="03-create.html">3. Working With Files and Directories</a>
+        <a href="03-create.html">3. Работа с файлами и каталогами</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -1016,7 +1016,7 @@ read”, что на сленге означает: “многа букаф, н
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Решение </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Опция <code>-l</code> заставляет команду <code>ls</code> использовать
 формат длинного (<strong>l</strong>ong) списка, показывая не только
@@ -1051,7 +1051,7 @@ read”, что на сленге означает: “многа букаф, н
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Решение </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>При использовании опций <code>-rt</code>, самый недавний измененный
 файл будет отображен последним . Это может быть очень полезно для поиска
@@ -1401,7 +1401,7 @@ read”, что на сленге означает: “многа букаф, н
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Нет: <code>.</code> обозначает текущий каталог.</li>
@@ -1454,7 +1454,7 @@ read”, что на сленге означает: “многа букаф, н
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Решение </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Нет: каталог <code>backup</code> существует в
@@ -1504,7 +1504,7 @@ read”, что на сленге означает: “многа букаф, н
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Решение </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Нет: <code>pwd</code> — это не имя каталога.</li>
@@ -1691,7 +1691,7 @@ Network/              Volumes/</code></pre>
 </div>
 </div>
 </div>
-</section></section><section id="aio-03-create"><p>Content from <a href="03-create.html">Working With Files and Directories</a></p>
+</section></section><section id="aio-03-create"><p>Content from <a href="03-create.html">Работа с файлами и каталогами</a></p>
 <hr>
 <p>Last updated on 2024-09-06 |
 
@@ -1707,8 +1707,8 @@ Network/              Volumes/</code></pre>
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How can I create, copy, and delete files and directories?</li>
-<li>How can I edit files?</li>
+<li>Как я могу создать, скопировать и удалить файлы и каталоги?</li>
+<li>Как я могу редактировать файлы?</li>
 </ul>
 </div>
 </div>
@@ -1718,29 +1718,31 @@ Network/              Volumes/</code></pre>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Create a directory hierarchy that matches a given diagram.</li>
-<li>Create files in that hierarchy using an editor or by copying and
-renaming existing files.</li>
-<li>Delete, copy and move specified files and/or directories.</li>
+<li>Создать иерархию каталогов, соответствующую заданной схеме.</li>
+<li>Создать файлы в этой иерархии с помощью редактора или путем
+копирования и переименования существующих файлов.</li>
+<li>Удалить, скопировать и переместить указанные файлы и/или
+каталоги.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="creating-directories">Creating directories<a class="anchor" aria-label="anchor" href="#creating-directories"></a>
+<section><h2 class="section-heading" id="создание-каталогов">Создание каталогов<a class="anchor" aria-label="anchor" href="#%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%D0%BE%D0%B2"></a>
 </h2>
 <hr class="half-width">
-<p>We now know how to explore files and directories, but how do we
-create them in the first place?</p>
-<p>In this episode we will learn about creating and moving files and
-directories, using the <code>exercise-data/writing</code> directory as
-an example.</p>
+<p>Теперь мы знаем, как исследовать файлы и каталоги, но как их
+создать?</p>
+<p>В этом разделе мы узнаем, как создавать и перемещать файлы и
+каталоги, используя каталог <code>exercise-data/writing</code> в
+качестве примера.</p>
 <div class="section level3">
-<h3 id="step-one-see-where-we-are-and-what-we-already-have">Step one: see where we are and what we already have<a class="anchor" aria-label="anchor" href="#step-one-see-where-we-are-and-what-we-already-have"></a>
+<h3 id="шаг-первый-проверим-где-мы-находимся-и-что-у-нас-уже-есть">Шаг первый: проверим, где мы находимся и что у нас уже есть<a class="anchor" aria-label="anchor" href="#%D1%88%D0%B0%D0%B3-%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B8%D0%BC-%D0%B3%D0%B4%D0%B5-%D0%BC%D1%8B-%D0%BD%D0%B0%D1%85%D0%BE%D0%B4%D0%B8%D0%BC%D1%81%D1%8F-%D0%B8-%D1%87%D1%82%D0%BE-%D1%83-%D0%BD%D0%B0%D1%81-%D1%83%D0%B6%D0%B5-%D0%B5%D1%81%D1%82%D1%8C"></a>
 </h3>
-<p>We should still be in the <code>shell-lesson-data</code> directory on
-the Desktop, which we can check using:</p>
+<p>Мы всё ещё должны находиться в каталоге
+<code>shell-lesson-data</code>, расположенном на рабочем столе, в чём
+можно убедиться с помощью:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1751,8 +1753,8 @@ the Desktop, which we can check using:</p>
 </h3>
 <pre class="output" tabindex="0"><code>/Users/nelle/Desktop/shell-lesson-data</code></pre>
 </div>
-<p>Next we’ll move to the <code>exercise-data/writing</code> directory
-and see what it contains:</p>
+<p>Далее перейдём в каталог <code>exercise-data/writing</code> и
+посмотрим, что в нём содержится:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1766,19 +1768,22 @@ and see what it contains:</p>
 </div>
 </div>
 <div class="section level3">
-<h3 id="create-a-directory">Create a directory<a class="anchor" aria-label="anchor" href="#create-a-directory"></a>
+<h3 id="создание-каталога">Создание каталога<a class="anchor" aria-label="anchor" href="#%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%D0%B0"></a>
 </h3>
-<p>Let’s create a new directory called <code>thesis</code> using the
-command <code>mkdir thesis</code> (which has no output):</p>
+<p>Создадим новый каталог под названием <code>thesis</code>, используя
+команду <code>mkdir thesis</code> (которая не выведет никакого
+результата):</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">$</span> mkdir thesis</span></code></pre>
 </div>
-<p>As you might guess from its name, <code>mkdir</code> means ‘make
-directory’. Since <code>thesis</code> is a relative path (i.e., does not
-have a leading slash, like <code>/what/ever/thesis</code>), the new
-directory is created in the current working directory:</p>
+<p>Как можно догадаться по названию, <code>mkdir</code> означает
+‘<strong>m</strong>a<strong>k</strong>e <strong>dir</strong>ectory
+(’создать каталог’). Так как <code>thesis</code> — это относительный
+путь (т.е. не имеет ведущего слэша, как в
+<code>/what/ever/thesis</code>), новый каталог создаётся в текущем
+рабочем каталоге:</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1789,26 +1794,25 @@ directory is created in the current working directory:</p>
 </h3>
 <pre class="output" tabindex="0"><code>haiku.txt  LittleWomen.txt  thesis/</code></pre>
 </div>
-<p>Since we’ve just created the <code>thesis</code> directory, there’s
-nothing in it yet:</p>
+<p>Поскольку мы только что создали каталог <code>thesis</code>, в нём
+пока ничего нет:</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-F</span> thesis</span></code></pre>
 </div>
-<p>Note that <code>mkdir</code> is not limited to creating single
-directories one at a time. The <code>-p</code> option allows
-<code>mkdir</code> to create a directory with nested subdirectories in a
-single operation:</p>
+<p>Обратите внимание, что <code>mkdir</code> не ограничивается созданием
+одного каталога за раз. Опция -p позволяет <code>mkdir</code> создать
+каталог с вложенными подкаталогами за одну операцию:</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="ex">$</span> mkdir <span class="at">-p</span> ../project/data ../project/results</span></code></pre>
 </div>
-<p>The <code>-R</code> option to the <code>ls</code> command will list
-all nested subdirectories within a directory. Let’s use
-<code>ls -FR</code> to recursively list the new directory hierarchy we
-just created in the <code>project</code> directory:</p>
+<p>Опция <code>-R</code> для команды <code>ls</code> выведет все
+вложенные подкаталоги внутри каталога. Давайте используем команду
+<code>ls -FR</code>, чтобы рекурсивно вывести новую иерархию каталогов,
+которую мы только что создали в каталоге <code>project</code>:</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1824,57 +1828,59 @@ data/  results/
 
 ../project/results:</code></pre>
 </div>
-<div id="two-ways-of-doing-the-same-thing" class="callout">
+<div id="два-способа-сделать-одно-и-то-же" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="two-ways-of-doing-the-same-thing" class="callout-inner">
-<h3 class="callout-title">Two ways of doing the same thing</h3>
+<div id="два-способа-сделать-одно-и-то-же" class="callout-inner">
+<h3 class="callout-title">Два способа сделать одно и то же</h3>
 <div class="callout-content">
-<p>Using the shell to create a directory is no different than using a
-file explorer. If you open the current directory using your operating
-system’s graphical file explorer, the <code>thesis</code> directory will
-appear there too. While the shell and the file explorer are two
-different ways of interacting with the files, the files and directories
-themselves are the same.</p>
+<p>Использование оболочки для создания каталога ничем не отличается от
+использования файлового менеджера. Если вы откроете текущий каталог с
+помощью графического файлового менеджера вашей операционной системы,
+каталог <code>thesis</code> также появится там. Хотя оболочка и файловый
+менеджер — это два разных способа взаимодействия с файлами, сами файлы и
+каталоги остаются одними и теми же.</p>
 </div>
 </div>
 </div>
-<div id="good-names-for-files-and-directories" class="callout">
+<div id="хорошие-имена-для-файлов-и-каталогов" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="good-names-for-files-and-directories" class="callout-inner">
-<h3 class="callout-title">Good names for files and directories</h3>
+<div id="хорошие-имена-для-файлов-и-каталогов" class="callout-inner">
+<h3 class="callout-title">Хорошие имена для файлов и каталогов</h3>
 <div class="callout-content">
-<p>Complicated names of files and directories can make your life painful
-when working on the command line. Here we provide a few useful tips for
-the names of your files and directories.</p>
+<p>Сложные имена файлов и каталогов могут сильно усложнить вашу работу в
+командной строке. Вот несколько полезных советов по именованию файлов и
+каталогов.</p>
 <ol style="list-style-type: decimal">
-<li>Don’t use spaces.</li>
+<li>Не используйте пробелы.</li>
 </ol>
-<p>Spaces can make a name more meaningful, but since spaces are used to
-separate arguments on the command line it is better to avoid them in
-names of files and directories. You can use <code>-</code> or
-<code>_</code> instead (e.g. <code>north-pacific-gyre/</code> rather
-than <code>north pacific gyre/</code>). To test this out, try typing
-<code>mkdir north pacific gyre</code> and see what directory (or
-directories!) are made when you check with <code>ls -F</code>.</p>
+<p>Пробелы могут делать имена более понятными, но так как пробелы
+используются для разделения аргументов в командной строке, лучше
+избегать их в именах файлов и каталогов. Вместо этого можно использовать
+<code>-</code> или <code>_</code> (например,
+<code>north-pacific-gyre/</code> вместо
+<code>north pacific gyre/</code>). Попробуйте ввести
+<code>mkdir north pacific gyre</code> и посмотрите, какой каталог (а
+точнее, каталоги!) будут созданы, когда вы проверите результат командой
+<code>ls -F</code>.</p>
 <ol start="2" style="list-style-type: decimal">
-<li>Don’t begin the name with <code>-</code> (dash).</li>
+<li>Не начинайте имя с дефиса (символа <code>-</code>).</li>
 </ol>
-<p>Commands treat names starting with <code>-</code> as options.</p>
+<p>Команды интерпретируют имена, начинающиеся с -, как опции
+команды.</p>
 <ol start="3" style="list-style-type: decimal">
-<li>Stick with letters, numbers, <code>.</code> (period or ‘full stop’),
-<code>-</code> (dash) and <code>_</code> (underscore).</li>
+<li>Ограничьтесь использованием букв, цифр и символов <code>.</code>,
+<code>-</code> и <code>_</code>.</li>
 </ol>
-<p>Many other characters have special meanings on the command line. We
-will learn about some of these during this lesson. There are special
-characters that can cause your command to not work as expected and can
-even result in data loss.</p>
-<p>If you need to refer to names of files or directories that have
-spaces or other special characters, you should surround the name in
-single <a href="https://www.gnu.org/software/bash/manual/html_node/Quoting.html" class="external-link">quotes</a>
+<p>Многие другие символы имеют особые значения в командной строке. Мы
+изучим некоторые из них в этом уроке. Существуют специальные символы,
+которые могут привести к тому, что ваша команда не сработает так, как
+ожидалось, и даже могут вызвать потерю данных.</p>
+<p>Если вам нужно обратиться к файлам или каталогам с пробелами или
+другими специальными символами в именах, окружите имя в одинарные <a href="https://www.gnu.org/software/bash/manual/html_node/Quoting.html" class="external-link">кавычки</a>
 (<code>''</code>).</p>
 </div>
 </div>
@@ -1882,65 +1888,71 @@ single <a href="https://www.gnu.org/software/bash/manual/html_node/Quoting.html"
 
 </div>
 <div class="section level3">
-<h3 id="create-a-text-file">Create a text file<a class="anchor" aria-label="anchor" href="#create-a-text-file"></a>
+<h3 id="создание-текстового-файла">Создание текстового файла<a class="anchor" aria-label="anchor" href="#%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D1%82%D0%B5%D0%BA%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE-%D1%84%D0%B0%D0%B9%D0%BB%D0%B0"></a>
 </h3>
-<p>Let’s change our working directory to <code>thesis</code> using
-<code>cd</code>, then run a text editor called Nano to create a file
-called <code>draft.txt</code>:</p>
+<p>Давайте изменим наш рабочий каталог на <code>thesis</code>, используя
+команду <code>cd</code>, а затем запустим текстовый редактор под
+названием Nano, чтобы создать файл с именем <code>draft.txt</code>:</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="ex">$</span> cd thesis</span>
 <span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="ex">$</span> nano draft.txt</span></code></pre>
 </div>
-<div id="which-editor" class="callout">
+<div id="какой-редактор" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="which-editor" class="callout-inner">
-<h3 class="callout-title">Which Editor?</h3>
+<div id="какой-редактор" class="callout-inner">
+<h3 class="callout-title">Какой редактор?</h3>
 <div class="callout-content">
-<p>When we say, ‘<code>nano</code> is a text editor’ we really do mean
-‘text’. It can only work with plain character data, not tables, images,
-or any other human-friendly media. We use it in examples because it is
-one of the least complex text editors. However, because of this trait,
-it may not be powerful enough or flexible enough for the work you need
-to do after this workshop. On Unix systems (such as Linux and macOS),
-many programmers use <a href="https://www.gnu.org/software/emacs/" class="external-link">Emacs</a> or <a href="https://www.vim.org/" class="external-link">Vim</a> (both of which require more time to
-learn), or a graphical editor such as <a href="https://projects.gnome.org/gedit/" class="external-link">Gedit</a> or <a href="https://code.visualstudio.com/" class="external-link">VScode</a>. On Windows, you may
-wish to use <a href="https://notepad-plus-plus.org/" class="external-link">Notepad++</a>.
-Windows also has a built-in editor called <code>notepad</code> that can
-be run from the command line in the same way as <code>nano</code> for
-the purposes of this lesson.</p>
-<p>No matter what editor you use, you will need to know where it
-searches for and saves files. If you start it from the shell, it will
-(probably) use your current working directory as its default location.
-If you use your computer’s start menu, it may want to save files in your
-Desktop or Documents directory instead. You can change this by
-navigating to another directory the first time you ‘Save As…’</p>
+<p>Когда мы говорим, что nano — это текстовый редактор, мы действительно
+имеем в виду именно “текстовый”. Он может работать только с текстовыми
+данными, а не с таблицами, изображениями или другими типами медиа. Мы
+используем его в примерах, потому что это один из самых простых
+текстовых редакторов. Однако из-за этой простоты он может оказаться
+недостаточно мощным или гибким для работы, которую вам нужно будет
+выполнять после этого урока. На Unix-системах (таких как Linux и macOS)
+многие программисты используют <a href="https://www.gnu.org/software/emacs/" class="external-link">Emacs</a> или <a href="https://www.vim.org/" class="external-link">Vim</a> (оба требуют больше времени для
+изучения), или графический редактор, такой как <a href="https://projects.gnome.org/gedit/" class="external-link">Gedit</a> или <a href="https://code.visualstudio.com/" class="external-link">VScode</a>. На Windows вы можете
+использовать <a href="https://notepad-plus-plus.org/" class="external-link">Notepad++</a>. В
+Windows также есть встроенный редактор <code>notepad</code>, который
+можно запустить из командной строки так же, как и <code>nano</code>, для
+целей этого урока.</p>
+<p>Независимо от того, какой редактор вы используете, вам нужно знать,
+где он сохраняет файлы. Если вы запускаете его из оболочки, он
+(вероятно) будет использовать ваш текущий рабочий каталог в качестве
+места по умолчанию. Если вы используете меню “Пуск” на компьютере,
+редактор может захотеть сохранить файлы на вашем рабочем столе или в
+папке “Документы”. Это можно изменить, перейдя в другой каталог при
+первом сохранении файла с помощью команды “Сохранить как…”.</p>
 </div>
 </div>
 </div>
-<p>Let’s type in a few lines of text.</p>
-<figure><img src="fig/nano-screenshot.png" alt="screenshot of nano text editor in action with the text It's not publish or perish any more, it's share and thrive" class="figure mx-auto d-block"></figure><p>Once we’re happy with our text, we can press
-<kbd>Ctrl</kbd>+<kbd>O</kbd> (press the <kbd>Ctrl</kbd> or
-<kbd>Control</kbd> key and, while holding it down, press the
-<kbd>O</kbd> key) to write our data to disk. We will be asked to provide
-a name for the file that will contain our text. Press <kbd>Return</kbd>
-to accept the suggested default of <code>draft.txt</code>.</p>
-<p>Once our file is saved, we can use <kbd>Ctrl</kbd>+<kbd>X</kbd> to
-quit the editor and return to the shell.</p>
-<div id="control-ctrl-or-key" class="callout">
+<p>Давайте наберём несколько строк текста.</p>
+<figure><img src="fig/nano-screenshot.png" alt="Скриншот работы в текстовом редакторе nano с текстом ‘It’s not publish or perish any more, it’s share and thrive’" class="figure mx-auto d-block"><div class="figcaption">Скриншот работы в текстовом редакторе nano с
+текстом ‘It’s not publish or perish any more, it’s share and
+thrive’</div>
+</figure><p>Когда мы будем довольны нашим текстом, мы можем нажать
+<kbd>Ctrl</kbd>+<kbd>O</kbd> (удерживая клавишу <kbd>Ctrl</kbd>, нажмите
+клавишу <kbd>O</kbd>), чтобы записать данные на диск. Нам будет
+предложено ввести имя файла, в котором будет сохранён текст. Нажмите
+<kbd>Return</kbd>, чтобы подтвердить предлагаемое имя
+<code>draft.txt</code>.</p>
+<p>После того как файл будет сохранён, мы можем использовать
+<kbd>Ctrl</kbd>+<kbd>X</kbd>, чтобы выйти из редактора и вернуться в
+оболочку.</p>
+<div id="клавиша-control-ctrl-или" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="control-ctrl-or-key" class="callout-inner">
-<h3 class="callout-title">Control, Ctrl, or ^ Key</h3>
+<div id="клавиша-control-ctrl-или" class="callout-inner">
+<h3 class="callout-title">Клавиша Control (Ctrl или ^)</h3>
 <div class="callout-content">
-<p>The Control key is also called the ‘Ctrl’ key. There are various ways
-in which using the Control key may be described. For example, you may
-see an instruction to press the <kbd>Control</kbd> key and, while
-holding it down, press the <kbd>X</kbd> key, described as any of:</p>
+<p>Клавиша Control также называется клавишей ‘Ctrl’. Существует
+несколько способов обозначить использование клавиши Control. Например,
+вы можете увидеть инструкцию нажать <kbd>Control</kbd>, удерживая ее,
+нажать клавишу <kbd>X</kbd>. Это можно обозначить как:</p>
 <ul>
 <li><code>Control-X</code></li>
 <li><code>Control+X</code></li>
@@ -1949,16 +1961,15 @@ holding it down, press the <kbd>X</kbd> key, described as any of:</p>
 <li><code>^X</code></li>
 <li><code>C-x</code></li>
 </ul>
-<p>In nano, along the bottom of the screen you’ll see
-<code>^G Get Help ^O WriteOut</code>. This means that you can use
-<code>Control-G</code> to get help and <code>Control-O</code> to save
-your file.</p>
+<p>В nano внизу экрана вы увидите <code>^G Get Help ^O WriteOut</code>.
+Это означает, что вы можете использовать <code>Control-G</code> для
+получения справки и <code>Control-O</code> для сохранения файла.</p>
 </div>
 </div>
 </div>
-<p><code>nano</code> doesn’t leave any output on the screen after it
-exits, but <code>ls</code> now shows that we have created a file called
-<code>draft.txt</code>:</p>
+<p>После выхода, <code>nano</code> не выводит какие-либо сообщения на
+экран, но команда <code>ls</code> теперь покажет, что мы создали файл
+под названием <code>draft.txt</code>:</p>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1969,27 +1980,27 @@ exits, but <code>ls</code> now shows that we have created a file called
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="va">draft.txt</span></span></code></pre>
 </div>
-<div id="creating-files-a-different-way" class="callout challenge">
+<div id="создание-файлов-другим-способом" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="creating-files-a-different-way" class="callout-inner">
-<h3 class="callout-title">Creating Files a Different Way</h3>
+<div id="создание-файлов-другим-способом" class="callout-inner">
+<h3 class="callout-title">Создание файлов другим способом</h3>
 <div class="callout-content">
-<p>We have seen how to create text files using the <code>nano</code>
-editor. Now, try the following command:</p>
+<p>Мы уже увидели, как создавать текстовые файлы с помощью редактора
+<code>nano</code>. Теперь попробуйте следующую команду:</p>
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="ex">$</span> touch my_file.txt</span></code></pre>
 </div>
 <ol style="list-style-type: decimal">
-<li><p>What did the <code>touch</code> command do? When you look at your
-current directory using the GUI file explorer, does the file show
-up?</p></li>
-<li><p>Use <code>ls -l</code> to inspect the files. How large is
-<code>my_file.txt</code>?</p></li>
-<li><p>When might you want to create a file this way?</p></li>
+<li><p>Что делает команда <code>touch</code>? Появляется ли файл в вашем
+текущем каталоге при просмотре через графический файловый
+менеджер?</p></li>
+<li><p>Используйте <code>ls -l</code>, чтобы исследовать файлы. Какого
+размера файл <code>my_file.txt</code>?</p></li>
+<li><p>Когда может быть полезно создать файл таким способом?</p></li>
 </ol>
 </div>
 </div>
@@ -1997,43 +2008,44 @@ up?</p></li>
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+  <h4 class="accordion-header" id="headingSolution1"> Решение </h4>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
-<li><p>The <code>touch</code> command generates a new file called
-<code>my_file.txt</code> in your current directory. You can observe this
-newly generated file by typing <code>ls</code> at the command line
-prompt. <code>my_file.txt</code> can also be viewed in your GUI file
-explorer.</p></li>
-<li><p>When you inspect the file with <code>ls -l</code>, note that the
-size of <code>my_file.txt</code> is 0 bytes. In other words, it contains
-no data. If you open <code>my_file.txt</code> using your text editor it
-is blank.</p></li>
-<li><p>Some programs do not generate output files themselves, but
-instead require that empty files have already been generated. When the
-program is run, it searches for an existing file to populate with its
-output. The touch command allows you to efficiently generate a blank
-text file to be used by such programs.</p></li>
+<li><p>Команда <code>touch</code> создает новый файл под названием
+<code>my_file.txt</code> в вашем текущем каталоге. Вы можете увидеть
+этот созданный файл, набрав команду <code>ls</code> в командной строке.
+Файл <code>my_file.txt</code> также будет виден в вашем графическом
+файловом менеджере.</p></li>
+<li><p>Если вы исследуете файл с помощью команды <code>ls -l</code>, то
+заметите, что размер файла <code>my_file.txt</code> равен 0 байтам.
+Другими словами, он не содержит данных. Если вы откроете файл
+<code>my_file.txt</code> в текстовом редакторе, он будет пуст.</p></li>
+<li><p>Некоторые программы не создают выходные файлы самостоятельно, а
+требуют, чтобы пустые файлы уже были созданы. Когда программа
+запускается, она ищет существующий файл, чтобы заполнить его своими
+данными. Команда <code>touch</code> позволяет эффективно создавать
+пустой текстовый файл, который можно использовать такими
+программами.</p></li>
 </ol>
 </div>
 </div>
 </div>
 </div>
-<div id="creating-files-a-different-way" class="callout discussion">
+<div id="создание-файлов-другим-способом" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<div id="creating-files-a-different-way" class="callout-inner">
-<h3 class="callout-title">Creating Files a Different Way<em>
+<div id="создание-файлов-другим-способом" class="callout-inner">
+<h3 class="callout-title">Создание файлов другим способом<em>
 (continued)</em>
 </h3>
 <div class="callout-content">
-<p>To avoid confusion later on, we suggest removing the file you’ve just
-created before proceeding with the rest of the episode, otherwise future
-outputs may vary from those given in the lesson. To do this, use the
-following command:</p>
+<p>Чтобы избежать путаницы в дальнейшем, рекомендуем удалить только что
+созданный файл перед продолжением урока, иначе дальнейшие выводы могут
+отличаться от приведённых в примере. Для этого используйте следующую
+команду:</p>
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2042,64 +2054,64 @@ following command:</p>
 </div>
 </div>
 </div>
-<div id="whats-in-a-name" class="callout">
+<div id="что-в-имени" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="whats-in-a-name" class="callout-inner">
-<h3 class="callout-title">What’s In A Name?</h3>
+<div id="что-в-имени" class="callout-inner">
+<h3 class="callout-title">Что в имени?</h3>
 <div class="callout-content">
-<p>You may have noticed that all of Nelle’s files are named ‘something
-dot something’, and in this part of the lesson, we always used the
-extension <code>.txt</code>. This is just a convention; we can call a
-file <code>mythesis</code> or almost anything else we want. However,
-most people use two-part names most of the time to help them (and their
-programs) tell different kinds of files apart. The second part of such a
-name is called the <strong>filename extension</strong> and indicates
-what type of data the file holds: <code>.txt</code> signals a plain text
-file, <code>.pdf</code> indicates a PDF document, <code>.cfg</code> is a
-configuration file full of parameters for some program or other,
-<code>.png</code> is a PNG image, and so on.</p>
-<p>This is just a convention, albeit an important one. Files merely
-contain bytes; it’s up to us and our programs to interpret those bytes
-according to the rules for plain text files, PDF documents,
-configuration files, images, and so on.</p>
-<p>Naming a PNG image of a whale as <code>whale.mp3</code> doesn’t
-somehow magically turn it into a recording of whale song, though it
-<em>might</em> cause the operating system to associate the file with a
-music player program. In this case, if someone double-clicked
-<code>whale.mp3</code> in a file explorer program, the music player will
-automatically (and erroneously) attempt to open the
-<code>whale.mp3</code> file.</p>
+<p>Вы могли заметить, что все файлы Нелли названы по шаблону ‘что-то
+точка что-то’, и в этой части урока мы всегда использовали расширение
+<code>.txt</code>. Это всего лишь соглашение; мы можем назвать файл
+<code>mythesis</code> или как угодно иначе. Однако большинство людей
+используют двухсоставные имена, чтобы помочь себе (и своим программам)
+различать разные типы файлов. Вторая часть такого имени называется
+<strong>расширением файла</strong> и указывает на тип данных, которые
+содержит файл: <code>.txt</code> обозначает простой текстовый файл,
+<code>.pdf</code> указывает на PDF-документ, <code>.cfg</code> — это
+файл конфигурации, полный параметров для какой-либо программы,
+<code>.png</code> — это изображение в формате PNG и так далее.</p>
+<p>Это всего лишь соглашение, хотя и важное. Файлы содержат только
+байты; нам и нашим программам предстоит интерпретировать эти байты в
+соответствии с правилами для текстовых файлов, PDF-документов,
+конфигурационных файлов, изображений и так далее.</p>
+<p>Назвав PNG-изображение кита как <code>whale.mp3</code>, вы не
+превратите его в запись звуков китов, хотя это <em>может</em> привести к
+тому, что операционная система свяжет файл с музыкальным плеером. В этом
+случае, если кто-то дважды щёлкнет на <code>whale.mp3</code> в файловом
+менеджере, музыкальный плеер автоматически (и ошибочно) попытается
+открыть файл <code>whale.mp3</code>.</p>
 </div>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="moving-files-and-directories">Moving files and directories<a class="anchor" aria-label="anchor" href="#moving-files-and-directories"></a>
+</section><section><h2 class="section-heading" id="перемещение-файлов-и-каталогов">Перемещение файлов и каталогов<a class="anchor" aria-label="anchor" href="#%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D0%B5-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2-%D0%B8-%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%D0%BE%D0%B2"></a>
 </h2>
 <hr class="half-width">
-<p>Returning to the <code>shell-lesson-data/exercise-data/writing</code>
-directory,</p>
+<p>Возвращаемся в каталог
+<code>shell-lesson-data/exercise-data/writing</code>:</p>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="ex">$</span> cd ~/Desktop/shell-lesson-data/exercise-data/writing</span></code></pre>
 </div>
-<p>In our <code>thesis</code> directory we have a file
-<code>draft.txt</code> which isn’t a particularly informative name, so
-let’s change the file’s name using <code>mv</code>, which is short for
-‘move’:</p>
+<p>В нашем каталоге <code>thesis</code> есть файл
+<code>draft.txt</code>, который не очень информативно назван, поэтому
+давайте изменим имя файла с помощью команды <code>mv</code>, которая
+сокращённо означает ‘<strong>m</strong>o<strong>v</strong>e’
+(переместить):</p>
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="ex">$</span> mv thesis/draft.txt thesis/quotes.txt</span></code></pre>
 </div>
-<p>The first argument tells <code>mv</code> what we’re ‘moving’, while
-the second is where it’s to go. In this case, we’re moving
-<code>thesis/draft.txt</code> to <code>thesis/quotes.txt</code>, which
-has the same effect as renaming the file. Sure enough, <code>ls</code>
-shows us that <code>thesis</code> now contains one file called
-<code>quotes.txt</code>:</p>
+<p>Первый аргумент указывает <code>mv</code>, что мы перемещаем, а
+второй — куда. В данном случае мы перемещаем
+<code>thesis/draft.txt</code> в <code>thesis/quotes.txt</code>, что
+фактически равносильно переименованию файла. Как и ожидалось, команда
+<code>ls</code> показывает, что теперь в каталоге <code>thesis</code>
+находится один файл под названием <code>quotes.txt</code>:</p>
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2110,29 +2122,30 @@ shows us that <code>thesis</code> now contains one file called
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="va">quotes.txt</span></span></code></pre>
 </div>
-<p>One must be careful when specifying the target file name, since
-<code>mv</code> will silently overwrite any existing file with the same
-name, which could lead to data loss. By default, <code>mv</code> will
-not ask for confirmation before overwriting files. However, an
-additional option, <code>mv -i</code> (or
-<code>mv --interactive</code>), will cause <code>mv</code> to request
-such confirmation.</p>
-<p>Note that <code>mv</code> also works on directories.</p>
-<p>Let’s move <code>quotes.txt</code> into the current working
-directory. We use <code>mv</code> once again, but this time we’ll use
-just the name of a directory as the second argument to tell
-<code>mv</code> that we want to keep the filename but put the file
-somewhere new. (This is why the command is called ‘move’.) In this case,
-the directory name we use is the special directory name <code>.</code>
-that we mentioned earlier.</p>
+<p>Будьте осторожны при указании имени целевого файла, так как команда
+<code>mv</code> без лишних слов перезапишет любой существующий файл с
+тем же именем, что может привести к потере данных. По умолчанию
+<code>mv</code> не запрашивает подтверждения перед перезаписью файлов.
+Однако дополнительная опция, <code>mv -i</code> (или
+<code>mv --interactive</code>), заставит команду <code>mv</code>
+запрашивать такое подтверждение.</p>
+<p>Обратите внимание, что команда <code>mv</code> также работает и с
+каталогами.</p>
+<p>Давайте переместим файл <code>quotes.txt</code> в текущий рабочий
+каталог. Мы снова используем команду <code>mv</code>, но на этот раз
+укажем только имя каталога в качестве второго аргумента, чтобы сообщить
+<code>mv</code>, что мы хотим сохранить имя файла, но поместить файл в
+новое место. (Именно поэтому команда называется ‘move’.) В данном случае
+каталог, который мы укажем, — это специальный каталог <code>.</code>,
+который мы упоминали ранее.</p>
 <div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="ex">$</span> mv thesis/quotes.txt .</span></code></pre>
 </div>
-<p>The effect is to move the file from the directory it was in to the
-current working directory. <code>ls</code> now shows us that
-<code>thesis</code> is empty:</p>
+<p>В результате этой команды файл переместится из каталога, в котором он
+находился, в текущий рабочий каталог. Теперь команда <code>ls</code>
+показывает, что каталог <code>thesis</code> пуст:</p>
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2143,9 +2156,9 @@ current working directory. <code>ls</code> now shows us that
 </h3>
 <pre class="output" tabindex="0"><code>$</code></pre>
 </div>
-<p>Alternatively, we can confirm the file <code>quotes.txt</code> is no
-longer present in the <code>thesis</code> directory by explicitly trying
-to list it:</p>
+<p>Кроме того, мы можем убедиться, что файл quotes.txt больше не
+находится в каталоге thesis, пытаясь вывести его с помощью
+<code>ls</code> в явном виде:</p>
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2156,11 +2169,12 @@ to list it:</p>
 </h3>
 <pre class="error" tabindex="0"><code>ls: cannot access 'thesis/quotes.txt': No such file or directory</code></pre>
 </div>
-<p><code>ls</code> with a filename or directory as an argument only
-lists the requested file or directory. If the file given as the argument
-doesn’t exist, the shell returns an error as we saw above. We can use
-this to see that <code>quotes.txt</code> is now present in our current
-directory:</p>
+<p>Команда <code>ls</code> с указанием имени файла или каталога в
+качестве аргумента выводит только запрашиваемый файл или содержимое
+каталога. Если файл, указанный в аргументе, не существует, оболочка
+вернёт ошибку, как показано выше. Мы можем использовать это, чтобы
+убедиться, что файл <code>quotes.txt</code> теперь находится в нашем
+текущем каталоге:</p>
 <div class="codewrapper sourceCode" id="cb26">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2171,17 +2185,16 @@ directory:</p>
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="va">quotes.txt</span></span></code></pre>
 </div>
-<div id="moving-files-to-a-new-folder" class="callout challenge">
+<div id="перемещение-файлов-в-новую-папку" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="moving-files-to-a-new-folder" class="callout-inner">
-<h3 class="callout-title">Moving Files to a new folder</h3>
+<div id="перемещение-файлов-в-новую-папку" class="callout-inner">
+<h3 class="callout-title">Перемещение файлов в новую папку</h3>
 <div class="callout-content">
-<p>After running the following commands, Jamie realizes that she put the
-files <code>sucrose.dat</code> and <code>maltose.dat</code> into the
-wrong folder. The files should have been placed in the <code>raw</code>
-folder.</p>
+<p>После выполнения следующих команд Джейми понимает, что она поместила
+файлы <code>sucrose.dat</code> и <code>maltose.dat</code> не в ту папку.
+Эти файлы должны были быть помещены в папку <code>raw</code>.</p>
 <div class="codewrapper sourceCode" id="cb28">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2191,8 +2204,8 @@ folder.</p>
 <span id="cb28-4"><a href="#cb28-4" tabindex="-1"></a><span class="ex">fructose.dat</span> glucose.dat maltose.dat sucrose.dat</span>
 <span id="cb28-5"><a href="#cb28-5" tabindex="-1"></a><span class="ex">$</span> cd analyzed</span></code></pre>
 </div>
-<p>Fill in the blanks to move these files to the <code>raw/</code>
-folder (i.e. the one she forgot to put them in)</p>
+<p>Заполните пропуски, чтобы переместить эти файлы в папку
+<code>raw/</code> (ту, куда Джейми забыла их поместить).</p>
 <div class="codewrapper sourceCode" id="cb29">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2204,7 +2217,7 @@ folder (i.e. the one she forgot to put them in)</p>
 <div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+  <h4 class="accordion-header" id="headingSolution2"> Решение </h4>
 </button>
 <div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
@@ -2213,21 +2226,21 @@ folder (i.e. the one she forgot to put them in)</p>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a><span class="ex">$</span> mv sucrose.dat maltose.dat ../raw</span></code></pre>
 </div>
-<p>Recall that <code>..</code> refers to the parent directory (i.e. one
-above the current directory) and that <code>.</code> refers to the
-current directory.</p>
+<p>Напомним, что <code>..</code> ссылается на родительский каталог (т.е.
+на один уровень выше текущего каталога), а <code>.</code> ссылается на
+текущий каталог.</p>
 </div>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="copying-files-and-directories">Copying files and directories<a class="anchor" aria-label="anchor" href="#copying-files-and-directories"></a>
+</section><section><h2 class="section-heading" id="копирование-файлов-и-каталогов">Копирование файлов и каталогов<a class="anchor" aria-label="anchor" href="#%D0%BA%D0%BE%D0%BF%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2-%D0%B8-%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%D0%BE%D0%B2"></a>
 </h2>
 <hr class="half-width">
-<p>The <code>cp</code> command works very much like <code>mv</code>,
-except it copies a file instead of moving it. We can check that it did
-the right thing using <code>ls</code> with two paths as arguments — like
-most Unix commands, <code>ls</code> can be given multiple paths at
-once:</p>
+<p>Команда <code>cp</code> работает так же, как и <code>mv</code>, за
+исключением того, что она копирует файл вместо его перемещения. Мы можем
+проверить, что она сработала правильно, используя команду
+<code>ls</code> с двумя путями в качестве аргументов — как и большинство
+команд Unix, <code>ls</code> может принимать несколько путей сразу:</p>
 <div class="codewrapper sourceCode" id="cb31">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2239,15 +2252,16 @@ once:</p>
 </h3>
 <pre class="output" tabindex="0"><code>quotes.txt   thesis/quotations.txt</code></pre>
 </div>
-<p>We can also copy a directory and all its contents by using the <a href="https://en.wikipedia.org/wiki/Recursion" class="external-link">recursive</a> option
-<code>-r</code>, e.g. to back up a directory:</p>
+<p>Мы также можем скопировать каталог со всем его содержимым, используя
+опцию <a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BA%D1%83%D1%80%D1%81%D0%B8%D1%8F" class="external-link">рекурсии</a>
+<code>-r</code>, например, для создания резервной копии каталога:</p>
 <div class="codewrapper sourceCode" id="cb33">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" tabindex="-1"></a><span class="ex">$</span> cp <span class="at">-r</span> thesis thesis_backup</span></code></pre>
 </div>
-<p>We can check the result by listing the contents of both the
-<code>thesis</code> and <code>thesis_backup</code> directory:</p>
+<p>Мы можем проверить результат, перечислив содержимое обоих каталогов
+<code>thesis</code> и <code>thesis_backup</code>:</p>
 <div class="codewrapper sourceCode" id="cb34">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2262,29 +2276,29 @@ once:</p>
 <span><span class="va">thesis_backup</span><span class="op">:</span></span>
 <span><span class="va">quotations.txt</span></span></code></pre>
 </div>
-<p>It is important to include the <code>-r</code> flag. If you want to
-copy a directory and you omit this option you will see a message that
-the directory has been omitted because
-<code>-r not specified</code>.</p>
+<p>Важно включить флаг <code>-r</code>. Если вы хотите скопировать
+каталог и не укажете эту опцию, вы увидите сообщение, что каталог
+пропущен, потому что <code>-r</code> не указано.</p>
 <div class="codewrapper sourceCode" id="cb36">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" tabindex="-1"></a><span class="ex">$</span> cp thesis thesis_backup</span>
 <span id="cb36-2"><a href="#cb36-2" tabindex="-1"></a><span class="ex">cp:</span> <span class="at">-r</span> not specified<span class="kw">;</span> <span class="ex">omitting</span> directory <span class="st">'thesis'</span></span></code></pre>
 </div>
-<div id="renaming-files" class="callout challenge">
+<div id="переименование-файлов" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="renaming-files" class="callout-inner">
-<h3 class="callout-title">Renaming Files</h3>
+<div id="переименование-файлов" class="callout-inner">
+<h3 class="callout-title">Переименование файлов</h3>
 <div class="callout-content">
-<p>Suppose that you created a plain-text file in your current directory
-to contain a list of the statistical tests you will need to do to
-analyze your data, and named it <code>statstics.txt</code></p>
-<p>After creating and saving this file you realize you misspelled the
-filename! You want to correct the mistake, which of the following
-commands could you use to do so?</p>
+<p>Предположим, вы создали текстовый файл в вашем текущем каталоге,
+чтобы содержать список статистических тестов, которые вам нужно будет
+провести для анализа данных, и назвали его
+<code>statstics.txt</code>.</p>
+<p>После создания и сохранения файла вы понимаете, что ошиблись в
+названии! Вы хотите исправить ошибку. Какую из следующих команд можно
+использовать для этого?</p>
 <ol style="list-style-type: decimal">
 <li><code>cp statstics.txt statistics.txt</code></li>
 <li><code>mv statstics.txt statistics.txt</code></li>
@@ -2297,33 +2311,34 @@ commands could you use to do so?</p>
 <div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
-  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
+  <h4 class="accordion-header" id="headingSolution3"> Решение </h4>
 </button>
 <div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
-<li>No. While this would create a file with the correct name, the
-incorrectly named file still exists in the directory and would need to
-be deleted.</li>
-<li>Yes, this would work to rename the file.</li>
-<li>No, the period(.) indicates where to move the file, but does not
-provide a new file name; identical file names cannot be created.</li>
-<li>No, the period(.) indicates where to copy the file, but does not
-provide a new file name; identical file names cannot be created.</li>
+<li>Нет. Хотя это создаст файл с правильным именем, файл с неправильным
+именем всё ещё останется в каталоге, и его нужно будет удалить.</li>
+<li>Да, это сработает для переименования файла.</li>
+<li>Нет, точка (<code>.</code>) указывает, куда переместить файл, но не
+предоставляет новое имя файла, программа не будет работать, если имя
+конечного файла совпадает с исходным.</li>
+<li>Нет, точка (<code>.</code>) указывает, куда копировать файл, но не
+предоставляет новое имя файла, программа не будет работать, если имя
+конечного файла совпадает с исходным.</li>
 </ol>
 </div>
 </div>
 </div>
 </div>
-<div id="moving-and-copying" class="callout challenge">
+<div id="перемещение-и-копирование" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="moving-and-copying" class="callout-inner">
-<h3 class="callout-title">Moving and Copying</h3>
+<div id="перемещение-и-копирование" class="callout-inner">
+<h3 class="callout-title">Перемещение и копирование</h3>
 <div class="callout-content">
-<p>What is the output of the closing <code>ls</code> command in the
-sequence shown below?</p>
+<p>Каков результат выполнения заключительной команды <code>ls</code> в
+приведённой ниже последовательности?</p>
 <div class="codewrapper sourceCode" id="cb37">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2364,50 +2379,50 @@ sequence shown below?</p>
 <div id="accordionSolution4" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
-  <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
+  <h4 class="accordion-header" id="headingSolution4"> Решение </h4>
 </button>
 <div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
-<p>We start in the <code>/Users/jamie/data</code> directory, and create
-a new folder called <code>recombined</code>. The second line moves
-(<code>mv</code>) the file <code>proteins.dat</code> to the new folder
-(<code>recombined</code>). The third line makes a copy of the file we
-just moved. The tricky part here is where the file was copied to. Recall
-that <code>..</code> means ‘go up a level’, so the copied file is now in
-<code>/Users/jamie</code>. Notice that <code>..</code> is interpreted
-with respect to the current working directory, <strong>not</strong> with
-respect to the location of the file being copied. So, the only thing
-that will show using ls (in <code>/Users/jamie/data</code>) is the
-recombined folder.</p>
+<p>Мы начинаем в каталоге <code>/Users/jamie/data</code> и создаём новую
+папку под названием <code>recombined</code>. Вторая строка перемещает
+(<code>mv</code>) файл <code>proteins.dat</code> в новую папку
+(<code>recombined</code>). Третья строка создаёт копию файла, который мы
+только что переместили. Сложность здесь заключается в том, куда был
+скопирован файл. Напомним, что <code>..</code> означает ‘подняться на
+уровень выше’, поэтому скопированный файл теперь находится в
+<code>/Users/jamie</code>. Обратите внимание, что <code>..</code>
+интерпретируется относительно текущего рабочего каталога, а не
+относительно местоположения копируемого файла. Таким образом,
+единственное, что покажет <code>ls</code> в каталоге
+<code>/Users/jamie/data</code>, — это папка <code>recombined</code>.</p>
 <ol style="list-style-type: decimal">
-<li>No, see explanation above. <code>proteins-saved.dat</code> is
-located at <code>/Users/jamie</code>
-</li>
-<li>Yes</li>
-<li>No, see explanation above. <code>proteins.dat</code> is located at
-<code>/Users/jamie/data/recombined</code>
-</li>
-<li>No, see explanation above. <code>proteins-saved.dat</code> is
-located at <code>/Users/jamie</code>
-</li>
+<li>Нет, см. объяснение выше. <code>proteins-saved.dat</code> находится
+в <code>/Users/jamie</code>.</li>
+<li>Да.</li>
+<li>Нет, см. объяснение выше. Файл <code>proteins.dat</code> находится в
+<code>/Users/jamie/data/recombined</code>.</li>
+<li>Нет, см. объяснение выше. <code>proteins-saved.dat</code> находится
+в <code>/Users/jamie</code>.</li>
 </ol>
 </div>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="removing-files-and-directories">Removing files and directories<a class="anchor" aria-label="anchor" href="#removing-files-and-directories"></a>
+</section><section><h2 class="section-heading" id="удаление-файлов-и-каталогов">Удаление файлов и каталогов<a class="anchor" aria-label="anchor" href="#%D1%83%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2-%D0%B8-%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%D0%BE%D0%B2"></a>
 </h2>
 <hr class="half-width">
-<p>Returning to the <code>shell-lesson-data/exercise-data/writing</code>
-directory, let’s tidy up this directory by removing the
-<code>quotes.txt</code> file we created. The Unix command we’ll use for
-this is <code>rm</code> (short for ‘remove’):</p>
+<p>Возвращаемся в каталог
+<code>shell-lesson-data/exercise-data/writing</code>. Давайте приведём
+этот каталог в порядок, удалив файл <code>quotes.txt</code>, который мы
+создали. Команда Unix, которую мы будем использовать для этого, — это
+<code>rm</code> (сокращение от
+‘<strong>r</strong>e<strong>m</strong>ove’ — удалить):</p>
 <div class="codewrapper sourceCode" id="cb42">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" tabindex="-1"></a><span class="ex">$</span> rm quotes.txt</span></code></pre>
 </div>
-<p>We can confirm the file has gone using <code>ls</code>:</p>
+<p>Мы можем проверить, что файл был удалён, с помощью команды ls:</p>
 <div class="codewrapper sourceCode" id="cb43">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2418,40 +2433,42 @@ this is <code>rm</code> (short for ‘remove’):</p>
 </h3>
 <pre class="error" tabindex="0"><code>ls: cannot access 'quotes.txt': No such file or directory</code></pre>
 </div>
-<div id="deleting-is-forever" class="callout">
+<div id="удаление-безвозвратно" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="deleting-is-forever" class="callout-inner">
-<h3 class="callout-title">Deleting Is Forever</h3>
+<div id="удаление-безвозвратно" class="callout-inner">
+<h3 class="callout-title">Удаление безвозвратно</h3>
 <div class="callout-content">
-<p>The Unix shell doesn’t have a trash bin that we can recover deleted
-files from (though most graphical interfaces to Unix do). Instead, when
-we delete files, they are unlinked from the file system so that their
-storage space on disk can be recycled. Tools for finding and recovering
-deleted files do exist, but there’s no guarantee they’ll work in any
-particular situation, since the computer may recycle the file’s disk
-space right away.</p>
+<p>В Unix-оболочке нет корзины, из которой можно было бы восстановить
+удалённые файлы (хотя большинство графических интерфейсов для Unix её
+имеют). Вместо этого, когда мы удаляем файлы, они отвязываются от
+файловой системы, чтобы их место на диске можно было перераспределить.
+Существуют инструменты для поиска и восстановления удалённых файлов, но
+нет никакой гарантии, что они сработают в каждом конкретном случае, так
+как компьютер может сразу перераспределить место на диске, где был
+файл.</p>
 </div>
 </div>
 </div>
-<div id="using-rm-safely" class="callout challenge">
+<div id="безопасное-использование-rm" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="using-rm-safely" class="callout-inner">
-<h3 class="callout-title">Using <code>rm</code> Safely</h3>
+<div id="безопасное-использование-rm" class="callout-inner">
+<h3 class="callout-title">Безопасное использование <code>rm</code>
+</h3>
 <div class="callout-content">
-<p>What happens when we execute
-<code>rm -i thesis_backup/quotations.txt</code>? Why would we want this
-protection when using <code>rm</code>?</p>
+<p>Что произойдёт, когда мы выполним команду
+<code>rm -i thesis_backup/quotations.txt</code>? Зачем может
+понадобиться эта защита при использовании <code>rm</code>?</p>
 </div>
 </div>
 </div>
 <div id="accordionSolution5" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
-  <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
+  <h4 class="accordion-header" id="headingSolution5"> Решение </h4>
 </button>
 <div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
@@ -2460,18 +2477,18 @@ protection when using <code>rm</code>?</p>
 </h3>
 <pre class="output" tabindex="0"><code>rm: remove regular file 'thesis_backup/quotations.txt'? y</code></pre>
 </div>
-<p>The <code>-i</code> option will prompt before (every) removal (use
-<kbd>Y</kbd> to confirm deletion or <kbd>N</kbd> to keep the file). The
-Unix shell doesn’t have a trash bin, so all the files removed will
-disappear forever. By using the <code>-i</code> option, we have the
-chance to check that we are deleting only the files that we want to
-remove.</p>
+<p>Опция <code>-i</code> перед каждым удалением запрашивает
+подтверждение (используйте <kbd>Y</kbd>, чтобы подтвердить удаление, или
+<kbd>N</kbd>, чтобы сохранить файл). Поскольку в Unix-оболочке нет
+корзины, все удалённые файлы исчезают навсегда. Используя опцию
+<code>-i</code>, у нас есть шанс проверить, удаляем ли мы только те
+файлы, которые действительно хотим удалить.</p>
 </div>
 </div>
 </div>
 </div>
-<p>If we try to remove the <code>thesis</code> directory using
-<code>rm thesis</code>, we get an error message:</p>
+<p>Если мы попробуем удалить каталог <code>thesis</code> с помощью
+команды <code>rm thesis</code>, то получим сообщение об ошибке:</p>
 <div class="codewrapper sourceCode" id="cb46">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2482,46 +2499,48 @@ remove.</p>
 </h3>
 <pre class="error" tabindex="0"><code>rm: cannot remove 'thesis': Is a directory</code></pre>
 </div>
-<p>This happens because <code>rm</code> by default only works on files,
-not directories.</p>
-<p><code>rm</code> can remove a directory <em>and all its contents</em>
-if we use the recursive option <code>-r</code>, and it will do so
-<em>without any confirmation prompts</em>:</p>
+<p>Это происходит потому, что по умолчанию команда <code>rm</code>
+работает только с файлами, а не с каталогами.</p>
+<p>Команда <code>rm</code> может удалить каталог <em>вместе со всем его
+содержимым</em>, если мы используем опцию рекурсии <code>-r</code>, и
+сделает это <em>без запросов подтверждения</em>:</p>
 <div class="codewrapper sourceCode" id="cb48">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb48-1"><a href="#cb48-1" tabindex="-1"></a><span class="ex">$</span> rm <span class="at">-r</span> thesis</span></code></pre>
 </div>
-<p>Given that there is no way to retrieve files deleted using the shell,
-<code>rm -r</code> <em>should be used with great caution</em> (you might
-consider adding the interactive option <code>rm -r -i</code>).</p>
-</section><section><h2 class="section-heading" id="operations-with-multiple-files-and-directories">Operations with multiple files and directories<a class="anchor" aria-label="anchor" href="#operations-with-multiple-files-and-directories"></a>
+<p>Учитывая, что в оболочке нет возможности восстановить удалённые
+файлы, команду <code>rm -r</code> нужно использовать с большой
+осторожностью (можно рассмотреть вариант использования интерактивной
+опции <code>rm -r -i</code>).</p>
+</section><section><h2 class="section-heading" id="операции-с-несколькими-файлами-и-каталогами">Операции с несколькими файлами и каталогами<a class="anchor" aria-label="anchor" href="#%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%B8-%D1%81-%D0%BD%D0%B5%D1%81%D0%BA%D0%BE%D0%BB%D1%8C%D0%BA%D0%B8%D0%BC%D0%B8-%D1%84%D0%B0%D0%B9%D0%BB%D0%B0%D0%BC%D0%B8-%D0%B8-%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%D0%B0%D0%BC%D0%B8"></a>
 </h2>
 <hr class="half-width">
-<p>Oftentimes one needs to copy or move several files at once. This can
-be done by providing a list of individual filenames, or specifying a
-naming pattern using wildcards. Wildcards are special characters that
-can be used to represent unknown characters or sets of characters when
-navigating the Unix file system.</p>
-<div id="copy-with-multiple-filenames" class="callout challenge">
+<p>Часто возникает необходимость скопировать или переместить сразу
+несколько файлов. Это можно сделать, указав список отдельных имён файлов
+или задать шаблон с использованием символов подстановки. Подстановочные
+символы — это специальные символы, которые можно использовать для
+обозначения неизвестных символов или наборов символов при работе с
+файловой системой Unix.</p>
+<div id="копирование-нескольких-файлов" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="copy-with-multiple-filenames" class="callout-inner">
-<h3 class="callout-title">Copy with Multiple Filenames</h3>
+<div id="копирование-нескольких-файлов" class="callout-inner">
+<h3 class="callout-title">Копирование нескольких файлов</h3>
 <div class="callout-content">
-<p>For this exercise, you can test the commands in the
-<code>shell-lesson-data/exercise-data</code> directory.</p>
-<p>In the example below, what does <code>cp</code> do when given several
-filenames and a directory name?</p>
+<p>Для этого упражнения можно протестировать команды в каталоге
+<code>shell-lesson-data/exercise-data</code>.</p>
+<p>В приведённом ниже примере, что делает команда <code>cp</code>, когда
+ей передают несколько имён файлов и имя каталога?</p>
 <div class="codewrapper sourceCode" id="cb49">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb49-1"><a href="#cb49-1" tabindex="-1"></a><span class="ex">$</span> mkdir backup</span>
 <span id="cb49-2"><a href="#cb49-2" tabindex="-1"></a><span class="ex">$</span> cp creatures/minotaur.dat creatures/unicorn.dat backup/</span></code></pre>
 </div>
-<p>In the example below, what does <code>cp</code> do when given three
-or more file names?</p>
+<p>В следующем примере, что делает команда <code>cp</code>, когда ей
+передают три или более имён файлов?</p>
 <div class="codewrapper sourceCode" id="cb50">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2544,16 +2563,16 @@ or more file names?</p>
 <div id="accordionSolution6" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution6" aria-expanded="false" aria-controls="collapseSolution6">
-  <h4 class="accordion-header" id="headingSolution6"> Show me the solution </h4>
+  <h4 class="accordion-header" id="headingSolution6"> Решение </h4>
 </button>
 <div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
 <div class="accordion-body">
-<p>If given more than one file name followed by a directory name
-(i.e. the destination directory must be the last argument),
-<code>cp</code> copies the files to the named directory.</p>
-<p>If given three file names, <code>cp</code> throws an error such as
-the one below, because it is expecting a directory name as the last
-argument.</p>
+<p>Если команде <code>cp</code> передаются несколько имён файлов, а
+затем имя каталога (т.е. каталог назначения должен быть последним
+аргументом), <code>cp</code> копирует файлы в указанный каталог.</p>
+<p>Если команде передать три имени файлов, она выдаст ошибку, как
+показано ниже, потому что команда ожидает последним аргументом имя
+каталога.</p>
 <div class="codewrapper">
 <h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2564,54 +2583,59 @@ argument.</p>
 </div>
 </div>
 <div class="section level3">
-<h3 id="using-wildcards-for-accessing-multiple-files-at-once">Using wildcards for accessing multiple files at once<a class="anchor" aria-label="anchor" href="#using-wildcards-for-accessing-multiple-files-at-once"></a>
+<h3 id="использование-подстановочных-символов-для-работы-с-несколькими-файлами-одновременно">Использование подстановочных символов для работы с несколькими
+файлами одновременно<a class="anchor" aria-label="anchor" href="#%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D0%BE%D0%B4%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BE%D1%87%D0%BD%D1%8B%D1%85-%D1%81%D0%B8%D0%BC%D0%B2%D0%BE%D0%BB%D0%BE%D0%B2-%D0%B4%D0%BB%D1%8F-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B-%D1%81-%D0%BD%D0%B5%D1%81%D0%BA%D0%BE%D0%BB%D1%8C%D0%BA%D0%B8%D0%BC%D0%B8-%D1%84%D0%B0%D0%B9%D0%BB%D0%B0%D0%BC%D0%B8-%D0%BE%D0%B4%D0%BD%D0%BE%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%BE"></a>
 </h3>
-<div id="wildcards" class="callout">
+<div id="подстановочные-символы" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="wildcards" class="callout-inner">
-<h3 class="callout-title">Wildcards</h3>
+<div id="подстановочные-символы" class="callout-inner">
+<h3 class="callout-title">Подстановочные символы</h3>
 <div class="callout-content">
-<p><code>*</code> is a <strong>wildcard</strong>, which represents zero
-or more other characters. Let’s consider the
-<code>shell-lesson-data/exercise-data/alkanes</code> directory:
-<code>*.pdb</code> represents <code>ethane.pdb</code>,
-<code>propane.pdb</code>, and every file that ends with ‘.pdb’. On the
-other hand, <code>p*.pdb</code> only represents <code>pentane.pdb</code>
-and <code>propane.pdb</code>, because the ‘p’ at the front can only
-represent filenames that begin with the letter ‘p’.</p>
-<p><code>?</code> is also a wildcard, but it represents exactly one
-character. So <code>?ethane.pdb</code> could represent
-<code>methane.pdb</code> whereas <code>*ethane.pdb</code> represents
-both <code>ethane.pdb</code> and <code>methane.pdb</code>.</p>
-<p>Wildcards can be used in combination with each other. For example,
-<code>???ane.pdb</code> indicates three characters followed by
-<code>ane.pdb</code>, giving
-<code>cubane.pdb  ethane.pdb  octane.pdb</code>.</p>
-<p>When the shell sees a wildcard, it expands the wildcard to create a
-list of matching filenames <em>before</em> running the preceding
-command. As an exception, if a wildcard expression does not match any
-file, Bash will pass the expression as an argument to the command as it
-is. For example, typing <code>ls *.pdf</code> in the
-<code>alkanes</code> directory (which contains only files with names
-ending with <code>.pdb</code>) results in an error message that there is
-no file called <code>*.pdf</code>. However, generally commands like
-<code>wc</code> and <code>ls</code> see the lists of file names matching
-these expressions, but not the wildcards themselves. It is the shell,
-not the other programs, that expands the wildcards.</p>
+<p><code>*</code> — это <strong>подстановочный символ</strong>
+(<strong>wildcard</strong>), который представляет <strong>ноль или
+более</strong> других символов. Рассмотрим каталог
+<code>shell-lesson-data/exercise-data/alkanes</code>: <code>*.pdb</code>
+обозначает <code>ethane.pdb</code>, <code>propane.pdb</code> и любой
+файл, который оканчивается на <code>.pdb</code>. С другой стороны,
+<code>p*.pdb</code> обозначает только <code>pentane.pdb</code> и
+<code>propane.pdb</code>, так как символ ‘p’ в начале может представлять
+только те имена файлов, которые начинаются с буквы ‘p’.</p>
+<p><code>?</code> также является подстановочным символом, но он
+обозначает <strong>ровно один</strong> символ. Таким образом,
+<code>?ethane.pdb</code> может обозначать <code>methane.pdb</code>, в то
+время как <code>*ethane.pdb</code> обозначает и <code>ethane.pdb</code>,
+и <code>methane.pdb</code>.</p>
+<p>Подстановочные символы могут использоваться в сочетании друг с
+другом. Например, <code>???ane.pdb</code> указывает три любых символа,
+за которыми следует <code>ane.pdb</code>, что даёт
+<code>cubane.pdb</code>, <code>ethane.pdb</code>,
+<code>octane.pdb</code>.</p>
+<p>Когда оболочка видит подстановочный символ, она разворачивает его в
+список совпадающих имён файлов до выполнения команды. Исключением
+является случай, когда выражение с подстановочными символами не
+соответствует ни одному файлу: в этом случае Bash передаёт выражение как
+аргумент команды без изменений. Например, если ввести
+<code>ls *.pdf</code> в каталоге <code>alkanes</code> (где содержатся
+только файлы с именами, оканчивающимися на <code>.pdb</code>), то вы
+получите сообщение с ошибкой о том, что файл с именем <code>*.pdf</code>
+не найден. Однако обычно команды, такие как <code>wc</code> и
+<code>ls</code>, видят списки имён файлов, соответствующих этим
+выражениям, но не видят сами подстановочные символы. Разворачивает
+подстановочные символы именно оболочка, а не другие программы.</p>
 </div>
 </div>
 </div>
-<div id="list-filenames-matching-a-pattern" class="callout challenge">
+<div id="список-имён-файлов-соответствующих-шаблону" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="list-filenames-matching-a-pattern" class="callout-inner">
-<h3 class="callout-title">List filenames matching a pattern</h3>
+<div id="список-имён-файлов-соответствующих-шаблону" class="callout-inner">
+<h3 class="callout-title">Список имён файлов, соответствующих шаблону</h3>
 <div class="callout-content">
-<p>When run in the <code>alkanes</code> directory, which <code>ls</code>
-command(s) will produce this output?</p>
+<p>Какая команда <code>ls</code>, запущенная в каталоге
+<code>alkanes</code>, выведет следующий результат?</p>
 <p><code>ethane.pdb   methane.pdb</code></p>
 <ol style="list-style-type: decimal">
 <li><code>ls *t*ane.pdb</code></li>
@@ -2625,40 +2649,43 @@ command(s) will produce this output?</p>
 <div id="accordionSolution7" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution7" aria-expanded="false" aria-controls="collapseSolution7">
-  <h4 class="accordion-header" id="headingSolution7"> Show me the solution </h4>
+  <h4 class="accordion-header" id="headingSolution7"> Решение </h4>
 </button>
 <div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
 <div class="accordion-body">
-<p>The solution is <code>3.</code></p>
-<p><code>1.</code> shows all files whose names contain zero or more
-characters (<code>*</code>) followed by the letter <code>t</code>, then
-zero or more characters (<code>*</code>) followed by
-<code>ane.pdb</code>. This gives
-<code>ethane.pdb  methane.pdb  octane.pdb  pentane.pdb</code>.</p>
-<p><code>2.</code> shows all files whose names start with zero or more
-characters (<code>*</code>) followed by the letter <code>t</code>, then
-a single character (<code>?</code>), then <code>ne.</code> followed by
-zero or more characters (<code>*</code>). This will give us
-<code>octane.pdb</code> and <code>pentane.pdb</code> but doesn’t match
-anything which ends in <code>thane.pdb</code>.</p>
-<p><code>3.</code> fixes the problems of option 2 by matching two
-characters (<code>??</code>) between <code>t</code> and <code>ne</code>.
-This is the solution.</p>
-<p><code>4.</code> only shows files starting with
-<code>ethane.</code>.</p>
+<p>Решением является вариант №3.</p>
+<ol style="list-style-type: decimal">
+<li><p>Выводит все файлы, имена которых содержат ноль или более символов
+(<code>*</code>), за которыми следует буква <code>t</code>, затем ноль
+или более символов (<code>*</code>), за которыми следует
+<code>ane.pdb</code>. Это даст <code>ethane.pdb</code>,
+<code>methane.pdb</code>, <code>octane.pdb</code>,
+<code>pentane.pdb</code>.</p></li>
+<li><p>Выводит все файлы, имена которых начинаются с нуля или более
+символов (<code>*</code>), за которыми следует буква <code>t</code>,
+затем один символ (<code>?</code>), затем <code>ne.</code>, за которыми
+следуют ноль или более символов (<code>*</code>). Это даст
+<code>octane.pdb</code> и <code>pentane.pdb</code>, но не совпадёт с
+именами, оканчивающимися на <code>thane.pdb</code>.</p></li>
+<li><p>Исправляет проблему варианта 2, совпадая с двумя символами
+(<code>??</code>) между <code>t</code> и <code>ne</code>. Это правильное
+решение.</p></li>
+<li><p>Выводит только файлы, начинающиеся с
+<code>ethane.</code>.</p></li>
+</ol>
 </div>
 </div>
 </div>
 </div>
-<div id="more-on-wildcards" class="callout challenge">
+<div id="ещё-о-подстановочных-символах" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="more-on-wildcards" class="callout-inner">
-<h3 class="callout-title">More on Wildcards</h3>
+<div id="ещё-о-подстановочных-символах" class="callout-inner">
+<h3 class="callout-title">Ещё о подстановочных символах</h3>
 <div class="callout-content">
-<p>Sam has a directory containing calibration data, datasets, and
-descriptions of the datasets:</p>
+<p>У Сэма есть каталог, содержащий данные калибровки (calibration),
+наборы данных (dataset) и описания этих наборов (dataset_overview):</p>
 <div class="codewrapper sourceCode" id="cb54">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2682,9 +2709,10 @@ descriptions of the datasets:</p>
 <span id="cb54-18"><a href="#cb54-18" tabindex="-1"></a>    <span class="ex">├──</span> all_datasets_created_on_a_23rd</span>
 <span id="cb54-19"><a href="#cb54-19" tabindex="-1"></a>    <span class="ex">└──</span> all_november_files</span></code></pre>
 </div>
-<p>Before heading off to another field trip, she wants to back up her
-data and send some datasets to her colleague Bob. Sam uses the following
-commands to get the job done:</p>
+<p>Перед тем как отправиться в новую экспедицию, Сэм хочет сделать
+резервную копию данных и отправить некоторые наборы данных своему
+коллеге Бобу. Сэм использует следующие команды для выполнения
+задачи:</p>
 <div class="codewrapper sourceCode" id="cb55">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2693,8 +2721,8 @@ commands to get the job done:</p>
 <span id="cb55-3"><a href="#cb55-3" tabindex="-1"></a><span class="ex">$</span> cp 2015-____-____ send_to_bob/all_november_files/</span>
 <span id="cb55-4"><a href="#cb55-4" tabindex="-1"></a><span class="ex">$</span> cp ____ send_to_bob/all_datasets_created_on_a_23rd/</span></code></pre>
 </div>
-<p>Help Sam by filling in the blanks.</p>
-<p>The resulting directory structure should look like this</p>
+<p>Помогите Сэму заполнить пропуски.</p>
+<p>Окончательная структура каталогов должна выглядеть так:</p>
 <div class="codewrapper sourceCode" id="cb56">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2746,7 +2774,7 @@ commands to get the job done:</p>
 <div id="accordionSolution8" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution8" aria-expanded="false" aria-controls="collapseSolution8">
-  <h4 class="accordion-header" id="headingSolution8"> Show me the solution </h4>
+  <h4 class="accordion-header" id="headingSolution8"> Решение </h4>
 </button>
 <div id="collapseSolution8" class="accordion-collapse collapse" data-bs-parent="#accordionSolution8" aria-labelledby="headingSolution8">
 <div class="accordion-body">
@@ -2761,15 +2789,15 @@ commands to get the job done:</p>
 </div>
 </div>
 </div>
-<div id="organizing-directories-and-files" class="callout challenge">
+<div id="организация-каталогов-и-файлов" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="organizing-directories-and-files" class="callout-inner">
-<h3 class="callout-title">Organizing Directories and Files</h3>
+<div id="организация-каталогов-и-файлов" class="callout-inner">
+<h3 class="callout-title">Организация каталогов и файлов</h3>
 <div class="callout-content">
-<p>Jamie is working on a project, and she sees that her files aren’t
-very well organized:</p>
+<p>Джейми работает над проектом и замечает, что её файлы не очень хорошо
+организованы:</p>
 <div class="codewrapper sourceCode" id="cb58">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2780,10 +2808,9 @@ very well organized:</p>
 </h3>
 <pre class="output" tabindex="0"><code>analyzed/  fructose.dat    raw/   sucrose.dat</code></pre>
 </div>
-<p>The <code>fructose.dat</code> and <code>sucrose.dat</code> files
-contain output from her data analysis. What command(s) covered in this
-lesson does she need to run so that the commands below will produce the
-output shown?</p>
+<p>Файлы <code>fructose.dat</code> и <code>sucrose.dat</code> содержат
+результаты её анализа данных. Какие команды, рассмотренные в этом уроке,
+она должна выполнить, чтобы получить следующий результат?</p>
 <div class="codewrapper sourceCode" id="cb60">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2810,7 +2837,7 @@ output shown?</p>
 <div id="accordionSolution9" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution9" aria-expanded="false" aria-controls="collapseSolution9">
-  <h4 class="accordion-header" id="headingSolution9"> Show me the solution </h4>
+  <h4 class="accordion-header" id="headingSolution9"> Решение </h4>
 </button>
 <div id="collapseSolution9" class="accordion-collapse collapse" data-bs-parent="#accordionSolution9" aria-labelledby="headingSolution9">
 <div class="accordion-body">
@@ -2819,32 +2846,32 @@ output shown?</p>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb64-1"><a href="#cb64-1" tabindex="-1"></a><span class="fu">mv</span> <span class="pp">*</span>.dat analyzed</span></code></pre>
 </div>
-<p>Jamie needs to move her files <code>fructose.dat</code> and
-<code>sucrose.dat</code> to the <code>analyzed</code> directory. The
-shell will expand *.dat to match all .dat files in the current
-directory. The <code>mv</code> command then moves the list of .dat files
-to the ‘analyzed’ directory.</p>
+<p>Джейми нужно переместить файлы <code>fructose.dat</code> и
+<code>sucrose.dat</code> в каталог <code>analyzed</code>. Оболочка
+развернёт <code>*.dat</code>, чтобы совпадать со всеми файлами,
+заканчивающимися на <code>.dat</code> в текущем каталоге. Затем команда
+<code>mv</code> переместит список файлов <code>.dat</code> в каталог
+<code>analyzed</code>.</p>
 </div>
 </div>
 </div>
 </div>
-<div id="reproduce-a-folder-structure" class="callout challenge">
+<div id="воспроизведение-структуры-каталогов" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="reproduce-a-folder-structure" class="callout-inner">
-<h3 class="callout-title">Reproduce a folder structure</h3>
+<div id="воспроизведение-структуры-каталогов" class="callout-inner">
+<h3 class="callout-title">Воспроизведение структуры каталогов</h3>
 <div class="callout-content">
-<p>You’re starting a new experiment and would like to duplicate the
-directory structure from your previous experiment so you can add new
-data.</p>
-<p>Assume that the previous experiment is in a folder called
-<code>2016-05-18</code>, which contains a <code>data</code> folder that
-in turn contains folders named <code>raw</code> and
-<code>processed</code> that contain data files. The goal is to copy the
-folder structure of the <code>2016-05-18</code> folder into a folder
-called <code>2016-05-20</code> so that your final directory structure
-looks like this:</p>
+<p>Вы начинаете новый эксперимент и хотите дублировать структуру
+каталогов из предыдущего эксперимента, чтобы добавить новые данные.</p>
+<p>Предположим, что предыдущий эксперимент находится в каталоге
+<code>2016-05-18</code>, который содержит папку <code>data</code>,
+которая, в свою очередь, содержит папки с именами <code>raw</code> и
+<code>processed</code>, в которых находятся файлы данных. Цель —
+скопировать структуру каталогов из папки <code>2016-05-18</code> в папку
+<code>2016-05-20</code>, чтобы ваша окончательная структура каталогов
+выглядела так:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2853,8 +2880,8 @@ looks like this:</p>
    ├── processed
    └── raw</code></pre>
 </div>
-<p>Which of the following set of commands would achieve this objective?
-What would the other commands do?</p>
+<p>Какой из следующих наборов команд позволит достичь этой цели? Что
+делают остальные команды?</p>
 <div class="codewrapper sourceCode" id="cb66">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2898,23 +2925,21 @@ What would the other commands do?</p>
 <div id="accordionSolution10" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution10" aria-expanded="false" aria-controls="collapseSolution10">
-  <h4 class="accordion-header" id="headingSolution10"> Show me the solution </h4>
+  <h4 class="accordion-header" id="headingSolution10"> Решение </h4>
 </button>
 <div id="collapseSolution10" class="accordion-collapse collapse" data-bs-parent="#accordionSolution10" aria-labelledby="headingSolution10">
 <div class="accordion-body">
-<p>The first two sets of commands achieve this objective. The first set
-uses relative paths to create the top-level directory before the
-subdirectories.</p>
-<p>The third set of commands will give an error because the default
-behavior of <code>mkdir</code> won’t create a subdirectory of a
-non-existent directory: the intermediate level folders must be created
-first.</p>
-<p>The fourth set of commands achieve this objective. Remember, the
-<code>-p</code> option, followed by a path of one or more directories,
-will cause <code>mkdir</code> to create any intermediate subdirectories
-as required.</p>
-<p>The final set of commands generates the ‘raw’ and ‘processed’
-directories at the same level as the ‘data’ directory.</p>
+<p>Первые два набора команд достигают цели.</p>
+<p>Третий набор команд вызовет ошибку, так как по умолчанию команда
+<code>mkdir</code> не создаёт подкаталоги в несуществующем каталоге:
+сначала должны быть созданы промежуточные уровни каталогов.</p>
+<p>Четвёртый набор команд достигает цели. Напомним, что опция
+<code>-p</code>, за которой следует путь из одного или нескольких
+каталогов, заставляет <code>mkdir</code> создавать все необходимые
+промежуточные подкаталоги.</p>
+<p>Последний набор команд создаст каталоги <code>raw</code> и
+<code>processed</code> на том же уровне, что и каталог
+<code>data</code>.</p>
 </div>
 </div>
 </div>
@@ -2928,30 +2953,31 @@ directories at the same level as the ‘data’ directory.</p>
 <div class="callout-content">
 <ul>
 <li>
-<code>cp [old] [new]</code> copies a file.</li>
+<code>cp [старое] [новое]</code> копирует файл.</li>
 <li>
-<code>mkdir [path]</code> creates a new directory.</li>
+<code>mkdir [путь]</code> создаёт новый каталог.</li>
 <li>
-<code>mv [old] [new]</code> moves (renames) a file or
-directory.</li>
+<code>mv [старое] [новое]</code> перемещает (переименовывает) файл
+или каталог.</li>
 <li>
-<code>rm [path]</code> removes (deletes) a file.</li>
+<code>rm [путь]</code> удаляет (удаляет) файл.</li>
 <li>
-<code>*</code> matches zero or more characters in a filename, so
-<code>*.txt</code> matches all files ending in <code>.txt</code>.</li>
-<li>
-<code>?</code> matches any single character in a filename, so
-<code>?.txt</code> matches <code>a.txt</code> but not
-<code>any.txt</code>.</li>
-<li>Use of the Control key may be described in many ways, including
-<code>Ctrl-X</code>, <code>Control-X</code>, and <code>^X</code>.</li>
-<li>The shell does not have a trash bin: once something is deleted, it’s
-really gone.</li>
-<li>Most files’ names are <code>something.extension</code>. The
-extension isn’t required, and doesn’t guarantee anything, but is
-normally used to indicate the type of data in the file.</li>
-<li>Depending on the type of work you do, you may need a more powerful
-text editor than Nano.</li>
+<code>*</code> соответствует <strong>нулю или более</strong>
+символам в имени файла, например <code>*.txt</code> соответствует всем
+файлам, заканчивающимся на <code>.txt</code>.</li>
+<li>ё соответствует любому <strong>одному</strong> символу в имени
+файла, например <code>?.txt</code> соответствует <code>a.txt</code>, но
+не <code>any.txt</code>.</li>
+<li>Использование клавиши Control может быть описано разными способами,
+включая <code>Ctrl-X</code>, <code>Control-X</code> и
+<code>^X</code>.</li>
+<li>В оболочке нет корзины: если что-то удалено, оно действительно
+исчезло навсегда.</li>
+<li>Большинство имён файлов имеют формат <code>что-то.расширение</code>.
+Расширение не обязательно, и оно не гарантирует ничего, но обычно
+используется для указания типа данных в файле.</li>
+<li>В зависимости от типа вашей работы вам может понадобиться более
+мощный текстовый редактор, чем Nano.</li>
 </ul>
 </div>
 </div>
@@ -4052,7 +4078,7 @@ like a list of numbers or a subset of data.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4122,7 +4148,7 @@ like a list of numbers or a subset of data.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>The first code block gives the same output on each iteration through
 the loop. Bash expands the wildcard <code>*.pdb</code> within the loop
@@ -4196,7 +4222,7 @@ The value of the <code>datafile</code> variable is evaluated using
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>4 is the correct answer. <code>*</code> matches zero or more
 characters, so any file name starting with the letter c, followed by
@@ -4239,7 +4265,7 @@ be listed.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>4 is the correct answer. <code>*</code> matches zero or more
 characters, so a file name with zero or more characters before a letter
@@ -4289,7 +4315,7 @@ will be saved to a file called <code>alkanes.pdb</code>.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>The text from each file in turn gets written to the
@@ -4344,7 +4370,7 @@ file called <code>all.pdb</code>.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution6" aria-expanded="false" aria-controls="collapseSolution6">
   <h4 class="accordion-header" id="headingSolution6"> Show me the solution </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
 <div class="accordion-body">
 <p>3 is the correct answer. <code>&gt;&gt;</code> appends to a file,
 rather than overwriting it with the redirected output from a command.
@@ -4750,7 +4776,7 @@ would we want to run?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution7" aria-expanded="false" aria-controls="collapseSolution7">
   <h4 class="accordion-header" id="headingSolution7"> Show me the solution </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
 <div class="accordion-body">
 <p>The second version is the one we want to run. This prints to screen
 everything enclosed in the quote marks, expanding the loop variable name
@@ -4798,7 +4824,7 @@ following code:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution8" aria-expanded="false" aria-controls="collapseSolution8">
   <h4 class="accordion-header" id="headingSolution8"> Show me the solution </h4>
 </button>
-<div id="collapseSolution8" class="accordion-collapse collapse" aria-labelledby="headingSolution8" data-bs-parent="#accordionSolution8">
+<div id="collapseSolution8" class="accordion-collapse collapse" data-bs-parent="#accordionSolution8" aria-labelledby="headingSolution8">
 <div class="accordion-body">
 <p>We have a nested loop, i.e. contained within another loop, so for
 each species in the outer loop, the inner loop (the nested loop)
@@ -5161,7 +5187,7 @@ each of those files separately.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5227,7 +5253,7 @@ this?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>If a command causes something to crash or hang, it might be useful to
 know what that command was, in order to investigate the problem. Were
@@ -5351,7 +5377,7 @@ directory</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>The correct answer is 2.</p>
 <p>The special variables <code>$1</code>, <code>$2</code> and
@@ -5404,7 +5430,7 @@ lines.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb40">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5473,7 +5499,7 @@ three scripts would do when run as <code>bash script1.sh *.pdb</code>,
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Solutions </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <p>In each case, the shell expands the wildcard in <code>*.pdb</code>
 before passing the resulting list of file names as arguments to the
@@ -5541,7 +5567,7 @@ error?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution6" aria-expanded="false" aria-controls="collapseSolution6">
   <h4 class="accordion-header" id="headingSolution6"> Show me the solution </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
 <div class="accordion-body">
 <p>The <code>-x</code> option causes <code>bash</code> to run in debug
 mode. This prints out each command as it is run, which will help you to
@@ -5870,7 +5896,7 @@ Miscellaneous:
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>The correct answer is 3, because the <code>-w</code> option looks
 only for whole-word matches. The other options will also match ‘of’ when
@@ -5968,7 +5994,7 @@ one field in a line.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <pre class="source"><code>grep -w $1 -r $2 | cut -d : -f 2 | cut -d , -f 1,3 &gt; $1.txt</code></pre>
 <p>Actually, you can swap the order of the two cut commands and it still
@@ -6015,7 +6041,7 @@ speed.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Solutions </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <pre class="source"><code>for sis in Jo Meg Beth Amy
 do
@@ -6283,7 +6309,7 @@ you have thought about your answer, you can test the commands in the
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>Option 1 is correct. Putting the match expression in quotes prevents
 the shell expanding it, so it gets passed to the <code>find</code>
@@ -6358,7 +6384,7 @@ Comprehension</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Find all files with a <code>.dat</code> extension recursively from
