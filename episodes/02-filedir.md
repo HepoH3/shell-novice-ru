@@ -1,53 +1,39 @@
 ---
-title: Navigating Files and Directories
+title: Навигация по файлам и каталогам
 teaching: 30
 exercises: 10
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain the similarities and differences between a file and a directory.
-- Translate an absolute path into a relative path and vice versa.
-- Construct absolute and relative paths that identify specific files and directories.
-- Use options and arguments to change the behaviour of a shell command.
-- Demonstrate the use of tab completion and explain its advantages.
+- Объяснить сходства и различия между файлом и каталогом.
+- Преобразовать абсолютный путь в относительный и наоборот.
+- Построить абсолютные и относительные пути, идентифицирующие конкретные файлы и каталоги.
+- Использовать опции и аргументы для изменения поведения команды оболочки.
+- Продемонстрировать использование автодополнения по клавише Tab и объяснить его преимущества.
+
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- How can I move around on my computer?
-- How can I see what files and directories I have?
-- How can I specify the location of a file or directory on my computer?
+- Как я могу перемещаться по компьютеру?
+- Как я могу увидеть, какие файлы и каталоги у меня есть?
+- Как я могу указать расположение файла или каталога на своем компьютере?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: instructor
 
-Introducing and navigating the filesystem in the shell
-(covered in [Navigating Files and Directories](02-filedir.md) section)
-can be confusing. You may have both terminal and GUI file explorer
-open side by side so learners can see the content and file
-structure while they're using terminal to navigate the system.
+Введение в файловую систему и навигация по ней в оболочке (освещено в разделе [Навигация по файлам и каталогам](02-filedir.md)) может быт запутанным. Можно открыть одновременно терминал и графический файловый менеджер, чтобы учащиеся могли видеть содержимое и структуру файлов, используя при этом терминал для навигации по системе.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-The part of the operating system responsible for managing files and directories
-is called the **file system**.
-It organizes our data into files,
-which hold information,
-and directories (also called 'folders'),
-which hold files or other directories.
+Часть операционной системы, отвечающая за управление файлами и каталогами, называется **файловой системой**. Она организует наши данные в файлы, которые хранят информацию, и каталоги (также называемые "папками"), которые хранят файлы или другие каталоги.
 
-Several commands are frequently used to create, inspect, rename, and delete files and directories.
-To start exploring them, we'll go to our open shell window.
+Существует несколько команд, которые часто используются для создания, просмотра, переименования и удаления файлов и каталогов. Чтобы начать их изучение, мы откроем окно оболочки.
 
-First, let's find out where we are by running a command called `pwd`
-(which stands for 'print working directory'). Directories are like *places* — at any time
-while we are using the shell, we are in exactly one place called
-our **current working directory**. Commands mostly read and write files in the
-current working directory, i.e. 'here', so knowing where you are before running
-a command is important. `pwd` shows you where you are:
+Для начала узнаем, где мы находимся, запустив команду `pwd` (которая расшифровывается как "print working directory" — вывести рабочий каталог). Каталоги можно рассматривать как некоторые *места* — в любой момент, когда мы используем оболочку, мы находимся в месте, которое именуется **"текущим рабочим каталогом"**. Команды обычно читают и записывают файлы в текущем рабочем каталоге, то есть "здесь", поэтому важно знать, где вы находитесь перед запуском команды. `pwd` показывает, где мы находимся:
 
 ```bash
 $ pwd
@@ -57,88 +43,52 @@ $ pwd
 /Users/nelle
 ```
 
-Here,
-the computer's response is `/Users/nelle`,
-which is Nelle's **home directory**:
+В этих листингах, ответом компьютера является `/Users/nelle` — **домашний каталог**:
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Home Directory Variation
+## Вариации домашнего каталога
 
-The home directory path will look different on different operating systems.
-On Linux, it may look like `/home/nelle`,
-and on Windows, it will be similar to `C:\Documents and Settings\nelle` or
-`C:\Users\nelle`.
-(Note that it may look slightly different for different versions of Windows.)
-In future examples, we've used Mac output as the default - Linux and Windows
-output may differ slightly but should be generally similar.
+Путь домашнего каталога будет выглядеть по-разному на разных операционных системах. На Linux он может выглядеть как `/home/nelle`, а на Windows будет похож на `C:\Documents and Settings\nelle` или `C:\Users\nelle`. (Обратите внимание, что для разных версий Windows он может немного отличаться.) В будущих примерах мы используем по умолчанию вывод для `MacOS` — вывод на Linux и Windows может немного отличаться, но должен быть в целом схожим.
 
-We will also assume that your `pwd` command returns your user's home directory.
-If `pwd` returns something different, you may need to navigate there using `cd`
-or some commands in this lesson will not work as written.
-See [Exploring Other Directories](#exploring-other-directories) for more details
-on the `cd` command.
-
+Дальнейшее повествование будет исходить, что команда `pwd` вернула домашний каталог вашего пользователя. Если `pwd` возвращает что-то другое, вам, возможно, придется перейти туда с помощью команды `cd`, иначе некоторые команды в этом уроке не будут работать как написано. Подробности о команде `cd` см. в разделе [Исследование других каталогов](#исследование-других-каталогов).
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-To understand what a 'home directory' is,
-let's have a look at how the file system as a whole is organized.  For the
-sake of this example, we'll be
-illustrating the filesystem on our scientist Nelle's computer.  After this
-illustration, you'll be learning commands to explore your own filesystem,
-which will be constructed in a similar way, but not be exactly identical.
+Чтобы понять, что такое "домашний каталог", давайте рассмотрим, как организована файловая система в целом. Для примера мы будем иллюстрировать файловую систему на компьютере нашего ученого Нелли. После этого примера вы изучите команды для изучения вашей собственной файловой системы, которая будет построена аналогично, но не будет точно такой же.
 
-On Nelle's computer, the filesystem looks like this:
+Файловая система на компьютере Нелли  выглядит следующим образом:
 
-![](fig/filesystem.svg){alt='The file system is made up of a root directory that contains sub-directories titled bin, data, users, and tmp'}
+![Файловая система состоит из корневого каталога, который содержит подкаталоги с названиями bin, data, users и tmp](fig/filesystem.svg)
 
-The filesystem looks like an upside down tree. 
-The topmost directory  is the **root directory**
-that holds everything else.
-We refer to it using a slash character, `/`, on its own;
-this character is the leading slash in `/Users/nelle`.
+Файловая система напоминает перевернутое дерево. Верхний каталог — это **корневой каталог**, который содержит всё остальное. Мы обозначаем его с помощью одиночного символа "слэш" (`/`). В строке `/Users/nelle` корень обозначен ведущим (самым левым) слэшем.
 
-Inside that directory are several other directories:
-`bin` (which is where some built-in programs are stored),
-`data` (for miscellaneous data files),
-`Users` (where users' personal directories are located),
-`tmp` (for temporary files that don't need to be stored long-term),
-and so on.
+Внутри этого каталога находятся несколько других каталогов:
 
-We know that our current working directory `/Users/nelle` is stored inside `/Users`
-because `/Users` is the first part of its name.
-Similarly,
-we know that `/Users` is stored inside the root directory `/`
-because its name begins with `/`.
+- `bin`, где хранятся некоторые встроенные программы,
+- `data`, для различных файлов данных,
+- `Users`, где находятся персональные каталоги пользователей,
+- `tmp`, для временных файлов, которые не нужно хранить долго
+
+и т. д.
+
+Мы знаем, что наш текущий рабочий каталог `/Users/nelle` находится внутри `/Users`, потому что `/Users` — это первая часть его имени. Аналогично, мы знаем, что `/Users` находится в корневом каталоге `/`, потому что его имя начинается с /.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Slashes
+## Символы слэш
 
-Notice that there are two meanings for the `/` character.
-When it appears at the front of a file or directory name,
-it refers to the root directory. When it appears *inside* a path,
-it's just a separator.
-
+Обратите внимание, что символ `/` имеет два значения. Когда является самым первым символом в имени файла или каталога, он указывает на корневой каталог. Когда он появляется внутри пути, это просто разделитель.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-Underneath `/Users`,
-we find one directory for each user with an account on Nelle's machine,
-her colleagues *imhotep* and *larry*.
+В каталоге `/Users`, мы видим отдельные каталоги для каждого пользователя, зарегистрированного на компьютере Нелли: ее коллег _imhotep_ и _larry_.
 
-![](fig/home-directories.svg){alt='Like other directories, home directories are sub-directories underneath "/Users" like "/Users/imhotep", "/Users/larry" or"/Users/nelle"'}
+![Подкаталог "/Users" включает домашние директории таких пользователей, как "/Users/imhotep", "/Users/larry" и "/Users/nelle](fig/home-directories.svg)
 
-The user *imhotep*'s files are stored in `/Users/imhotep`,
-user *larry*'s in `/Users/larry`,
-and Nelle's in `/Users/nelle`. Nelle is the user in our
-examples here; therefore, we get `/Users/nelle` as our home directory.
-Typically, when you open a new command prompt, you will be in
-your home directory to start.
+Файлы пользователя _imhotep_ хранятся в `/Users/imhotep`, файлы пользователя _larry_ — в `/Users/larry`, а файлы Нелли — в `/Users/nelle`. В наших примерах мы работаем с пользователем Нелли, поэтому мы видим `/Users/nelle` как домашний каталог. Обычно при открытии нового командного окна вы начинаете в своем домашнем каталоге.
 
-Now let's learn the command that will let us see the contents of our
-own filesystem.  We can see what's in our home directory by running `ls`:
+Теперь давайте изучим команду, которая позволит нам увидеть содержимое нашей файловой системы. Мы можем увидеть, что находится в нашем домашнем каталоге, выполнив команду `ls`:
 
 ```bash
 $ ls
@@ -149,21 +99,16 @@ Applications Documents    Library      Music        Public
 Desktop      Downloads    Movies       Pictures
 ```
 
-(Again, your results may be slightly different depending on your operating
-system and how you have customized your filesystem.)
+> [!Note]  
+> Ваши результаты могут немного отличаться в зависимости от вашей операционной системы и настройки файловой системы.
 
-`ls` prints the names of the files and directories in the current directory.
-We can make its output more comprehensible by using the `-F` **option**
-which tells `ls` to classify the output
-by adding a marker to file and directory names to indicate what they are:
+Команда `ls` выводит названия файлов и каталогов в текущем каталоге. Мы можем сделать вывод более понятным, используя опцию `-F`, которая указывает `ls` классифицировать вывод, добавляя маркеры в конец имён файлов и каталогов для указания их типа:
 
-- a trailing `/` indicates that this is a directory
-- `@` indicates a link
-- `*` indicates an executable
+- `/` указывает, что это каталог;
+- `@` указывает на ссылку;
+- `*` указывает на исполняемый файл.
 
-Depending on your shell's default settings,
-the shell might also use colors to indicate whether each entry is a file or
-directory.
+В зависимости от настроек вашей оболочки, оболочка также может использовать цвета для указания, является ли элемент файлом или каталогом.
 
 ```bash
 $ ls -F
@@ -174,60 +119,45 @@ Applications/ Documents/    Library/      Music/        Public/
 Desktop/      Downloads/    Movies/       Pictures/
 ```
 
-Here,
-we can see that the home directory contains only **sub-directories**.
-Any names in the output that don't have a classification symbol
-are **files** in the current working directory.
+Вывод показывает, что домашний каталог содержит только **подкаталоги**. Любые имена в выводе без классификационного символа — это **файлы** в текущем рабочем каталоге.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Clearing your terminal
+## Очистка терминала
 
-If your screen gets too cluttered, you can clear your terminal using the
-`clear` command. You can still access previous commands using <kbd>↑</kbd>
-and <kbd>↓</kbd> to move line-by-line, or by scrolling in your terminal.
-
+Если экран становится слишком загроможденным, вы можете очистить терминал с помощью команды `clear`. Вы по-прежнему сможете получить доступ к предыдущим командам, используя <kbd>↑</kbd> и <kbd>↓</kbd> для перемещения по строкам, или прокручивая окно терминала.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Getting help
+### Получение справки
 
-`ls` has lots of other **options**. There are two common ways to find out how
-to use a command and what options it accepts ---
-**depending on your environment, you might find that only one of these ways works:**
+У команды `ls` есть множество других опций. Существует два распространенных способа узнать, как пользоваться командой и какие опции она поддерживает — **в зависимости от вашей среды, может работать только один из этих способов:**
 
-1. We can pass a `--help` option to any command (available on Linux and Git Bash), for example:
-  
+1. Мы можем передать опцию `--help` любой команде (доступно на Linux и Git Bash), например:
+
   ```bash
   $ ls --help
   ```
 
-2. We can read its manual with `man` (available on Linux and macOS):
-  
+2. Мы можем прочитать руководство с помощью команды `man` (доступно на Linux и macOS):
+
   ```bash
   $ man ls
   ```
 
-We'll describe both ways next.
+Далее будет разобрано оба способа.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Help for built-in commands
+## Справка для встроенных команд
 
-Some commands are built in to the Bash shell, rather than existing as separate
-programs on the filesystem. One example is the `cd` (change directory) command.
-If you get a message like `No manual entry for cd`, try `help cd` instead. The
-`help` command is how you get usage information for
-[Bash built-ins](https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html).
-
+Некоторые команды встроены в оболочку Bash, а не существуют как отдельные программы на файловой системе. Примером является команда `cd` (смена каталога). Если вы получите сообщение вроде `No manual entry for cd`, то попробуйте `help cd`. Команда `help` предоставляет информацию по использованию [встроенных команд Bash](https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html).
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-#### The `--help` option
+#### Опция --help
 
-Most bash commands and programs that people have written to be
-run from within bash, support a `--help` option that displays more
-information on how to use the command or program.
+Большинство команд Bash и программ, которые были написаны для запуска из Bash, поддерживают опцию `--help`, которая выводит больше информации о том, как использовать команду или программу.
 
 ```bash
 $ ls --help
@@ -263,22 +193,22 @@ Mandatory arguments to long options are mandatory for short options, too.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-### When to use short or long options
-When options exist as both short and long options:
+### Когда использовать "короткие" и "длинные" опции
 
-- Use the short option when typing commands directly into the
-   shell to minimize keystrokes and get your task done faster.
-- Use the long option in scripts to provide clarity.
-  It will be read many times and typed once.
-  
+Справка для команды `ls` показывает, что та имеет два формата опций: "короткие" и "длинные". К примеру, для отображения файлов и папкой, начинающихся с символа `.`, которые не отображаются по умолчанию командой `ls`, можно воспользоваться как короткой опцией `-a`, так и длинной опцией `--all`
+
+Когда команда поддерживает оба вида опций:
+
+- Используйте короткие опции при вводе команд непосредственно в оболочке, чтобы сократить количество нажатий клавиш и быстрее выполнить задачу.
+- Используйте длинные опции в скриптах для ясности. Скрипт будет прочитан много раз, а написан — один раз.
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Unsupported command-line options
+## Не поддерживаемые опции командной строки
 
-If you try to use an option that is not supported, `ls` and other commands
-will usually print an error message similar to:
+Если вы попробуете использовать опцию, которая не поддерживается, команда `ls` и другие команды обычно выведут сообщение об ошибке наподобие:
 
 ```bash
 $ ls -j
@@ -291,67 +221,47 @@ Try 'ls --help' for more information.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-#### The `man` command
+#### Команда `man`
 
-The other way to learn about `ls` is to type
+Другой способ узнать о команде `ls` — ввести:
 
 ```bash
 $ man ls
 ```
 
-This command will turn your terminal into a page with a description
-of the `ls` command and its options.
+Эта команда превратит ваш терминал в страницу с описанием команды `ls` и ее опций.
 
-To navigate through the `man` pages,
-you may use <kbd>↑</kbd> and <kbd>↓</kbd> to move line-by-line,
-or try <kbd>b</kbd> and <kbd>Spacebar</kbd> to skip up and down by a full page.
-To search for a character or word in the `man` pages,
-use <kbd>/</kbd> followed by the character or word you are searching for.
-Sometimes a search will result in multiple hits.
-If so, you can move between hits using <kbd>N</kbd> (for moving forward) and
-<kbd>Shift</kbd>\+<kbd>N</kbd> (for moving backward).
+Чтобы перемещаться по страницам руководства man, вы можете использовать <kbd>↑</kbd> и <kbd>↓</kbd> для покадрового перемещения, или попробовать <kbd>b</kbd> и <kbd>Spacebar</kbd> для прокрутки страницы целиком вверх и вниз. Чтобы искать символ или слово в руководстве man, используйте <kbd>/</kbd>, за которым введите искомый символ или слово. Если поиск найдет несколько совпадений, вы можете перемещаться между ними с помощью <kbd>N</kbd> (для перемещения вперед) и <kbd>Shift</kbd> + <kbd>N</kbd> (для перемещения назад).
 
-To **quit** the `man` pages, press <kbd>q</kbd>.
+Чтобы выйти из руководства `man`, нажмите <kbd>q</kbd>.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Manual pages on the web
+## Страницы руководства в интернете
 
-Of course, there is a third way to access help for commands:
-searching the internet via your web browser.
-When using internet search, including the phrase `unix man page` in your search
-query will help to find relevant results.
+Конечно, есть третий способ получить справку по командам: поиск в интернете через браузер. При поиске в интернете включение фразы `unix man page` в поисковый запрос поможет найти соответствующие результаты.
 
-GNU provides links to its
-[manuals](https://www.gnu.org/manual/manual.html) including the
-[core GNU utilities](https://www.gnu.org/software/coreutils/manual/coreutils.html),
-which covers many commands introduced within this lesson.
+GNU предоставляет ссылки на свои [руководства](https://www.gnu.org/manual/manual.html), включая [основные утилиты GNU](https://www.gnu.org/software/coreutils/manual/coreutils.html), которые охватывают многие команды, представленные в этом уроке.
 
+### Использование проекта `tl;dr`
+
+Часто, очень подробные справки и мануалы могут отпугнуть впервые столкнувшемуся с ними пользователя. Проект [`tl;dr`](https://tldr.sh/) (анг.: "Too long; don't read", что на сленге означает: "многа букаф, ниасилил") позволяет вывести краткое резюме по указанной команде с примерами частых сценариев использования. Данный проект может быть установлен в систему в качестве отдельной программы, наряду с программой `man`, либо же использован [онлайн](https://tldr.inbrowser.app/).
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Exploring More `ls` Options
+## Изучение дополнительных опций `ls`
 
-You can also use two options at the same time. What does the command `ls` do when used
-with the `-l` option? What about if you use both the `-l` and the `-h` option?
+Вы также можете использовать две опции одновременно. Что делает команда `ls` с опцией `-l`? А что, если использовать опции `-l` и `-h` вместе?
 
-Some of its output is about properties that we do not cover in this lesson (such
-as file permissions and ownership), but the rest should be useful
-nevertheless.
+Некоторая информация в выводе будет касаться свойств, которые мы не рассматриваем в этом уроке (таких как права доступа к файлам и их владение), остальная информация будет полезной.
 
 :::::::::::::::  solution
 
-## Solution
+## Решение
 
-The `-l` option makes `ls` use a **l**ong listing format, showing not only
-the file/directory names but also additional information, such as the file size
-and the time of its last modification. If you use both the `-h` option and the `-l` option,
-this makes the file size '**h**uman readable', i.e. displaying something like `5.3K`
-instead of `5369`.
-
-
+Опция `-l` заставляет команду `ls` использовать формат длинного (**l**ong) списка, показывая не только имена файлов/каталогов, но и дополнительную информацию, такую как размер файла и время его последнего изменения. Если вы используете обе опции `-l` и `-h`, это делает размер файла человекочитаемым (**h**uman readable), то есть отображает что-то вроде `5.3K` вместо `5369`.
 
 :::::::::::::::::::::::::
 
@@ -359,39 +269,23 @@ instead of `5369`.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Listing in Reverse Chronological Order
+## Список в обратном хронологическом порядке
 
-By default, `ls` lists the contents of a directory in alphabetical
-order by name. The command `ls -t` lists items by time of last
-change instead of alphabetically. The command `ls -r` lists the
-contents of a directory in reverse order.
-Which file is displayed last when you combine the `-t` and `-r` options?
-Hint: You may need to use the `-l` option to see the
-last changed dates.
+По умолчанию `ls` выводит содержимое каталога в алфавитном порядке по имени. Команда `ls -t` сортирует элементы по времени последнего изменения, вместо алфавитного порядка. Команда `ls -r` выводит содержимое каталога в обратном порядке. Какой файл отображается последним, если использовать обе опции `-t` и `-r` вместе? Подсказка: вам может понадобиться использовать опцию `-l`, чтобы увидеть даты последних изменений.
 
 :::::::::::::::  solution
 
-## Solution
+## Решение
 
-The most recently changed file is listed last when using `-rt`. This
-can be very useful for finding your most recent edits or checking to
-see if a new output file was written.
-
-
+При использовании опций `-rt`, самый недавний измененный файл будет отображен последним . Это может быть очень полезно для поиска ваших последних правок или проверки, был ли создан новый файл.
 
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Exploring Other Directories
+### Изучение других каталогов
 
-Not only can we use `ls` on the current working directory,
-but we can use it to list the contents of a different directory.
-Let's take a look at our `Desktop` directory by running `ls -F Desktop`,
-i.e.,
-the command `ls` with the `-F` **option** and the [**argument**][Arguments]  `Desktop`.
-The argument `Desktop` tells `ls` that
-we want a listing of something other than our current working directory:
+Мы можем использовать команду `ls` не только для текущего рабочего каталога, но и для просмотра содержимого другого каталога. Давайте посмотрим на наш каталог `Desktop`, выполнив команду `ls -F Desktop`, то есть команду `ls` с опцией `-F` и [**аргументом**][Аргументы] `Desktop`. Аргумент `Desktop` указывает `ls`, что мы хотим просмотреть содержимое не текущего рабочего каталога (а вложенного каталога `Desktop`):
 
 ```bash
 $ ls -F Desktop
@@ -401,26 +295,15 @@ $ ls -F Desktop
 shell-lesson-data/
 ```
 
-Note that if a directory named `Desktop` does not exist in your current working directory,
-this command will return an error. Typically, a `Desktop` directory exists in your
-home directory, which we assume is the current working directory of your bash shell.
+Обратите внимание, что если каталог с именем `Desktop` не существует в вашем текущем рабочем каталоге, эта команда вернёт ошибку. Обычно каталог `Desktop` существует в домашнем каталоге, который, как предполагает данный текст, является текущим рабочим каталогом вашей bash-оболочки.
 
-Your output should be a list of all the files and sub-directories in your
-Desktop directory, including the `shell-lesson-data` directory you downloaded at
-the [setup for this lesson](../learners/setup.md). (On most systems, the
-contents of the `Desktop` directory in the shell will show up as icons in a graphical
-user interface behind all the open windows. See if this is the case for you.)
+Вывод должен содержать список всех файлов и подкаталогов в вашем каталоге `Desktop`, включая каталог `shell-lesson-data`, который вы скачали на этапе [настройки для этого урока](../learners/setup.md). На большинстве систем содержимое каталога Desktop в оболочке будет отображаться как значки в графическом интерфейсе за всеми открытыми окнами. Проверьте, так ли это у вас.
 
-Organizing things hierarchically helps us keep track of our work. While it's
-possible to put hundreds of files in our home directory just as it's possible to
-pile hundreds of printed papers on our desk, it's much easier to find things when
-they've been organized into sensibly-named subdirectories.
+Организация данных по иерархии помогает нам следить за своим рабочим процессом. Хотя можно поместить сотни файлов в домашний каталог, так же как можно сложить сотни напечатанных бумаг на столе, намного проще находить нужное, когда они организованы в подкаталоги с осмысленными именами.
 
-Now that we know the `shell-lesson-data` directory is located in our Desktop directory, we
-can do two things.
+Теперь, когда мы знаем, что каталог `shell-lesson-data` находится в каталоге `Desktop`, мы можем сделать две вещи.
 
-First, using the same strategy as before, we can look at its contents by passing
-a directory name to `ls`:
+Во-первых, используя ту же стратегию, что и ранее, мы можем посмотреть его содержимое, передав имя каталога команде `ls`:
 
 ```bash
 $ ls -F Desktop/shell-lesson-data
@@ -430,22 +313,11 @@ $ ls -F Desktop/shell-lesson-data
 exercise-data/  north-pacific-gyre/
 ```
 
-Second, we can actually change our location to a different directory, so
-we are no longer located in
-our home directory.
+Во-вторых, мы можем сменить наше местоположение на другой каталог, чтобы больше не находиться в домашнем каталоге.
 
-The command to change locations is `cd` followed by a
-directory name to change our working directory.
-`cd` stands for 'change directory',
-which is a bit misleading.
-The command doesn't change the directory;
-it changes the shell's current working directory.
-In other words it changes the shell's settings for what directory we are in.
-The `cd` command is akin to double-clicking a folder in a graphical interface
-to get into that folder.
+Команда для смены местоположения — это `cd`, за которой следует имя каталога для смены рабочего каталога. `cd` расшифровывается как '**c**hange **d**irectory' (сменить каталог), что немного вводит в заблуждение. Команда не меняет каталог; она изменяет текущий рабочий каталог оболочки. Другими словами, она говорит оболочке в каком каталоге мы находимся. Команда `cd` похожа на двойной щелчок по папке в графическом интерфейсе, чтобы попасть в эту папку.
 
-Let's say we want to move into the `exercise-data` directory we saw above. We can
-use the following series of commands to get there:
+Допустим, мы хотим перейти в каталог `exercise-data`, который мы видели выше. Мы можем выполнить следующие команды:
 
 ```bash
 $ cd Desktop
@@ -453,16 +325,9 @@ $ cd shell-lesson-data
 $ cd exercise-data
 ```
 
-These commands will move us from our home directory into our Desktop directory, then into
-the `shell-lesson-data` directory, then into the `exercise-data` directory.
-You will notice that `cd` doesn't print anything. This is normal.
-Many shell commands will not output anything to the screen when successfully executed.
-But if we run `pwd` after it, we can see that we are now
-in `/Users/nelle/Desktop/shell-lesson-data/exercise-data`.
+Эти команды переместят нас из домашнего каталога в каталог `Desktop`, затем в `shell-lesson-data`, а после в каталог `exercise-data`. Вы можете заметить, что `cd` ничего не выводит на экран. Это нормально. Многие команды оболочки при успешном выполнении ничего не выводят на экран. Но если мы выполним `pwd` после данных команд, мы увидим, что сейчас находимся в каталоге `/Users/nelle/Desktop/shell-lesson-data/exercise-data`.
 
-If we run `ls -F` without arguments now,
-it lists the contents of `/Users/nelle/Desktop/shell-lesson-data/exercise-data`,
-because that's where we now are:
+Если мы теперь выполним `ls -F` без аргументов, то увидим содержимое каталога `/Users/nelle/Desktop/shell-lesson-data/exercise-data`, потому что именно там мы сейчас находимся:
 
 ```bash
 $ pwd
@@ -480,9 +345,7 @@ $ ls -F
 alkanes/  animal-counts/  creatures/  numbers.txt  writing/
 ```
 
-We now know how to go down the directory tree (i.e. how to go into a subdirectory),
-but how do we go up (i.e. how do we leave a directory and go into its parent directory)?
-We might try the following:
+Теперь мы знаем, как спуститься по дереву каталогов (то есть как войти в подкаталог), но как подняться вверх (то есть как выйти из каталога и войти в его родительский каталог)? Мы могли бы попробовать следующее:
 
 ```bash
 $ cd shell-lesson-data
@@ -492,25 +355,17 @@ $ cd shell-lesson-data
 -bash: cd: shell-lesson-data: No such file or directory
 ```
 
-But we get an error! Why is this?
+Но мы получаем ошибку! Почему так?
 
-With our methods so far,
-`cd` can only see sub-directories inside your current directory. There are
-different ways to see directories above your current location; we'll start
-with the simplest.
+С нашими текущими методами работы, команда `cd` видит только подкаталоги внутри вашего текущего каталога. Есть разные способы увидеть каталоги выше текущего местоположения, начнём с самого простого.
 
-There is a shortcut in the shell to move up one directory level. It works as follows:
+Существует сокращение в оболочке для перемещения на один уровень выше по каталогу. Это делается следующим образом:
 
 ```bash
 $ cd ..
 ```
 
-`..` is a special directory name meaning
-"the directory containing this one",
-or more succinctly,
-the **parent** of the current directory.
-Sure enough,
-if we run `pwd` after running `cd ..`, we're back in `/Users/nelle/Desktop/shell-lesson-data`:
+`..` — это специальное имя каталога, означающее "каталог, содержащий этот", или, короче, **родительский каталог**. И действительно, если мы выполним `pwd` после выполнения `cd ..`, мы увидим, что снова оказались в `/Users/nelle/Desktop/shell-lesson-data`:
 
 ```bash
 $ pwd
@@ -520,8 +375,7 @@ $ pwd
 /Users/nelle/Desktop/shell-lesson-data
 ```
 
-The special directory `..` doesn't usually show up when we run `ls`. If we want
-to display it, we can add the `-a` option to `ls -F`:
+Специальный каталог `..` обычно не отображается, когда мы выполняем `ls`. Если мы хотим его увидеть, мы можем добавить опцию `-a` к `ls -F`:
 
 ```bash
 $ ls -F -a
@@ -531,44 +385,25 @@ $ ls -F -a
 ./  ../  exercise-data/  north-pacific-gyre/
 ```
 
-`-a` stands for 'show all' (including hidden files);
-it forces `ls` to show us file and directory names that begin with `.`,
-such as `..` (which, if we're in `/Users/nelle`, refers to the `/Users` directory).
-As you can see,
-it also displays another special directory that's just called `.`,
-which means 'the current working directory'.
-It may seem redundant to have a name for it,
-but we'll see some uses for it soon.
+`-a` означает 'показать все' (show **a**ll), включая скрытые файлы. Эта опция сообщает команде `ls` показывать нам имена файлов и каталогов, которые начинаются с `.`, которым является и `..`. Как вы можете видеть, такой вывод также отображает другой специальный каталог — `.`, который обозначает 'текущий рабочий каталог'. Это может показаться излишним, но вскоре мы увидим, как это можно использовать.
 
-Note that in most command line tools, multiple options can be combined
-with a single `-` and no spaces between the options; `ls -F -a` is
-equivalent to `ls -Fa`.
+Обратите внимание, что в большинстве утилит командной строки можно объединять несколько коротких опций, используя один символ `-` без пробелов между опциями: `ls -F -a` эквивалентно `ls -Fa`.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Other Hidden Files
+## Другие скрытые файлы
 
-In addition to the hidden directories `..` and `.`, you may also see a file
-called `.bash_profile`. This file usually contains shell configuration
-settings. You may also see other files and directories beginning
-with `.`. These are usually files and directories that are used to configure
-different programs on your computer. The prefix `.` is used to prevent these
-configuration files from cluttering the terminal when a standard `ls` command
-is used.
-
+Помимо скрытых каталогов `..` и `.`, вы также можете увидеть файл под названием `.bash_profile`. Этот файл обычно содержит настройки конфигурации оболочки. Вы также можете увидеть другие файлы и каталоги, начинающиеся с `.`. Эти файлы и каталоги обычно используются для настройки различных программ на вашем компьютере. Префикс `.` используется, чтобы предотвратить загромождение терминала этими конфигурационными файлами при выполнении стандартной команды ls.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-These three commands are the basic commands for navigating the filesystem on your computer:
-`pwd`, `ls`, and `cd`. Let's explore some variations on those commands. What happens
-if you type `cd` on its own, without giving
-a directory?
+Эти три команды — основные команды для навигации по файловой системе на вашем компьютере: `pwd`, `ls` и `cd`. Давайте изучим некоторые вариации этих команд. Что произойдет, если вы введете `cd` без указания каталога?
 
 ```bash
 $ cd
 ```
 
-How can you check what happened? `pwd` gives us the answer!
+Как можно проверить, что произошло? Команда pwd даст нам ответ!
 
 ```bash
 $ pwd
@@ -578,38 +413,23 @@ $ pwd
 /Users/nelle
 ```
 
-It turns out that `cd` without an argument will return you to your home directory,
-which is great if you've got lost in your own filesystem.
+Оказывается, что команда `cd` без аргументов вернёт вас в домашний каталог, что очень полезно, если вы потерялись в своей файловой системе.
 
-Let's try returning to the `exercise-data` directory from before. Last time, we used
-three commands, but we can actually string together the list of directories
-to move to `exercise-data` in one step:
+Попробуем вернуться в каталог `exercise-data`. В прошлый раз мы использовали три команды, но на самом деле можно указать последовательность каталогов для перехода в `exercise-data` за один шаг:
 
 ```bash
 $ cd Desktop/shell-lesson-data/exercise-data
 ```
 
-Check that we've moved to the right place by running `pwd` and `ls -F`.
+Проверьте, что мы перешли в нужное место, выполнив команды `pwd` и `ls -F`.
 
-If we want to move up one level from the data directory, we could use `cd ..`.  But
-there is another way to move to any directory, regardless of your
-current location.
+Если мы хотим подняться на один уровень выше от каталога данных, мы могли бы использовать `cd ..`. Но есть и другой способ перейти в любой каталог, независимо от вашего текущего местоположения.
 
-So far, when specifying directory names, or even a directory path (as above),
-we have been using **relative paths**.  When you use a relative path with a command
-like `ls` or `cd`, it tries to find that location from where we are,
-rather than from the root of the file system.
+До сих пор при указании имен каталогов или даже пути к каталогу (как в примере выше) мы использовали **относительные пути**. Когда вы используете относительный путь с командой, такой как `ls` или `cd`, она пытается найти это местоположение относительно вашего текущего каталога, а не корня файловой системы.
 
-However, it is possible to specify the **absolute path** to a directory by
-including its entire path from the root directory, which is indicated by a
-leading slash. The leading `/` tells the computer to follow the path from
-the root of the file system, so it always refers to exactly one directory,
-no matter where we are when we run the command.
+Однако можно указать **абсолютный путь** к каталогу, указав весь путь от корневого каталога. Начало такого пути обозначается слэшем. `/` в качестве первого символа пути сообщает компьютеру следовать по пути от корня файловой системы, поэтому он всегда указывает на один и тот же каталог, независимо от того, где мы находимся при выполнении команды.
 
-This allows us to move to our `shell-lesson-data` directory from anywhere on
-the filesystem (including from inside `exercise-data`). To find the absolute path
-we're looking for, we can use `pwd` and then extract the piece we need
-to move to `shell-lesson-data`.
+Это позволяет нам перейти в каталог `shell-lesson-data` из любого места файловой системы (включая каталог `exercise-data`). Для помощи в написании абсолютного пути, мы можем использовать команду `pwd`, которая возвращает абсолютный путь до текущего рабочего каталога.
 
 ```bash
 $ pwd
@@ -623,61 +443,48 @@ $ pwd
 $ cd /Users/nelle/Desktop/shell-lesson-data
 ```
 
-Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
+Выполните команды `pwd` и `ls -F`, чтобы убедиться, что мы находимся в том каталоге, в котором ожидаем.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Two More Shortcuts
+## Ещё два полезных сокращения
 
-The shell interprets a tilde (`~`) character at the start of a path to
-mean "the current user's home directory". For example, if Nelle's home
-directory is `/Users/nelle`, then `~/data` is equivalent to
-`/Users/nelle/data`. This only works if it is the first character in the
-path; `here/there/~/elsewhere` is *not* `here/there/Users/nelle/elsewhere`.
+Оболочка интерпретирует символ тильды (`~`) в начале пути как "домашний каталог текущего пользователя". Например, если домашний каталог Нелли — это `/Users/nelle`, то `~/data` эквивалентно `/Users/nelle/data`. Это работает только если тильда стоит в начале пути: `here/there/~/elsewhere` *не* будет интерпретировано как `here/there/Users/nelle/elsewhere`.
 
-Another shortcut is the `-` (dash) character. `cd` will translate `-` into
-*the previous directory I was in*, which is faster than having to remember,
-then type, the full path.  This is a *very* efficient way of moving
-*back and forth between two directories* -- i.e. if you execute `cd -` twice,
-you end up back in the starting directory.
+Еще одной полезной командой является символ тире (`-`). `cd` интерпретирует `-` как *предыдущий каталог, в котором я был*, что удобнее, чем запоминать и вводить полный путь. Это *очень* эффективный способ перемещаться *между двумя каталогами* — если выполнить `cd -` дважды, вы вернетесь в исходный каталог.
 
-The difference between `cd ..` and `cd -` is
-that the former brings you *up*, while the latter brings you *back*.
+Разница между `cd ..` и `cd -` заключается в том, что первая команда перемещает вас *вверх* (в родительский каталог), а вторая — *назад* (в тот каталог, где вы были до крайнего вызова `cd`).
 
 ***
 
-Try it!
-First navigate to `~/Desktop/shell-lesson-data` (you should already be there).
+Попробуйте сами!
+Сначала перейдите в каталог `~/Desktop/shell-lesson-data` (вы, вероятно, уже там).
 
 ```bash
 $ cd ~/Desktop/shell-lesson-data
 ```
 
-Then `cd` into the `exercise-data/creatures` directory
+Затем перейдите в каталог `exercise-data/creatures`
 
 ```bash
 $ cd exercise-data/creatures
 ```
 
-Now if you run
+Теперь, если вы выполните команду:
 
 ```bash
 $ cd -
 ```
 
-you'll see you're back in `~/Desktop/shell-lesson-data`.
-Run `cd -` again and you're back in `~/Desktop/shell-lesson-data/exercise-data/creatures`
-
+вы вернётесь в каталог `~/Desktop/shell-lesson-data`. Выполните `cd -` снова, и вы вернётесь в `~/Desktop/shell-lesson-data/exercise-data/creatures`.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Absolute vs Relative Paths
+## Абсолютные и относительные пути
 
-Starting from `/Users/nelle/data`,
-which of the following commands could Nelle use to navigate to her home directory,
-which is `/Users/nelle`?
+Начиная с каталога `/Users/nelle/data`, какую из следующих команд могла бы использовать Нелли, чтобы перейти в свой домашний каталог, который находится по адресу `/Users/nelle`?
 
 1. `cd .`
 2. `cd /`
@@ -693,18 +500,16 @@ which is `/Users/nelle`?
 
 ## Solution
 
-1. No: `.` stands for the current directory.
-2. No: `/` stands for the root directory.
-3. No: Nelle's home directory is `/Users/nelle`.
-4. No: this command goes up two levels, i.e. ends in `/Users`.
-5. Yes: `~` stands for the user's home directory, in this case `/Users/nelle`.
-6. No: this command would navigate into a directory `home` in the current directory
+1. Нет: `.` обозначает текущий каталог.
+2. Нет: `/` обозначает корневой каталог.
+3. Нет: домашний каталог Нелли — это `/Users/nelle`.
+4. Нет: эта команда поднимет на два уровня вверх, то есть окажемся в `/Users`.
+5. Да: `~` обозначает домашний каталог пользователя, в данном случае `/Users/nelle`.
+6. Нет: эта команда попытается перейти в каталог `home` в текущем каталоге, если он существует.
   if it exists.
-7. Yes: unnecessarily complicated, but correct.
-8. Yes: shortcut to go back to the user's home directory.
-9. Yes: goes up one level.
-  
-  
+7. Да: хоть это и избыточно сложный, но правильный путь.
+8. Да: это сокращение для перехода в домашний каталог пользователя.
+9. Да: переход на уровень вверх из каталога `/Users/nelle/data` перенесёт вас в домашний каталог Нелли.
 
 :::::::::::::::::::::::::
 
@@ -712,29 +517,25 @@ which is `/Users/nelle`?
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Relative Path Resolution
+## Разрешение относительных путей
 
-Using the filesystem diagram below, if `pwd` displays `/Users/thing`,
-what will `ls -F ../backup` display?
+Используя диаграмму файловой системы ниже, ответьте: если команда `pwd` выводит /`Users/thing`, что покажет `ls -F ../backup`?
 
 1. `../backup: No such file or directory`
 2. `2012-12-01 2013-01-08 2013-01-27`
 3. `2012-12-01/ 2013-01-08/ 2013-01-27/`
 4. `original/ pnas_final/ pnas_sub/`
 
-![](fig/filesystem-challenge.svg){alt='A directory tree below the Users directory where "/Users" contains the directories "backup" and "thing"; "/Users/backup" contains "original","pnas\_final" and "pnas\_sub"; "/Users/thing" contains "backup"; and"/Users/thing/backup" contains "2012-12-01", "2013-01-08" and"2013-01-27"'}
+![Дерево каталогов ниже директории Users, где "/Users" содержит каталоги "backup" и "thing"; "/Users/backup" содержит "original", "pnas_final" и "pnas_sub"; "/Users/thing" содержит "backup"; а "/Users/thing/backup" содержит "2012-12-01", "2013-01-08" и "2013-01-27"](fig/filesystem-challenge.svg)
 
 :::::::::::::::  solution
 
-## Solution
+## Решение
 
-1. No: there *is* a directory `backup` in `/Users`.
-2. No: this is the content of `Users/thing/backup`,
-  but with `..`, we asked for one level further up.
-3. No: see previous explanation.
-4. Yes: `../backup/` refers to `/Users/backup/`.
-  
-  
+1. Нет: каталог `backup` существует в `/Users`.
+2. Нет: это содержимое каталога `Users/thing/backup`, но с `..` мы запрашиваем уровень выше.
+3. Нет: см. п.2.
+4. Да: `../backup/` ссылается на `/Users/backup/`.
 
 :::::::::::::::::::::::::
 
@@ -742,18 +543,15 @@ what will `ls -F ../backup` display?
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## `ls` Reading Comprehension
+## Понимание вывода команды `ls`
 
-Using the filesystem diagram below,
-if `pwd` displays `/Users/backup`,
-and `-r` tells `ls` to display things in reverse order,
-what command(s) will result in the following output:
+Используя диаграмму файловой системы ниже, ответьте: если команда `pwd` выводит `/Users/backup`, и опция `-r` заставляет `ls` отображать содержимое в обратном порядке, какая команда приведёт к следующему выводу:
 
 ```output
 pnas_sub/ pnas_final/ original/
 ```
 
-![](fig/filesystem-challenge.svg){alt='A directory tree below the Users directory where "/Users" contains the directories "backup" and "thing"; "/Users/backup" contains "original","pnas\_final" and "pnas\_sub"; "/Users/thing" contains "backup"; and"/Users/thing/backup" contains "2012-12-01", "2013-01-08" and"2013-01-27"'}
+![Дерево каталогов ниже директории Users, где "/Users" содержит каталоги "backup" и "thing"; "/Users/backup" содержит "original", "pnas_final" и "pnas_sub"; "/Users/thing" содержит "backup"; а "/Users/thing/backup" содержит "2012-12-01", "2013-01-08" и "2013-01-27"](fig/filesystem-challenge.svg)
 
 1. `ls pwd`
 2. `ls -r -F`
@@ -761,53 +559,33 @@ pnas_sub/ pnas_final/ original/
 
 :::::::::::::::  solution
 
-## Solution
+## Решение
 
-1. No: `pwd` is not the name of a directory.
-2. Yes: `ls` without directory argument lists files and directories
-  in the current directory.
-3. Yes: uses the absolute path explicitly.
-  
-  
+1. Нет: `pwd` — это не имя каталога.
+2. Да: ls без каталога, переданного в качестве аргумента выводит файлы и подкаталоги в текущем каталоге.
+3. Да: команда использует абсолютный путь.
 
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## General Syntax of a Shell Command
+## Общий синтаксис команд оболочки
 
-We have now encountered commands, options, and arguments,
-but it is perhaps useful to formalise some terminology.
+Мы уже познакомились с командами, опциями и аргументами, но полезно формализовать некоторые термины.
 
-Consider the command below as a general example of a command,
-which we will dissect into its component parts:
+Рассмотрим следующую команду в качестве общего примера, который мы разберем на составные части:
 
 ```bash
 $ ls -F /
 ```
 
-![](fig/shell_command_syntax.svg){alt='General syntax of a shell command'}
+![Общий синтаксис команды оболочки](fig/shell_command_syntax.svg)
 
-`ls` is the **command**, with an **option** `-F` and an
-**argument** `/`.
-We've already encountered options  which
-either start with a single dash (`-`), known as **short options**,
-or two dashes (`--`), known as **long options**.
-[Options] change the behavior of a command and
-[Arguments] tell the command what to operate on (e.g. files and directories).
-Sometimes options and arguments are referred to as **parameters**.
-A command can be called with more than one option and more than one argument, but a
-command doesn't always require an argument or an option.
+`ls` — это **команда** с **опцией** `-F` и **аргументом** `/`. Мы уже видели, что опции могут начинаться с одного дефиса (`-`), такие опции называются **короткими**, или с двух дефисов (`--`), такие опции называются **длинными**. [Опции] изменяют поведение команды, а [аргументы] указывают, над чем команда должна работать (например, файлы и каталоги). Иногда опции и аргументы называют параметрами. Команда может быть вызвана с несколькими опциями и аргументами, но они не всегда являются обязательными.
 
-You might sometimes see options being referred to as **switches** or **flags**,
-especially for options that take no argument. In this lesson we will stick with
-using the term *option*.
+Иногда опции называют **переключателями** или **флагами**, особенно если опции не принимают аргументов. В этом уроке мы будем использовать термин _опция_.
 
-Each part is separated by spaces. If you omit the space
-between `ls` and `-F` the shell will look for a command called `ls-F`, which
-doesn't exist. Also, capitalization can be important.
-For example, `ls -s` will display the size of files and directories alongside the names,
-while `ls -S` will sort the files and directories by size, as shown below:
+Каждая часть команды разделена пробелами. Если опустить пробел между `ls` и `-F`, оболочка попытается найти команду под названием `ls-F`, которой не существует. Кроме того, важно учитывать регистр. Например, `ls -s` выводит размер файлов и каталогов рядом с их именами, тогда как `ls -S` сортирует файлы и каталоги по размеру, как показано ниже:
 
 ```bash
 $ cd ~/Desktop/shell-lesson-data
@@ -819,9 +597,7 @@ total 28
  4 animal-counts   4 creatures  12 numbers.txt   4 alkanes   4 writing
 ```
 
-Note that the sizes returned by `ls -s` are in *blocks*.
-As these are defined differently for different operating systems,
-you may not obtain the same figures as in the example.
+Обратите внимание, что размеры, возвращаемые командой `ls -s`, указаны в _блоках_. Эти блоки могут быть определены по-разному в зависимости от операционной системы, поэтому вы можете получить результаты, отличные от приведенных в примере.
 
 ```bash
 $ ls -S exercise-data
@@ -831,9 +607,7 @@ $ ls -S exercise-data
 animal-counts  creatures  alkanes  writing  numbers.txt
 ```
 
-Putting all that together, our command `ls -F /` above gives us a listing
-of files and directories in the root directory `/`.
-An example of the output you might get from the above command is given below:
+Таким образом, команда `ls -F /` из примера выше выведет список файлов и каталогов в корневом каталоге `/`. Пример возможного вывода для этой команды:
 
 ```bash
 $ ls -F /
@@ -845,90 +619,65 @@ Library/              Users/
 Network/              Volumes/
 ```
 
-### Nelle's Pipeline: Organizing Files
+### Работа Нелли: Организация файлов
 
-Knowing this much about files and directories,
-Nelle is ready to organize the files that the protein assay machine will create.
+Зная все это о файлах и каталогах, Нелли готова организовать файлы, которые будут созданы анализатором белков.
 
-She creates a directory called `north-pacific-gyre`
-(to remind herself where the data came from),
-which will contain the data files from the assay machine
-and her data processing scripts.
+Она создает каталог под названием `north-pacific-gyre` (чтобы напомнить себе, откуда пришли данные), который будет содержать файлы данных с машины и ее скрипты для обработки данных.
 
-Each of her physical samples is labelled according to her lab's convention
-with a unique ten-character ID,
-such as 'NENE01729A'.
-This ID is what she used in her collection log
-to record the location, time, depth, and other characteristics of the sample,
-so she decides to use it within the filename of each data file.
-Since the output of the assay machine is plain text,
-she will call her files `NENE01729A.txt`, `NENE01812A.txt`, and so on.
-All 1520 files will go into the same directory.
+Каждая из ее физических проб отличается уникальным десятизначным идентификатором, например 'NENE01729A'. Этот идентификатор используется в её журнале для записи местоположения, времени, глубины и других характеристик образца, поэтому она решает использовать его в названиях файлов данных. Поскольку выходные данные анализатора являются простым текстом, тот назовёт свои файлы `NENE01729A.txt`, `NENE01812A.txt` и так далее. Все 1520 файлов будут размещены в одном каталоге.
 
-Now in her current directory `shell-lesson-data`,
-Nelle can see what files she has using the command:
+Теперь, находясь в своем текущем каталоге `shell-lesson-data`, Нелли может увидеть, какие файлы у неё есть, используя команду:
 
 ```bash
 $ ls north-pacific-gyre/
 ```
 
-This command is a lot to type,
-but she can let the shell do most of the work through what is called **tab completion**.
-If she types:
+Эта команда требует много ввода, но Нелли может позволить оболочке выполнить большую часть работы за неё с помощью **автодополнения по клавише Tab**. Если она введет:
 
 ```bash
 $ ls nor
 ```
 
-and then presses <kbd>Tab</kbd> (the tab key on her keyboard),
-the shell automatically completes the directory name for her:
+а затем нажмёт <kbd>Tab</kbd> (клавишу табуляции на клавиатуре), оболочка автоматически завершит имя каталога за неё:
 
 ```bash
 $ ls north-pacific-gyre/
 ```
 
-Pressing <kbd>Tab</kbd> again does nothing,
-since there are multiple possibilities;
-pressing <kbd>Tab</kbd> twice brings up a list of all the files.
+Если нажать <kbd>Tab</kbd> снова, ничего не произойдет, так как существует несколько вариантов для заполнения. Двойное нажатие <kbd>Tab</kbd> выведет список всех файлов.
 
-If Nelle then presses <kbd>G</kbd> and then presses <kbd>Tab</kbd> again,
-the shell will append 'goo' since all files that start with 'g' share
-the first three characters 'goo'.
+Если после Нелли нажмёт <kbd>G</kbd>, а затем снова <kbd>Tab</kbd>, оболочка добавит 'goo', так как все файлы, начинающиеся с 'g', содержат первые три символа 'goo'.
 
 ```bash
 $ ls north-pacific-gyre/goo
 ```
 
-To see all of those files, she can press <kbd>Tab</kbd> twice more.
+Чтобы увидеть все эти файлы, Нелли может снова дважды нажать <kbd>Tab</kbd>.
 
 ```bash
 ls north-pacific-gyre/goo
 goodiff.sh   goostats.sh
 ```
 
-This is called **tab completion**,
-and we will see it in many other tools as we go on.
+**Автодополнением по клавише Tab** используется во многих других инструментах.
 
-
-
-[Arguments]: https://swcarpentry.github.io/shell-novice/reference.html#argument
+[Аргументы]: https://hepoh3.github.io/shell-novice-ru/reference.html#аргумент
 
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- The file system is responsible for managing information on the disk.
-- Information is stored in files, which are stored in directories (folders).
-- Directories can also store other directories, which then form a directory tree.
-- `pwd` prints the user's current working directory.
-- `ls [path]` prints a listing of a specific file or directory; `ls` on its own lists the current working directory.
-- `cd [path]` changes the current working directory.
-- Most commands take options that begin with a single `-`.
-- Directory names in a path are separated with `/` on Unix, but `\` on Windows.
-- `/` on its own is the root directory of the whole file system.
-- An absolute path specifies a location from the root of the file system.
-- A relative path specifies a location starting from the current location.
-- `.` on its own means 'the current directory'; `..` means 'the directory above the current one'.
+- Файловая система отвечает за управление информацией на диске.
+- Информация хранится в файлах, которые размещены в каталогах (папках).
+- Каталоги также могут содержать другие каталоги, образуя дерево каталогов.
+- `pwd` выводит текущий рабочий каталог пользователя.
+- `ls [path]` выводит список конкретного файла или каталога. `ls` без аргументов выводит содержимое текущего рабочего каталога.
+- `cd [path]` изменяет текущий рабочий каталог.
+- Большинство команд имеют опции, начинающиеся с одного дефиса (`-`).
+- Имена каталогов в пути разделяются символом `/` в Unix и `\` в Windows.
+- `/` обозначает корневой каталог всей файловой системы.
+- Абсолютный путь указывает местоположение, начиная с корневого каталога файловой системы.
+- Относительный путь указывает местоположение относительно текущего рабочего каталога.
+- `.` означает 'текущий каталог', `..` означает 'каталог уровнем выше'.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
