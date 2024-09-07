@@ -89,7 +89,7 @@
           <button class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
             More <i data-feather="chevron-down"></i>
           </button>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown"><li><a class="dropdown-item" href="discuss.html">Discussion</a></li><li><a class="dropdown-item" href="reference.html">Summary of Basic Commands</a></li>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown"><li><a class="dropdown-item" href="discuss.html">Обсуждение</a></li><li><a class="dropdown-item" href="reference.html">Сводка основных команд</a></li>
           </ul></li>
       </ul></div>
     <!--
@@ -197,9 +197,9 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#download-files">Download files</a></li>
-<li><a href="#install-software">Install software</a></li>
-<li><a href="#open-a-new-shell">Open a new shell</a></li>
+        <ul><li><a href="#%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2">Загрузка файлов</a></li>
+<li><a href="#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE-%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F">Установка программного обеспечения</a></li>
+<li><a href="#%D0%BE%D1%82%D0%BA%D1%80%D0%BE%D0%B9%D1%82%D0%B5-%D0%BD%D0%BE%D0%B2%D1%83%D1%8E-%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83">Откройте новую оболочку</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -263,7 +263,7 @@
 <div class="accordion accordion-flush" id="accordionFlush8">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading8">
-        <a href="07-find.html">7. Finding Things</a>
+        <a href="07-find.html">7. Поиск</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -291,7 +291,7 @@
                       <li>
                         <a href="profiles.html">Learner Profiles</a>
                       </li>
-                      <li><a href="discuss.html">Discussion</a></li><li><a href="reference.html">Summary of Basic Commands</a></li>
+                      <li><a href="discuss.html">Обсуждение</a></li><li><a href="reference.html">Сводка основных команд</a></li>
                     </ul></div>
                 </div>
               </div>
@@ -320,150 +320,123 @@
       <hr></nav><main id="main-content" class="main-content"><h1 class="schedule-heading">Summary and Setup</h1>
       
 
-<p>The Unix shell has been around longer than most of its users have
-been alive. It has survived because it’s a powerful tool that allows
-users to perform complex and powerful tasks, often with just a few
-keystrokes or lines of code. It helps users automate repetitive tasks
-and easily combine smaller tasks into larger, more powerful
-workflows.</p>
-<p>Use of the shell is fundamental to a wide range of advanced computing
-tasks, including high-performance computing. These lessons will
-introduce you to this powerful tool.</p>
-<div id="prerequisites" class="callout prereq">
+<p>Unix-оболочка существует дольше, чем живет большинство ее
+пользователей. Она сохраняет свою популярность благодаря тому, что
+является мощным инструментом, позволяющим выполнять сложные и
+эффективные задачи, зачастую всего лишь с несколькими нажатиями клавиш
+или строками кода. Она помогает автоматизировать повторяющиеся задачи и
+легко объединять небольшие задачи в более мощные рабочие процессы.</p>
+<p>Использование оболочки является основой для широкого круга
+продвинутых вычислительных задач, включая высокопроизводительные
+вычисления. Эти уроки познакомят вас с этим мощным инструментом.</p>
+<div id="требования" class="callout prereq">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check"></i>
 </div>
-<div id="prerequisites" class="callout-inner">
-<h3 class="callout-title">Prerequisites</h3>
+<div id="требования" class="callout-inner">
+<h3 class="callout-title">Требования</h3>
 <div class="callout-content">
-<p>This lesson guides you through the basics of file systems and the
-shell. If you have stored files on a computer at all and recognize the
-word “file” and either “directory” or “folder” (two common words for the
-same thing), you’re ready for this lesson.</p>
-<p>If you’re already comfortable manipulating files and directories,
-searching for files with <code>grep</code> and <code>find</code>, and
-writing simple loops and scripts, you probably want to explore the next
-lesson: <a href="https://carpentries-incubator.github.io/shell-extras/" class="external-link">shell-extras</a>.</p>
+<p>Этот урок проведет вас через основы файловых систем и оболочки. Если
+вы когда-либо сохраняли файлы на компьютере и знаете такие термины, как
+“файл” и “директория” или “папка” (два распространенных слова для
+обозначения одного и того же), то вы готовы к этому уроку.</p>
+<p>Если вы уже уверенно управляете файлами и директориями, ищете файлы с
+помощью команд <code>grep</code> и <code>find</code>, а также пишете
+простые циклы и скрипты, вам, вероятно, стоит перейти к следующему
+уроку: <a href="https://carpentries-incubator.github.io/shell-extras/" class="external-link">shell-extras</a>.</p>
 </div>
 </div>
 </div>
 
 
-      <section id="setup"><section><h2 class="section-heading" id="download-files">Download files<a class="anchor" aria-label="anchor" href="#download-files"></a></h2>
-<hr class="half-width"><p>You need to download some files to follow this lesson.</p>
-<ol style="list-style-type: decimal"><li>Download <a href="data/shell-lesson-data.zip">shell-lesson-data.zip</a> and move the
-file to your Desktop.</li>
-<li>Unzip/extract the file. <strong>Let your instructor know if you need
-help with this step</strong>. You should end up with a new folder called
-<strong><code>shell-lesson-data</code></strong> on your Desktop.</li>
-</ol></section><section><h2 class="section-heading" id="install-software">Install software<a class="anchor" aria-label="anchor" href="#install-software"></a></h2>
-<hr class="half-width"><p>If you do not already have the shell software installed, you will
-need to <a href="https://carpentries.github.io/workshop-template/install_instructions/#shell" class="external-link">download
-and install</a> it.</p>
-</section><section><h2 class="section-heading" id="open-a-new-shell">Open a new shell<a class="anchor" aria-label="anchor" href="#open-a-new-shell"></a></h2>
-<hr class="half-width"><p>After installing the software</p>
-<ol start="3" style="list-style-type: decimal"><li>Open a terminal. If you’re not sure how to open a terminal on your
-operating system, see the instructions below.</li>
-<li>In the terminal type <code>cd</code> then press the
-<kbd>Return</kbd> key. This step will make sure you start with your home
-folder as your working directory.</li>
-</ol><p>In the lesson, you will find out how to access the data files in this
-folder.</p>
-<div id="where-to-type-commands-how-to-open-a-new-shell" class="callout">
+      <section id="setup"><section><h2 class="section-heading" id="загрузка-файлов">Загрузка файлов<a class="anchor" aria-label="anchor" href="#%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2"></a></h2>
+<hr class="half-width"><p>Вам необходимо скачать несколько файлов, чтобы пройти этот урок.</p>
+<ol style="list-style-type: decimal"><li>Скачайте <a href="data/shell-lesson-data.zip">shell-lesson-data.zip</a> и
+переместите файл на рабочий стол.</li>
+<li>Разархивируйте/извлеките файл. <strong>Сообщите инструктору, если
+вам нужна помощь с этим шагом</strong>. В итоге у вас должна появиться
+новая папка под названием
+<strong><code>shell-lesson-data</code></strong> на рабочем столе.</li>
+</ol></section><section><h2 class="section-heading" id="установка-программного-обеспечения">Установка программного обеспечения<a class="anchor" aria-label="anchor" href="#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE-%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F"></a></h2>
+<hr class="half-width"><p>Если у вас еще не установлено программное обеспечение оболочки, вам
+нужно <a href="https://carpentries.github.io/workshop-template/install_instructions/#shell" class="external-link">скачать
+и установить</a> его.</p>
+</section><section><h2 class="section-heading" id="откройте-новую-оболочку">Откройте новую оболочку<a class="anchor" aria-label="anchor" href="#%D0%BE%D1%82%D0%BA%D1%80%D0%BE%D0%B9%D1%82%D0%B5-%D0%BD%D0%BE%D0%B2%D1%83%D1%8E-%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D1%83"></a></h2>
+<hr class="half-width"><p>После установки программного обеспечения</p>
+<ol start="3" style="list-style-type: decimal"><li>Откройте терминал. Если вы не знаете, как открыть терминал в вашей
+операционной системе, ознакомьтесь с инструкциями ниже.</li>
+<li>В терминале введите команду <code>cd</code> и нажмите клавишу
+<kbd>Return</kbd>. Этот шаг обеспечит старт работы в домашней папке как
+вашей рабочей директории.</li>
+</ol><p>В ходе урока вы узнаете, как получить доступ к файлам данных в этой
+папке.</p>
+<div id="где-вводить-команды-как-открыть-новую-оболочку" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="where-to-type-commands-how-to-open-a-new-shell" class="callout-inner">
-<h3 class="callout-title">Where to type commands: How to open a new
-shell</h3>
+<div id="где-вводить-команды-как-открыть-новую-оболочку" class="callout-inner">
+<h3 class="callout-title">Где вводить команды: Как открыть новую
+оболочку</h3>
 <div class="callout-content">
-<p>The shell is a program that enables us to send commands to the
-computer and receive output. It is also referred to as the terminal or
-command line.</p>
-<p>Some computers include a default Unix Shell program. The steps below
-describe some methods for identifying and opening a Unix Shell program
-if you already have one installed. There are also options for
-identifying and downloading a Unix Shell program, a Linux/UNIX emulator,
-or a program to access a Unix Shell on a server.</p>
-<p>If none of the options below address your circumstances, try an
-online search for: Unix shell [your computer model] [your operating
-system].</p>
+<p>Оболочка — это программа, которая позволяет нам отправлять команды
+компьютеру и получать ответы. Её также называют терминалом или командной
+строкой.</p>
+<p>На некоторых компьютерах по умолчанию установлена программа Unix
+Shell. Ниже описаны методы для идентификации и открытия программы Unix
+Shell, если она уже установлена. Также указаны варианты для установки
+программы оболочки Unix, эмулятора Linux/UNIX или программы для доступа
+к оболочке Unix на сервере.</p>
+<p>Если ни один из приведенных ниже вариантов не подходит для вас,
+попробуйте поискать в Интернете по запросу: Unix shell [ваша модель
+компьютера] [ваша операционная система].</p>
 </div>
 </div>
 </div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1">
-  Windows
-  </h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
-<div class="accordion-body">
-<p>Computers with Windows operating systems do not automatically have a
-Unix Shell program installed. In this lesson, we encourage you to use an
-emulator included in <a href="https://carpentries.github.io/workshop-template/install_instructions/#shell" class="external-link">Git
-for Windows</a>, which gives you access to both Bash shell commands and
-Git.</p>
-<p>Once installed, you can open a terminal by running the program Git
-Bash from the Windows start menu.</p>
-<p><strong>For advanced users:</strong></p>
-<p>As an alternative to Git for Windows you may wish to <a href="https://learn.microsoft.com/en-us/windows/wsl/install" class="external-link">Install the
-Windows Subsystem for Linux</a> which gives access to a Bash shell
-command-line tool in Windows 10 and above.</p>
-<p>Please note that commands in the Windows Subsystem for Linux (WSL)
-may differ slightly from those shown in the lesson or presented in the
-workshop.</p>
+<div class="section level3 решение">
+<h3 id="windows">Windows<a class="anchor" aria-label="anchor" href="#windows"></a></h3>
+<p>Компьютеры с операционной системой Windows не имеют программы Unix
+Shell, установленной по умолчанию. В этом уроке мы рекомендуем
+использовать эмулятор, входящий в состав <a href="https://carpentries.github.io/workshop-template/install_instructions/#shell" class="external-link">Git
+для Windows</a>, который предоставляет доступ как к командам оболочки
+Bash, так и к Git.</p>
+<p>После установки вы можете открыть терминал, запустив программу Git
+Bash из меню «Пуск» Windows.</p>
+<p><strong>Для продвинутых пользователей:</strong></p>
+<p>В качестве альтернативы Git для Windows вы можете <a href="https://learn.microsoft.com/en-us/windows/wsl/install" class="external-link">установить
+подсистему Windows для Linux</a>, которая предоставляет доступ к
+Bash-оболочке в Windows 10 и более поздних версиях.</p>
+<p>Обратите внимание, что команды в подсистеме Windows для Linux (WSL)
+могут немного отличаться от тех, что показаны в уроке или на
+мастер-классе.</p>
 </div>
+<div class="section level3 решение">
+<h3 id="macos">MacOS<a class="anchor" aria-label="anchor" href="#macos"></a></h3>
+<p>На компьютерах Mac с macOS Mojave или более ранними версиями по
+умолчанию используется оболочка Bash. На компьютерах Mac с macOS
+Catalina или более поздними версиями по умолчанию используется оболочка
+Zsh. Ваша оболочка по умолчанию доступна через программу «Терминал» в
+папке «Утилиты».</p>
+<p>Чтобы открыть «Терминал», попробуйте один или оба из следующих
+методов:</p>
+<ul><li>В Finder выберите меню «Перейти», затем выберите «Утилиты». Найдите
+«Терминал» в папке «Утилиты» и откройте его.</li>
+<li>Используйте функцию поиска Mac «Spotlight». Введите запрос:
+<code>Terminal</code> и нажмите <kbd>Return</kbd>.</li>
+</ul><p>Чтобы проверить, настроен ли ваш компьютер на использование чего-то,
+кроме Bash, введите <code>echo $SHELL</code> в окне терминала.</p>
+<p>Если на вашем компьютере настроена другая оболочка, вы можете
+запустить Bash, открыв терминал и введя команду <code>bash</code>.</p>
+<p><a href="https://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/" class="external-link">Как
+использовать Терминал на Mac</a></p>
 </div>
-</div>
-</div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2">
-  MacOS
-  </h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
-<div class="accordion-body">
-<p>For a Mac computer running macOS Mojave or earlier releases, the
-default Unix Shell is Bash. For a Mac computer running macOS Catalina or
-later releases, the default Unix Shell is Zsh. Your default shell is
-available via the Terminal program within your Utilities folder.</p>
-<p>To open Terminal, try one or both of the following:</p>
-<ul><li>In Finder, select the Go menu, then select Utilities. Locate
-Terminal in the Utilities folder and open it.</li>
-<li>Use the Mac ‘Spotlight’ computer search function. Search for:
-<code>Terminal</code> and press <kbd>Return</kbd>.</li>
-</ul><p>To check if your machine is set up to use something other than Bash,
-type <code>echo $SHELL</code> in your terminal window.</p>
-<p>If your machine is set up to use something other than Bash, you can
-run it by opening a terminal and typing <code>bash</code>.</p>
-<p><a href="https://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/" class="external-link">How
-to Use Terminal on a Mac</a></p>
-</div>
-</div>
-</div>
-</div>
-<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
-  <h4 class="accordion-header" id="headingSolution3">
-  Linux
-  </h4>
-</button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
-<div class="accordion-body">
-<p>The default Unix Shell for Linux operating systems is usually Bash.
-On most versions of Linux, it is accessible by running the <a href="https://help.gnome.org/users/gnome-terminal/stable/" class="external-link">Gnome
-Terminal</a> or <a href="https://konsole.kde.org/" class="external-link">KDE Konsole</a> or <a href="https://en.wikipedia.org/wiki/Xterm" class="external-link">xterm</a>, which can be found
-via the applications menu or the search bar. If your machine is set up
-to use something other than Bash, you can run it by opening a terminal
-and typing <code>bash</code>.</p>
-</div>
-</div>
-</div>
+<div class="section level3 решение">
+<h3 id="linux">Linux<a class="anchor" aria-label="anchor" href="#linux"></a></h3>
+<p>По умолчанию в операционных системах Linux используется оболочка
+Bash. На большинстве версий Linux она доступна при запуске <a href="https://help.gnome.org/users/gnome-terminal/stable/" class="external-link">Gnome
+Terminal</a>, <a href="https://konsole.kde.org/" class="external-link">KDE Konsole</a> или <a href="https://en.wikipedia.org/wiki/Xterm" class="external-link">xterm</a>, которые можно
+найти через меню приложений или строку поиска. Если ваш компьютер
+настроен на использование другой оболочки, вы можете запустить Bash,
+открыв терминал и введя команду <code>bash</code>.</p>
 </div>
 </section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link float-end" href="01-intro.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
