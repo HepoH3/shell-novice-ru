@@ -1,108 +1,104 @@
 ---
-title: Setup
+title: Установка
 ---
 
-## Download files
+## Загрузка файлов
 
-You need to download some files to follow this lesson.
+Вам необходимо скачать несколько файлов, чтобы пройти этот урок.
 
-1. Download [shell-lesson-data.zip][zip-file] and move the file to your Desktop.
-2. Unzip/extract the file.
-  **Let your instructor know if you need help with this step**.
-  You should end up with a new folder called **`shell-lesson-data`** on your Desktop.
+1. Скачайте [shell-lesson-data.zip][zip-file] и переместите файл на рабочий стол.
+2. Разархивируйте/извлеките файл.
+  **Сообщите инструктору, если вам нужна помощь с этим шагом**.
+  В итоге у вас должна появиться новая папка под названием **`shell-lesson-data`** на рабочем столе.
 
-## Install software
+## Установка программного обеспечения
 
-If you do not already have the shell software installed, you will need to
-[download and install][install_shell] it.
+Если у вас еще не установлено программное обеспечение оболочки, вам нужно
+[скачать и установить][install_shell] его.
 
-## Open a new shell
+## Откройте новую оболочку
 
-After installing the software
+После установки программного обеспечения
 
-3. Open a terminal.
-  If you're not sure how to open a terminal on your operating system, see the instructions below.
-4. In the terminal type `cd` then press the <kbd>Return</kbd> key.
-  This step will make sure you start with your home folder as your working directory.
+3. Откройте терминал.
+   Если вы не знаете, как открыть терминал в вашей операционной системе, ознакомьтесь с инструкциями ниже.
+4. В терминале введите команду `cd` и нажмите клавишу <kbd>Return</kbd>.
+   Этот шаг обеспечит старт работы в домашней папке как вашей рабочей директории.
 
-In the lesson, you will find out how to access the data files in this folder.
+В ходе урока вы узнаете, как получить доступ к файлам данных в этой папке.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Where to type commands: How to open a new shell
+## Где вводить команды: Как открыть новую оболочку
 
-The shell is a program that enables us to send commands to the computer and receive output.
-It is also referred to as the terminal or command line.
+Оболочка — это программа, которая позволяет нам отправлять команды компьютеру и получать ответы.
+Её также называют терминалом или командной строкой.
 
-Some computers include a default Unix Shell program.
-The steps below describe some methods for identifying and opening
-a Unix Shell program if you already have one installed.
-There are also options for identifying and downloading a Unix Shell program,
-a Linux/UNIX emulator, or a program to access a Unix Shell on a server.
+На некоторых компьютерах по умолчанию установлена программа Unix Shell.
+Ниже описаны методы для идентификации и открытия программы Unix Shell, если она уже установлена.
+Также указаны варианты для установки программы оболочки Unix, эмулятора Linux/UNIX
+или программы для доступа к оболочке Unix на сервере.
 
-If none of the options below address your circumstances,
-try an online search for: Unix shell [your computer model] [your operating system].
-
+Если ни один из приведенных ниже вариантов не подходит для вас,
+попробуйте поискать в Интернете по запросу: Unix shell [ваша модель компьютера] [ваша операционная система].
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-:::::::::::: solution
+:::::::::::: решение
 
 ### Windows {#windows}
 
-Computers with Windows operating systems do not automatically have a Unix Shell program
-installed.
-In this lesson, we encourage you to use an emulator included in [Git for Windows][install_shell],
-which gives you access to both Bash shell commands and Git.
+Компьютеры с операционной системой Windows не имеют программы Unix Shell, установленной по умолчанию.
+В этом уроке мы рекомендуем использовать эмулятор, входящий в состав [Git для Windows][install_shell],
+который предоставляет доступ как к командам оболочки Bash, так и к Git.
 
-Once installed, you can open a terminal by running the program Git Bash from the Windows start
-menu.
+После установки вы можете открыть терминал, запустив программу Git Bash из меню «Пуск» Windows.
 
-**For advanced users:**
+**Для продвинутых пользователей:**
 
-As an alternative to Git for Windows you may wish to [Install the Windows Subsystem for Linux][wsl]
-which gives access to a Bash shell command-line tool in Windows 10 and above.
+В качестве альтернативы Git для Windows вы можете [установить подсистему Windows для Linux][wsl],
+которая предоставляет доступ к Bash-оболочке в Windows 10 и более поздних версиях.
 
-Please note that commands in the Windows Subsystem for Linux (WSL) may differ slightly
-from those shown in the lesson or presented in the workshop.
+Обратите внимание, что команды в подсистеме Windows для Linux (WSL) могут немного отличаться
+от тех, что показаны в уроке или на мастер-классе.
 
 ::::::::::::
 
-:::::::::::: solution
+:::::::::::: решение
 
 ### MacOS {#macos}
 
-For a Mac computer running macOS Mojave or earlier releases, the default Unix Shell is Bash.
-For a Mac computer running macOS Catalina or later releases, the default Unix Shell is Zsh.
-Your default shell is available via the Terminal program within your Utilities folder.
+На компьютерах Mac с macOS Mojave или более ранними версиями по умолчанию используется оболочка Bash.
+На компьютерах Mac с macOS Catalina или более поздними версиями по умолчанию используется оболочка Zsh.
+Ваша оболочка по умолчанию доступна через программу «Терминал» в папке «Утилиты».
 
-To open Terminal, try one or both of the following:
+Чтобы открыть «Терминал», попробуйте один или оба из следующих методов:
 
-- In Finder, select the Go menu, then select Utilities.
-  Locate Terminal in the Utilities folder and open it.
-- Use the Mac 'Spotlight' computer search function.
-  Search for: `Terminal` and press <kbd>Return</kbd>.
+- В Finder выберите меню «Перейти», затем выберите «Утилиты».
+  Найдите «Терминал» в папке «Утилиты» и откройте его.
+- Используйте функцию поиска Mac «Spotlight».
+  Введите запрос: `Terminal` и нажмите <kbd>Return</kbd>.
 
-To check if your machine is set up to use something other than Bash,
-type `echo $SHELL` in your terminal window.
+Чтобы проверить, настроен ли ваш компьютер на использование чего-то, кроме Bash,
+введите `echo $SHELL` в окне терминала.
 
-If your machine is set up to use something other than Bash,
-you can run it by opening a terminal and typing `bash`.
+Если на вашем компьютере настроена другая оболочка,
+вы можете запустить Bash, открыв терминал и введя команду `bash`.
 
-[How to Use Terminal on a Mac][mac-terminal]
+[Как использовать Терминал на Mac][mac-terminal]
 
 ::::::::::::
 
-:::::::::::: solution
+:::::::::::: решение
 
 ### Linux {#linux}
 
-The default Unix Shell for Linux operating systems is usually Bash.
-On most versions of Linux, it is accessible by running the
-[Gnome Terminal][gnome-terminal] or [KDE Konsole][kde-konsole] or [xterm],
-which can be found via the applications menu or the search bar.
-If your machine is set up to use something other than Bash,
-you can run it by opening a terminal and typing `bash`.
+По умолчанию в операционных системах Linux используется оболочка Bash.
+На большинстве версий Linux она доступна при запуске
+[Gnome Terminal][gnome-terminal], [KDE Konsole][kde-konsole] или [xterm],
+которые можно найти через меню приложений или строку поиска.
+Если ваш компьютер настроен на использование другой оболочки,
+вы можете запустить Bash, открыв терминал и введя команду `bash`.
 
 ::::::::::::
 
@@ -113,6 +109,3 @@ you can run it by opening a terminal and typing `bash`.
 [gnome-terminal]: https://help.gnome.org/users/gnome-terminal/stable/
 [kde-konsole]: https://konsole.kde.org/
 [xterm]: https://en.wikipedia.org/wiki/Xterm
-
-
-
