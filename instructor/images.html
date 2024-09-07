@@ -284,7 +284,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="05-loop.html">5. Loops</a>
+        <a href="05-loop.html">5. Циклы</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -423,11 +423,18 @@ lengths” перенаправляет вывод в файл “lengths”. �
 head -n 1” создаёт конвейер, где вывод команды “wc” становится вводом
 для команды “sort”, вывод команды “sort” становится вводом для команды
 “head”, а вывод команды “head” отправляется в оболочку</div>
-</figure><hr></section><section id="05-loop"><h2 class="section-heading"><a href="05-loop.html">Loops</a></h2>
+</figure><hr></section><section id="05-loop"><h2 class="section-heading"><a href="05-loop.html">Циклы</a></h2>
 <hr class="half-width">
 <h3 id="05-loop-figure-1">Figure 1</h3>
-<p aria-hidden="true">Image 1 of 1: ‘The for loop "for filename in .dat; do echo cp $filename original-$filename;done" will successively assign the names of all ".dat" files in your currentdirectory to the variable "$filename" and then execute the command. With thefiles "basilisk.dat", "minotaur.dat" and "unicorn.dat" in the current directorythe loop will successively call the echo command three times and print threelines: "cp basislisk.dat original-basilisk.dat", then "cp minotaur.datoriginal-minotaur.dat" and finally "cp unicorn.datoriginal-unicorn.dat"’</p>
-<figure><img src="../fig/shell_script_for_loop_flow_chart.svg" alt='The for loop "for filename in .dat; do echo cp $filename original-$filename;done" will successively assign the names of all ".dat" files in your currentdirectory to the variable "$filename" and then execute the command. With thefiles "basilisk.dat", "minotaur.dat" and "unicorn.dat" in the current directorythe loop will successively call the echo command three times and print threelines: "cp basislisk.dat original-basilisk.dat", then "cp minotaur.datoriginal-minotaur.dat" and finally "cp unicorn.datoriginal-unicorn.dat"' class="figure mx-auto d-block"></figure><hr></section><section id="06-script"><h2 class="section-heading"><a href="06-script.html">Shell Scripts</a></h2>
+<p aria-hidden="true">Image 1 of 1: ‘Цикл for “for filename in .dat; do echo cp filename original-filename; done” последовательно присваивает переменной “$filename” имена всех файлов “.dat” в текущем каталоге и выполняет команду. С файлами “basilisk.dat”, “minotaur.dat” и “unicorn.dat” в текущем каталоге цикл последовательно вызовет команду echo трижды и выведет три строки: “cp basilisk.dat original-basilisk.dat”, затем “cp minotaur.dat original-minotaur.dat” и наконец “cp unicorn.dat original-unicorn.dat”’</p>
+<figure><img src="../fig/shell_script_for_loop_flow_chart.svg" alt="Цикл for “for filename in .dat; do echo cp filename original-filename; done” последовательно присваивает переменной “$filename” имена всех файлов “.dat” в текущем каталоге и выполняет команду. С файлами “basilisk.dat”, “minotaur.dat” и “unicorn.dat” в текущем каталоге цикл последовательно вызовет команду echo трижды и выведет три строки: “cp basilisk.dat original-basilisk.dat”, затем “cp minotaur.dat original-minotaur.dat” и наконец “cp unicorn.dat original-unicorn.dat”" class="figure mx-auto d-block"><div class="figcaption">Цикл for “for filename in .dat; do echo cp <span class="math inline">\(filename original-\)</span>filename; done”
+последовательно присваивает переменной “$filename” имена всех файлов
+“.dat” в текущем каталоге и выполняет команду. С файлами “basilisk.dat”,
+“minotaur.dat” и “unicorn.dat” в текущем каталоге цикл последовательно
+вызовет команду echo трижды и выведет три строки: “cp basilisk.dat
+original-basilisk.dat”, затем “cp minotaur.dat original-minotaur.dat” и
+наконец “cp unicorn.dat original-unicorn.dat”</div>
+</figure><hr></section><section id="06-script"><h2 class="section-heading"><a href="06-script.html">Shell Scripts</a></h2>
 <hr class="half-width"></section><section id="07-find"><h2 class="section-heading"><a href="07-find.html">Finding Things</a></h2>
 <hr class="half-width"></section>
 </div>
@@ -477,8 +484,8 @@ head -n 1” создаёт конвейер, где вывод команды �
   "url": "https://swcarpentry.github.io/shell-novice/instructor/images.html",
   "identifier": "https://swcarpentry.github.io/shell-novice/instructor/images.html",
   "dateCreated": "2014-10-22",
-  "dateModified": "2024-09-06",
-  "datePublished": "2024-09-06"
+  "dateModified": "2024-09-07",
+  "datePublished": "2024-09-07"
 }
 
   </script><script>
