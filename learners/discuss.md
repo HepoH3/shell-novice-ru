@@ -1,74 +1,40 @@
 ---
-title: Discussion
+title: Обсуждение
 ---
 
-## Alphabet Soup
+## Алфавитная каша
 
-If the command to find out who we are is `whoami`, the command to find
-out where we are ought to be called `whereami`, so why is it `pwd`
-instead? The usual answer is that in the early 1970s, when Unix was
-first being developed, every keystroke counted: the devices of the day
-were slow, and backspacing on a teletype was so painful that cutting the
-number of keystrokes in order to cut the number of typing mistakes was
-actually a win for usability. The reality is that commands were added to
-Unix one by one, without any master plan, by people who were immersed in
-its jargon. The result is as inconsistent as the roolz uv Inglish
-speling, but we're stuck with it now.
+Если команда для того, чтобы узнать, кто мы, — это `whoami`, то команда, чтобы узнать, где мы находимся, логично должна называться `whereami`. Почему же она называется `pwd`? Обычно отвечают, что в начале 1970-х, когда Unix только создавался, каждая нажатая клавиша имела значение: устройства в то время были медленными, и удаление текста на телетайпе было настолько мучительным, что сокращение количества нажатий ради уменьшения ошибок при наборе действительно улучшало удобство использования. На самом деле команды добавлялись в Unix по одной, без единого плана, людьми, которые были погружены в специфическую терминологию Unix. В результате получилось такое же непоследовательное именование, как и правила английского правописания, но теперь мы с этим живем.
 
-## Job Control Codes
+## Коды управления задачами
 
-The shell accepts a few special commands that allow users to interact
-with running processes or programs. You can enter each of these
-"control codes" by holding down the `Ctrl` key and then pressing one
-of the control characters. In other tutorials, you may see the term
-`Control` or the `^` used to represent the `Ctrl` key (e.g. the
-following are all equivalent `Ctrl-C`, `Ctrl+C`, `Control-C`, `Control+C`, `^C`).
+Оболочка поддерживает несколько специальных команд, позволяющих пользователям взаимодействовать с запущенными процессами или программами. Эти "управляющие коды" вводятся с помощью удержания клавиши `Ctrl` и нажатия одной из управляющих клавиш. В других руководствах вы можете увидеть термины `Control` или символ `^`, которые обозначают клавишу `Ctrl` (например, все следующие обозначения эквивалентны: `Ctrl-C`, `Ctrl+C`, `Control-C`, `Control+C`, `^C`).
 
 - `Ctrl-C`:
-  interrupts and cancels a running program.
-  This is useful if you want to cancel a command that is taking too long to execute.
+  прерывает и отменяет выполнение программы.
+  Это полезно, если вы хотите остановить команду, выполнение которой занимает слишком много времени.
 
 - `Ctrl-D`:
-  indicates the end of a file or stream of characters that you are entering on the command line.
-  For example, we saw earlier that the `wc` command counts lines, words, and characters in a file.
-  If we just type `wc` and hit the Enter key without providing a file name,
-  then `wc` will assume we want it to analyze all the stuff we type next.
-  After typing our magnum opus directly into the shell prompt,
-  we can then type Ctrl-D to tell `wc` that we're done
-  and we'd like to see the results of the word count.
+  указывает на завершение файла или потока символов, которые вы вводите в командной строке.
+  Например, ранее мы видели, что команда `wc` считает строки, слова и символы в файле.
+  Если мы просто введем `wc` и нажмем Enter, не указав имя файла,
+  то `wc` будет ожидать ввода текста для анализа.
+  После того как мы введем наш шедевр прямо в командную строку,
+  можно нажать Ctrl-D, чтобы сообщить `wc`, что ввод завершен, и получить результаты подсчета.
 
 - `Ctrl-Z`:
-  Suspends a process but does not terminate it.
-  You can then use the command `fg` to restart the job in the foreground.
+  приостанавливает процесс, но не завершает его.
+  Вы можете использовать команду `fg`, чтобы возобновить выполнение задачи на переднем плане.
 
-For new shell users, these control codes can all appear to have
-the same effect: they make things "go away." But it is helpful to
-understand the differences. In general, if something went wrong and
-you just want to get your shell prompt back, it is better to use
-`Ctrl-C`.
+Для новых пользователей оболочки все эти управляющие коды могут показаться одинаковыми — они заставляют "что-то исчезнуть". Но важно понимать различия между ними. В целом, если что-то пошло не так и вы хотите просто вернуть приглашение командной строки, лучше использовать `Ctrl-C`.
 
-## Other Shells
+## Другие оболочки
 
-Before Bash became popular in the end of nineties, scientists widely
-used (and some still use) another shell, C-shell, or Csh. Bash and Csh
-have similar feature sets, but their syntax rules are different and
-this makes them incompatible with each other. A few other shells have
-appeared since, including ksh, zsh, and a number of others; they are
-mostly compatible with Bash, and Bash is the default shell on most
-modern implementations of Unix (including most packages that provide
-Unix-like tools for Windows) but if you get strange errors in shell
-scripts written by colleagues, check to see which shell they were
-written for.
+До того как Bash стал популярным в конце 90-х, ученые широко использовали (и некоторые до сих пор используют) другую оболочку — C-shell, или Csh. Bash и Csh обладают похожими функциями, но их правила синтаксиса различаются, что делает их несовместимыми. С тех пор появились и другие оболочки, включая ksh, zsh и другие; большинство из них совместимы с Bash. Bash является оболочкой по умолчанию в большинстве современных версий Unix (включая большинство пакетов Unix-подобных инструментов для Windows). Однако, если вы сталкиваетесь со странными ошибками в скриптах, написанных вашими коллегами, проверьте, для какой оболочки они были написаны.
 
-## Bash Configurations
+## Конфигурация Bash
 
-Want to customize paths, environment variables, aliases,
-and other behaviors of your shell?
-This excellent blog post "[Bash Configurations Demystified][bash-demystified]"
-from Dalton Hubble
-covers tips, tricks, and how to avoid dangers.
+Хотите настроить пути, переменные окружения, псевдонимы и другие параметры вашей оболочки? Этот отличный пост в блоге "[Конфигурация Bash: разоблачение мифов][bash-demystified]" от Далтона Хаббла расскажет о советах, приемах и как избежать возможных проблем.
 
 [bash-demystified]: https://blog.dghubble.io/posts/.bashprofile-.profile-and-.bashrc-conventions/
-
-
 
