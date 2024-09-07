@@ -12,6 +12,6 @@
 "episodes/07-find.md" "b3a82fa5f2ca5924ead7af7ef326a039" "site/built/07-find.md" "2024-09-07"
 "instructors/instructor-notes.md" "5db2f86826be7c6bba6157eb15a8a881" "site/built/instructor-notes.md" "2024-09-06"
 "learners/discuss.md" "68b133bc3569130a7984f7c7008f4ce1" "site/built/discuss.md" "2024-09-07"
-"learners/reference.md" "8b225efd6318f064715e5d844bc882c0" "site/built/reference.md" "2024-09-07"
+"learners/reference.md" "222bb7a898e66b1cd22b769615e37c47" "site/built/reference.md" "2024-09-07"
 "learners/setup.md" "bd7e99f30603ac73c0cc4c1379d151f2" "site/built/setup.md" "2024-09-07"
 "profiles/learner-profiles.md" "60b93493cf1da06dfd63255d73854461" "site/built/learner-profiles.md" "2024-09-06"
