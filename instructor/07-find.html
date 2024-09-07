@@ -381,10 +381,7 @@ expression/print’, что описывает частую последоват
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="ex">$</span> cd Desktop/shell-lesson-data/exercise-data/writing</span>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="ex">$</span> cat haiku.txt</span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>The Tao that is seen
+<pre class="вывод"><code>The Tao that is seen
 Is not the true Tao, until
 You bring fresh toner.
 
@@ -395,20 +392,15 @@ and the presence of absence:
 Yesterday it worked
 Today it is not working
 Software is like that.</code></pre>
-</div>
 <p>Найдём строки, содержащие слово ‘not’:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">$</span> grep not haiku.txt</span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>Is not the true Tao, until
+<pre class="вывод"><code>Is not the true Tao, until
 "My Thesis" not found
 Today it is not working</code></pre>
-</div>
 <p>Здесь <code>not</code> — это шаблон, по которому мы ищем. Команда
 <code>grep</code> ищет в файле строки, соответствующие указанному
 шаблону. Чтобы её использовать, напишите <code>grep</code>, затем
@@ -425,12 +417,8 @@ Today it is not working</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">$</span> grep The haiku.txt</span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>The Tao that is seen
+<pre class="вывод"><code>The Tao that is seen
 "My Thesis" not found.</code></pre>
-</div>
 <p>На этот раз выводятся две строки, содержащие символы ‘The’, одна из
 которых содержит шаблон поиска внутри более длинного слова —
 ‘Thesis’.</p>
@@ -444,11 +432,7 @@ Today it is not working</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="ex">$</span> grep <span class="at">-w</span> The haiku.txt</span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>The Tao that is seen</code></pre>
-</div>
+<pre class="вывод"><code>The Tao that is seen</code></pre>
 <p>Обратите внимание, что граница слова включает начало и конец строки,
 а не только пробелы вокруг букв. Иногда нам нужно искать не отдельное
 слово, а фразу. Это также можно сделать с помощью <code>grep</code>,
@@ -458,11 +442,7 @@ Today it is not working</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="ex">$</span> grep <span class="at">-w</span> <span class="st">"is not"</span> haiku.txt</span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>Today it is not working</code></pre>
-</div>
+<pre class="вывод"><code>Today it is not working</code></pre>
 <p>Мы уже видели, что необязательно заключать одиночные слова в кавычки,
 но это полезно при поиске нескольких слов. Это также облегчает различие
 между искомым шаблоном или фразой и файлом, в котором выполняется поиск.
@@ -474,13 +454,9 @@ Today it is not working</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="ex">$</span> grep <span class="at">-n</span> <span class="st">"it"</span> haiku.txt</span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>5:With searching comes loss
+<pre class="вывод"><code>5:With searching comes loss
 9:Yesterday it worked
 10:Today it is not working</code></pre>
-</div>
 <p>Здесь видно, что строки 5, 9 и 10 содержат последовательность
 ‘it’.</p>
 <p>Мы можем комбинировать опции (т.е. флаги), как и с другими
@@ -492,12 +468,8 @@ Unix-командами. Например, давайте найдём стро�
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="ex">$</span> grep <span class="at">-n</span> <span class="at">-w</span> <span class="st">"the"</span> haiku.txt</span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>2:Is not the true Tao, until
+<pre class="вывод"><code>2:Is not the true Tao, until
 6:and the presence of absence:</code></pre>
-</div>
 <p>Теперь используем опцию <code>-i</code>, чтобы сделать наш поиск
 нечувствительным к регистру:</p>
 <div class="codewrapper sourceCode" id="cb15">
@@ -505,13 +477,9 @@ Unix-командами. Например, давайте найдём стро�
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="ex">$</span> grep <span class="at">-n</span> <span class="at">-w</span> <span class="at">-i</span> <span class="st">"the"</span> haiku.txt</span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>1:The Tao that is seen
+<pre class="вывод"><code>1:The Tao that is seen
 2:Is not the true Tao, until
 6:and the presence of absence:</code></pre>
-</div>
 <p>Далее используем опцию <code>-v</code>, чтобы инвертировать наш
 поиск, т.е. вывести строки, которые не содержат слово ‘the’.</p>
 <div class="codewrapper sourceCode" id="cb17">
@@ -519,10 +487,7 @@ Unix-командами. Например, давайте найдём стро�
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="ex">$</span> grep <span class="at">-n</span> <span class="at">-w</span> <span class="at">-v</span> <span class="st">"the"</span> haiku.txt</span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>1:The Tao that is seen
+<pre class="вывод"><code>1:The Tao that is seen
 3:You bring fresh toner.
 4:
 5:With searching comes loss
@@ -531,7 +496,6 @@ Unix-командами. Например, давайте найдём стро�
 9:Yesterday it worked
 10:Today it is not working
 11:Software is like that.</code></pre>
-</div>
 <p>Если использовать опцию <code>-r</code> (рекурсивно),
 <code>grep</code> может искать шаблон в файлах и подкаталогах.</p>
 <p>Попробуем найти шаблон <code>Yesterday</code> рекурсивно в каталоге
@@ -541,14 +505,10 @@ Unix-командами. Например, давайте найдём стро�
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="ex">$</span> grep <span class="at">-r</span> Yesterday .</span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>./LittleWomen.txt:"Yesterday, when Aunt was asleep and I was trying to be as still as a
+<pre class="вывод"><code>./LittleWomen.txt:"Yesterday, when Aunt was asleep and I was trying to be as still as a
 ./LittleWomen.txt:Yesterday at dinner, when an Austrian officer stared at us and then
 ./LittleWomen.txt:Yesterday was a quiet day spent in teaching, sewing, and writing in my
 ./haiku.txt:Yesterday it worked</code></pre>
-</div>
 <p>У команды <code>grep</code> есть много других опций. Чтобы узнать,
 какие именно, можно ввести:</p>
 <div class="codewrapper sourceCode" id="cb21">
@@ -556,10 +516,7 @@ Unix-командами. Например, давайте найдём стро�
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="ex">$</span> grep <span class="at">--help</span></span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>Usage: grep [OPTION]... PATTERN [FILE]...
+<pre class="вывод"><code>Usage: grep [OPTION]... PATTERN [FILE]...
 Search for PATTERN in each FILE or standard input.
 PATTERN is, by default, a basic regular expression (BRE).
 Example: grep -i 'hello world' menu.h main.c
@@ -578,7 +535,6 @@ Regexp selection and interpretation:
 
 Miscellaneous:
 ...        ...        ...</code></pre>
-</div>
 <div id="использование-grep" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -588,11 +544,7 @@ Miscellaneous:
 </h3>
 <div class="callout-content">
 <p>Какая команда приведёт к следующему результату:</p>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>and the presence of absence:</code></pre>
-</div>
+<pre class="вывод"><code>and the presence of absence:</code></pre>
 <ol style="list-style-type: decimal"><li><code>grep "of" haiku.txt</code></li>
 <li><code>grep -E "of" haiku.txt</code></li>
 <li><code>grep -w "of" haiku.txt</code></li>
@@ -633,13 +585,9 @@ Miscellaneous:
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="ex">$</span> grep <span class="at">-E</span> <span class="st">"^.o"</span> haiku.txt</span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>You bring fresh toner.
+<pre class="вывод"><code>You bring fresh toner.
 Today it is not working
 Software is like that.</code></pre>
-</div>
 <p>Мы используем опцию <code>-E</code> и заключаем шаблон в кавычки,
 чтобы оболочка не пыталась его интерпретировать. (Если бы в шаблоне был
 символ <code>*</code>, оболочка попыталась бы его развернуть до
@@ -778,10 +726,7 @@ VANITY FAIR’). Если вы хотите учитывать и такие с�
 опций. Чтобы показать, как работают самые простые из них, мы
 воспользуемся деревом директорий
 <code>shell-lesson-data/exercise-data</code>, показанным ниже.</p>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>.
+<pre class="вывод"><code>.
 ├── animal-counts/
 │   └── animals.csv
 ├── creatures/
@@ -799,7 +744,6 @@ VANITY FAIR’). Если вы хотите учитывать и такие с�
 └── writing/
     ├── haiku.txt
     └── LittleWomen.txt</code></pre>
-</div>
 <p>Директория <code>exercise-data</code> содержит один файл
 <code>numbers.txt</code> и четыре каталога: <code>animal-counts</code>,
 <code>creatures</code>, <code>alkanes</code> и <code>writing</code>,
@@ -812,10 +756,7 @@ VANITY FAIR’). Если вы хотите учитывать и такие с�
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" tabindex="-1"></a><span class="ex">$</span> find .</span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code><span><span class="va">.</span></span>
+<pre class="вывод"><code><span><span class="va">.</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">writing</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">writing</span><span class="op">/</span><span class="va">LittleWomen.txt</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">writing</span><span class="op">/</span><span class="va">haiku.txt</span></span>
@@ -833,7 +774,6 @@ VANITY FAIR’). Если вы хотите учитывать и такие с�
 <span><span class="va">.</span><span class="op">/</span><span class="va">alkanes</span><span class="op">/</span><span class="va">pentane.pdb</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">alkanes</span><span class="op">/</span><span class="va">methane.pdb</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">alkanes</span><span class="op">/</span><span class="va">cubane.pdb</span></span></code></pre>
-</div>
 <p><code>.</code> означает текущую рабочую директорию, откуда мы и
 начнём наш поиск. Результат работы команды <code>find</code> — это
 список всех файлов и директорий в текущей рабочей директории. Это может
@@ -849,15 +789,11 @@ VANITY FAIR’). Если вы хотите учитывать и такие с�
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" tabindex="-1"></a><span class="ex">$</span> find . <span class="at">-type</span> d</span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code><span><span class="va">.</span></span>
+<pre class="вывод"><code><span><span class="va">.</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">writing</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">creatures</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">animal</span><span class="op">-</span><span class="va">counts</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">alkanes</span></span></code></pre>
-</div>
 <p>Заметьте, что объекты, найденные <code>find</code>, не выводятся в
 каком-либо определённом порядке. Если изменить <code>-type d</code> на
 <code>-type f</code>, то будет выведен список всех файлов:</p>
@@ -866,10 +802,7 @@ VANITY FAIR’). Если вы хотите учитывать и такие с�
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" tabindex="-1"></a><span class="ex">$</span> find . <span class="at">-type</span> f</span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code><span><span class="va">.</span><span class="op">/</span><span class="va">writing</span><span class="op">/</span><span class="va">LittleWomen.txt</span></span>
+<pre class="вывод"><code><span><span class="va">.</span><span class="op">/</span><span class="va">writing</span><span class="op">/</span><span class="va">LittleWomen.txt</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">writing</span><span class="op">/</span><span class="va">haiku.txt</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">creatures</span><span class="op">/</span><span class="va">basilisk.dat</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">creatures</span><span class="op">/</span><span class="va">unicorn.dat</span></span>
@@ -882,18 +815,13 @@ VANITY FAIR’). Если вы хотите учитывать и такие с�
 <span><span class="va">.</span><span class="op">/</span><span class="va">alkanes</span><span class="op">/</span><span class="va">pentane.pdb</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">alkanes</span><span class="op">/</span><span class="va">methane.pdb</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">alkanes</span><span class="op">/</span><span class="va">cubane.pdb</span></span></code></pre>
-</div>
 <p>Теперь попробуем найти файлы по имени:</p>
 <div class="codewrapper sourceCode" id="cb40">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" tabindex="-1"></a><span class="ex">$</span> find . <span class="at">-name</span> <span class="pp">*</span>.txt</span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code><span><span class="va">.</span><span class="op">/</span><span class="va">numbers.txt</span></span></code></pre>
-</div>
+<pre class="вывод"><code><span><span class="va">.</span><span class="op">/</span><span class="va">numbers.txt</span></span></code></pre>
 <p>Мы ожидали найти все текстовые файлы, но был выведен только
 <code>./numbers.txt</code>. Проблема в том, что оболочка разворачивает
 подстановочные символы, такие как <code>*</code>, <em>до того</em>, как
@@ -916,13 +844,9 @@ VANITY FAIR’). Если вы хотите учитывать и такие с�
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" tabindex="-1"></a><span class="ex">$</span> find . <span class="at">-name</span> <span class="st">"*.txt"</span></span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code><span><span class="va">.</span><span class="op">/</span><span class="va">writing</span><span class="op">/</span><span class="va">LittleWomen.txt</span></span>
+<pre class="вывод"><code><span><span class="va">.</span><span class="op">/</span><span class="va">writing</span><span class="op">/</span><span class="va">LittleWomen.txt</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">writing</span><span class="op">/</span><span class="va">haiku.txt</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">numbers.txt</span></span></code></pre>
-</div>
 <div id="сравнение-ls-и-find" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -953,14 +877,10 @@ VANITY FAIR’). Если вы хотите учитывать и такие с�
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" tabindex="-1"></a><span class="ex">$</span> wc <span class="at">-l</span> <span class="va">$(</span><span class="fu">find</span> . <span class="at">-name</span> <span class="st">"*.txt"</span><span class="va">)</span></span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>  21022 ./writing/LittleWomen.txt
+<pre class="вывод"><code>  21022 ./writing/LittleWomen.txt
      11 ./writing/haiku.txt
       5 ./numbers.txt
   21038 total</code></pre>
-</div>
 <p>Когда оболочка выполняет эту команду, первое, что она делает, — это
 запускает всё, что находится внутри <code>$()</code>. Затем она заменяет
 выражение <code>$()</code> на результат этой команды. Так как результат
@@ -987,12 +907,8 @@ VANITY FAIR’). Если вы хотите учитывать и такие с�
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb48-1"><a href="#cb48-1" tabindex="-1"></a><span class="ex">$</span> grep <span class="st">"searching"</span> <span class="va">$(</span><span class="fu">find</span> . <span class="at">-name</span> <span class="st">"*.txt"</span><span class="va">)</span></span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>./writing/LittleWomen.txt:sitting on the top step, affected to be searching for her book, but was
+<pre class="вывод"><code>./writing/LittleWomen.txt:sitting on the top step, affected to be searching for her book, but was
 ./writing/haiku.txt:With searching comes loss</code></pre>
-</div>
 <div id="поиск-и-исключение" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
