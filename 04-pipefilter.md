@@ -26,7 +26,7 @@ exercises: 10
 $ ls
 ```
 
-```output
+```вывод
 cubane.pdb    methane.pdb    pentane.pdb
 ethane.pdb    octane.pdb     propane.pdb
 ```
@@ -37,7 +37,7 @@ ethane.pdb    octane.pdb     propane.pdb
 $ wc cubane.pdb
 ```
 
-```output
+```вывод
 20  156 1158 cubane.pdb
 ```
 
@@ -49,7 +49,7 @@ wc — это команда "word count" (подсчёт слов): она сч
 $ wc *.pdb
 ```
 
-```output
+```вывод
   20  156  1158  cubane.pdb
   12  84   622   ethane.pdb
    9  57   422   methane.pdb
@@ -67,7 +67,7 @@ $ wc *.pdb
 $ wc -l *.pdb
 ```
 
-```output
+```вывод
   20  cubane.pdb
   12  ethane.pdb
    9  methane.pdb
@@ -111,7 +111,7 @@ $ wc -l *.pdb > lengths.txt
 $ ls lengths.txt
 ```
 
-```output
+```вывод
 lengths.txt
 ```
 
@@ -121,7 +121,7 @@ lengths.txt
 $ cat lengths.txt
 ```
 
-```output
+```вывод
   20  cubane.pdb
   12  ethane.pdb
    9  methane.pdb
@@ -160,7 +160,7 @@ $ cat lengths.txt
 
 Если мы запустим команду `sort`, передав её имя этого файла, результат будет следующим:
 
-```output
+```вывод
 10
 19
 2
@@ -170,7 +170,7 @@ $ cat lengths.txt
 
 Если мы запустим `sort -n` на том же файле, результат будет следующим:
 
-```output
+```вывод
 2
 6
 10
@@ -196,7 +196,7 @@ $ cat lengths.txt
 $ sort -n lengths.txt
 ```
 
-```output
+```вывод
   9  methane.pdb
  12  ethane.pdb
  15  propane.pdb
@@ -213,7 +213,7 @@ $ sort -n lengths.txt > sorted-lengths.txt
 $ head -n 1 sorted-lengths.txt
 ```
 
-```output
+```вывод
   9  methane.pdb
 ```
 
@@ -243,7 +243,7 @@ $ sort -n lengths.txt > lengths.txt
 $ echo The echo command prints text
 ```
 
-```output
+```вывод
 The echo command prints text
 ```
 
@@ -309,7 +309,7 @@ $ tail -n 2 animals.csv >> animals-subset.csv
 $ sort -n lengths.txt | head -n 1
 ```
 
-```output
+```вывод
   9  methane.pdb
 ```
 
@@ -327,7 +327,7 @@ $ sort -n lengths.txt | head -n 1
 $ wc -l *.pdb | sort -n
 ```
 
-```output
+```вывод
    9 methane.pdb
   12 ethane.pdb
   15 propane.pdb
@@ -343,7 +343,7 @@ $ wc -l *.pdb | sort -n
 $ wc -l *.pdb | sort -n | head -n 1
 ```
 
-```output
+```вывод
    9  methane.pdb
 ```
 
@@ -433,7 +433,7 @@ $ cut -d , -f 2 animals.csv
 
 Команда `cut` используется для удаления или "вырезания" определённых разделов из каждой строки файла. `cut` ожидает, что строки будут разделены на столбцы с помощью символа <kbd>Tab</kbd>. Символ, используемый таким образом, называется разделителем. В приведённом выше примере мы используем опцию `-d`, чтобы указать запятую в качестве символа-разделителя. Мы также использовали опцию `-f`, чтобы указать, что мы хотим извлечь второй столбец. Это даст следующий вывод:
 
-```output
+```вывод
 deer
 rabbit
 raccoon
@@ -464,7 +464,7 @@ $ cut -d , -f 2 animals.csv | sort | uniq
 
 Файл `animals.csv` содержит 8 строк данных в следующем формате:
 
-```output
+```вывод
 2012-11-05,deer,5
 2012-11-05,rabbit,22
 2012-11-05,raccoon,7
@@ -501,7 +501,7 @@ $ wc -l *.txt
 
 Вывод состоит из 18 строк, которые выглядят так:
 
-```output
+```вывод
 300 NENE01729A.txt
 300 NENE01729B.txt
 300 NENE01736A.txt
@@ -517,7 +517,7 @@ $ wc -l *.txt
 $ wc -l *.txt | sort -n | head -n 5
 ```
 
-```output
+```вывод
  240 NENE02018B.txt
  300 NENE01729A.txt
  300 NENE01729B.txt
@@ -531,7 +531,7 @@ $ wc -l *.txt | sort -n | head -n 5
 $ wc -l *.txt | sort -n | tail -n 5
 ```
 
-```output
+```вывод
  300 NENE02040B.txt
  300 NENE02040Z.txt
  300 NENE02043A.txt
@@ -545,7 +545,7 @@ $ wc -l *.txt | sort -n | tail -n 5
 $ ls *Z.txt
 ```
 
-```output
+```вывод
 NENE01971Z.txt    NENE02040Z.txt
 ```
 

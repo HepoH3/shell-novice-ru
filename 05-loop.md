@@ -55,7 +55,7 @@ $ for filename in basilisk.dat minotaur.dat unicorn.dat
 > done
 ```
 
-```output
+```вывод
 basilisk.dat
 CLASSIFICATION: basiliscus vulgaris
 minotaur.dat
@@ -131,7 +131,7 @@ $ for loop_variable in 0 1 2 3 4 5 6 7 8 9
 > done
 ```
 
-```output
+```вывод
 0
 1
 2
@@ -154,7 +154,7 @@ $ for loop_variable in 0 1 2 3 4 5 6 7 8 9
 
 Это упражнение относится к каталогу `shell-lesson-data/exercise-data/alkanes`. Команда `ls *.pdb` выводит следующий результат:
 
-```output
+```вывод
 cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
 ```
 
@@ -191,7 +191,7 @@ $ for datafile in cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  
 > done
 ```
 
-```output
+```вывод
 cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
 cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
 cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
@@ -202,7 +202,7 @@ cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
 
 Во втором блоке кода на каждой итерации цикла выводится разный файл. Значение переменной `datafile` вычисляется с использованием `$datafile` и затем выводится с помощью `ls`.
 
-```output
+```вывод
 cubane.pdb
 ethane.pdb
 methane.pdb
@@ -341,7 +341,7 @@ $ echo hello there
 
 выведет:
 
-```output
+```вывод
 hello there
 ```
 
@@ -388,7 +388,7 @@ head: cannot open ‘purple unicorn.dat' for reading: No such file or directory
 
 Попробуйте убрать кавычки вокруг `$filename` в приведённом выше цикле, чтобы увидеть, как кавычки влияют на пробелы. Обратите внимание, что при выполнении кода в каталоге `creatures` мы получаем результат для файла `unicorn.dat`:
 
-```output
+```вывод
 head: cannot open ‘red' for reading: No such file or directory
 head: cannot open ‘dragon.dat' for reading: No such file or directory
 head: cannot open ‘purple' for reading: No such file or directory
@@ -471,7 +471,7 @@ $ for datafile in NENE*A.txt NENE*B.txt
 > done
 ```
 
-```output
+```вывод
 NENE01729A.txt
 NENE01729B.txt
 NENE01736A.txt
@@ -489,7 +489,7 @@ $ for datafile in NENE*A.txt NENE*B.txt
 > done
 ```
 
-```output
+```вывод
 NENE01729A.txt stats-NENE01729A.txt
 NENE01729B.txt stats-NENE01729B.txt
 NENE01736A.txt stats-NENE01736A.txt
@@ -529,7 +529,7 @@ bash goostats.sh $datafile stats-$datafile; done
 
 Теперь при выполнении программы выводится одна строка каждые пять секунд:
 
-```output
+```вывод
 NENE01729A.txt
 NENE01729B.txt
 NENE01736A.txt
@@ -548,7 +548,7 @@ NENE01736A.txt
 $ history | tail -n 5
 ```
 
-```output
+```вывод
 456  for datafile in NENE*A.txt NENE*B.txt; do   echo $datafile stats-$datafile; done
 457  for datafile in NENE*A.txt NENE*B.txt; do echo $datafile stats-$datafile; done
 458  for datafile in NENE*A.txt NENE*B.txt; do bash goostats.sh $datafile stats-$datafile; done

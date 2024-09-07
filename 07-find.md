@@ -31,7 +31,7 @@ $ cd Desktop/shell-lesson-data/exercise-data/writing
 $ cat haiku.txt
 ```
 
-```output
+```вывод
 The Tao that is seen
 Is not the true Tao, until
 You bring fresh toner.
@@ -51,7 +51,7 @@ Software is like that.
 $ grep not haiku.txt
 ```
 
-```output
+```вывод
 Is not the true Tao, until
 "My Thesis" not found
 Today it is not working
@@ -69,7 +69,7 @@ Today it is not working
 $ grep The haiku.txt
 ```
 
-```output
+```вывод
 The Tao that is seen
 "My Thesis" not found.
 ```
@@ -84,7 +84,7 @@ The Tao that is seen
 $ grep -w The haiku.txt
 ```
 
-```output
+```вывод
 The Tao that is seen
 ```
 
@@ -94,7 +94,7 @@ The Tao that is seen
 $ grep -w "is not" haiku.txt
 ```
 
-```output
+```вывод
 Today it is not working
 ```
 
@@ -106,7 +106,7 @@ Today it is not working
 $ grep -n "it" haiku.txt
 ```
 
-```output
+```вывод
 5:With searching comes loss
 9:Yesterday it worked
 10:Today it is not working
@@ -120,7 +120,7 @@ $ grep -n "it" haiku.txt
 $ grep -n -w "the" haiku.txt
 ```
 
-```output
+```вывод
 2:Is not the true Tao, until
 6:and the presence of absence:
 ```
@@ -131,7 +131,7 @@ $ grep -n -w "the" haiku.txt
 $ grep -n -w -i "the" haiku.txt
 ```
 
-```output
+```вывод
 1:The Tao that is seen
 2:Is not the true Tao, until
 6:and the presence of absence:
@@ -143,7 +143,7 @@ $ grep -n -w -i "the" haiku.txt
 $ grep -n -w -v "the" haiku.txt
 ```
 
-```output
+```вывод
 1:The Tao that is seen
 3:You bring fresh toner.
 4:
@@ -163,7 +163,7 @@ $ grep -n -w -v "the" haiku.txt
 $ grep -r Yesterday .
 ```
 
-```output
+```вывод
 ./LittleWomen.txt:"Yesterday, when Aunt was asleep and I was trying to be as still as a
 ./LittleWomen.txt:Yesterday at dinner, when an Austrian officer stared at us and then
 ./LittleWomen.txt:Yesterday was a quiet day spent in teaching, sewing, and writing in my
@@ -176,7 +176,7 @@ $ grep -r Yesterday .
 $ grep --help
 ```
 
-```output
+```вывод
 Usage: grep [OPTION]... PATTERN [FILE]...
 Search for PATTERN in each FILE or standard input.
 PATTERN is, by default, a basic regular expression (BRE).
@@ -204,7 +204,7 @@ Miscellaneous:
 
 Какая команда приведёт к следующему результату:
 
-```output
+```вывод
 and the presence of absence:
 ```
 
@@ -233,7 +233,7 @@ and the presence of absence:
 $ grep -E "^.o" haiku.txt
 ```
 
-```output
+```вывод
 You bring fresh toner.
 Today it is not working
 Software is like that.
@@ -345,7 +345,7 @@ done
 В то время как `grep` находит строки в файлах, команда `find` находит сами файлы.
 Опять же, у этой команды множество опций. Чтобы показать, как работают самые простые из них, мы воспользуемся деревом директорий `shell-lesson-data/exercise-data`, показанным ниже.
 
-```output
+```вывод
 .
 ├── animal-counts/
 │   └── animals.csv
@@ -374,7 +374,7 @@ done
 $ find .
 ```
 
-```output
+```вывод
 .
 ./writing
 ./writing/LittleWomen.txt
@@ -403,7 +403,7 @@ $ find .
 $ find . -type d
 ```
 
-```output
+```вывод
 .
 ./writing
 ./creatures
@@ -417,7 +417,7 @@ $ find . -type d
 $ find . -type f
 ```
 
-```output
+```вывод
 ./writing/LittleWomen.txt
 ./writing/haiku.txt
 ./creatures/basilisk.dat
@@ -439,7 +439,7 @@ $ find . -type f
 $ find . -name *.txt
 ```
 
-```output
+```вывод
 ./numbers.txt
 ```
 
@@ -457,7 +457,7 @@ find сделал то, что мы попросили, некорректен �
 $ find . -name "*.txt"
 ```
 
-```output
+```вывод
 ./writing/LittleWomen.txt
 ./writing/haiku.txt
 ./numbers.txt
@@ -479,7 +479,7 @@ $ find . -name "*.txt"
 $ wc -l $(find . -name "*.txt")
 ```
 
-```output
+```вывод
   21022 ./writing/LittleWomen.txt
      11 ./writing/haiku.txt
       5 ./numbers.txt
@@ -500,7 +500,7 @@ $ wc -l ./writing/LittleWomen.txt ./writing/haiku.txt ./numbers.txt
 $ grep "searching" $(find . -name "*.txt")
 ```
 
-```output
+```вывод
 ./writing/LittleWomen.txt:sitting on the top step, affected to be searching for her book, but was
 ./writing/haiku.txt:With searching comes loss
 ```
