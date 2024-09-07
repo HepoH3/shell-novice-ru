@@ -1,64 +1,47 @@
 ---
-title: Shell Scripts
+title: Скрипты оболочки
 teaching: 30
 exercises: 15
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Write a shell script that runs a command or series of commands for a fixed set of files.
-- Run a shell script from the command line.
-- Write a shell script that operates on a set of files defined by the user on the command line.
-- Create pipelines that include shell scripts you, and others, have written.
+- Написать скрипт оболочки, который запускает одну или несколько команд для фиксированного набора файлов.
+- Запустить скрипт оболочки из командной строки.
+- Написать скрипт оболочки, который работает с набором файлов, определяемым пользователем на командной строке.
+- Создать конвейеры, включающие скрипты оболочки, написанные вами или другими.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- How can I save and re-use commands?
+- Как можно сохранить и повторно использовать команды?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-We are finally ready to see what makes the shell such a powerful programming environment.
-We are going to take the commands we repeat frequently and save them in files
-so that we can re-run all those operations again later by typing a single command.
-For historical reasons,
-a bunch of commands saved in a file is usually called a **shell script**,
-but make no mistake --- these are actually small programs.
+Наконец, мы готовы увидеть, что делает оболочку настолько мощной средой программирования. Мы собираемся взять команды, которые мы часто повторяем, и сохранить их в файлах, чтобы затем снова запустить все эти операции, набрав одну единственную команду. Исторически сложилось, что набор команд, сохранённых в файле, называется **скриптом оболочки**, но не заблуждайтесь — это настоящие небольшие программы.
 
-Not only will writing shell scripts make your work faster, but also you won't have to retype
-the same commands over and over again. It will also make it more accurate (fewer chances for
-typos) and more reproducible. If you come back to your work later (or if someone else finds
-your work and wants to build on it), you will be able to reproduce the same results simply
-by running your script, rather than having to remember or retype a long list of commands.
+Запись скриптов оболочки сделает вашу работу не только быстрее, но и избавит вас от необходимости повторно вводить те же команды. Это также сделает её более точной (меньше шансов на опечатки) и более воспроизводимой. Если вы вернётесь к своей работе позже (или кто-то другой найдёт вашу работу и захочет её использовать), вы сможете воспроизвести те же результаты, просто запустив свой скрипт, а не вспоминая или заново вводя длинный список команд.
 
-Let's start by going back to `alkanes/` and creating a new file, `middle.sh` which will
-become our shell script:
+Давайте начнём с возвращения в директорию `alkanes/` и создания нового файла, `middle.sh`, который станет нашим скриптом оболочки:
+
 
 ```bash
 $ cd alkanes
 $ nano middle.sh
 ```
 
-The command `nano middle.sh` opens the file `middle.sh` within the text editor 'nano'
-(which runs within the shell).
-If the file does not exist, it will be created.
-We can use the text editor to directly edit the file by inserting the following line:
+Команда `nano middle.sh` откроет файл `middle.sh` в текстовом редакторе `nano` (который работает внутри оболочки). Если файла не существует, он будет создан. Мы можем использовать текстовый редактор для прямого редактирования файла, добавив следующую строку:
 
 ```source
 head -n 15 octane.pdb | tail -n 5
 ```
 
-This is a variation on the pipe we constructed earlier, which selects lines 11-15 of
-the file `octane.pdb`. Remember, we are *not* running it as a command just yet;
-we are only incorporating the commands in a file.
+Это вариация на тему конвейера, который мы уже создавали ранее. Он выбирает строки с 11 по 15 из файла `octane.pdb`. Помните, что мы пока не запускаем эту команду; мы просто сохраняем её в файл.
 
-Then we save the file (`Ctrl-O` in nano) and exit the text editor (`Ctrl-X` in nano).
-Check that the directory `alkanes` now contains a file called `middle.sh`.
+Затем мы сохраняем файл (`Ctrl-O` в `nano`) и выходим из текстового редактора (`Ctrl-X` в `nano`). Проверьте, что в директории `alkanes` теперь есть файл под названием `middle.sh`.
 
-Once we have saved the file,
-we can ask the shell to execute the commands it contains.
-Our shell is called `bash`, so we run the following command:
+Как только файл сохранён, мы можем попросить оболочку выполнить команды, которые он содержит. Наша оболочка называется `bash`, поэтому мы выполняем следующую команду:
 
 ```bash
 $ bash middle.sh
@@ -72,45 +55,29 @@ ATOM     12  H           1      -3.009  -0.741  -1.467  1.00  0.00
 ATOM     13  H           1      -3.172  -1.337   0.206  1.00  0.00
 ```
 
-Sure enough,
-our script's output is exactly what we would get if we ran that pipeline directly.
+И действительно, вывод нашего скрипта точно такой же, как если бы мы запустили этот конвейер напрямую.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Text vs. Whatever
+## Текст против чего-то другого
 
-We usually call programs like Microsoft Word or LibreOffice Writer "text
-editors", but we need to be a bit more careful when it comes to
-programming. By default, Microsoft Word uses `.docx` files to store not
-only text, but also formatting information about fonts, headings, and so
-on. This extra information isn't stored as characters and doesn't mean
-anything to tools like `head`, which expects input files to contain
-nothing but the letters, digits, and punctuation on a standard computer
-keyboard. When editing programs, therefore, you must either use a plain
-text editor or be careful to save files as plain text.
-
+Мы часто называем некоторые программы, такие как Microsoft Word или LibreOffice Writer, "текстовыми редакторами", но нам нужно быть осторожнее со словами, когда дело доходит до программирования. По умолчанию Microsoft Word использует файлы `.docx`, которые сохраняют не только текст, но и информацию о форматировании (шрифты, заголовки и т. д.). Эта дополнительная информация не хранится в виде символов и не имеет смысла для таких инструментов, как `head`, который ожидает, что входные файлы будут содержать только буквы, цифры и знаки препинания с обычной клавиатуры. Поэтому при редактировании программ нужно либо использовать редактор для работы с обычным текстом, либо сохранять файлы как простой текст.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-What if we want to select lines from an arbitrary file?
-We could edit `middle.sh` each time to change the filename,
-but that would probably take longer than typing the command out again
-in the shell and executing it with a new file name.
-Instead, let's edit `middle.sh` and make it more versatile:
+Что если мы захотим выбирать строки из произвольного файла? Мы могли бы каждый раз редактировать `middle.sh`, изменять там имя файла, но это, вероятно, займёт больше времени, чем просто ввести команду снова и выполнить её с новым именем файла. Вместо этого давайте отредактируем `middle.sh` так, чтобы сделать его более универсальным:
 
 ```bash
 $ nano middle.sh
 ```
 
-Now, within "nano", replace the text `octane.pdb` with the special variable called `$1`:
+Теперь в `nano` заменим текст `octane.pdb` на специальную переменную $1:
 
 ```source
 head -n 15 "$1" | tail -n 5
 ```
 
-Inside a shell script,
-`$1` means 'the first filename (or other argument) on the command line'.
-We can now run our script like this:
+Внутри скрипта оболочки `$1` означает 'первый аргумент, поданной из командной строки'. Теперь мы можем запустить наш скрипт вот так:
 
 ```bash
 $ bash middle.sh octane.pdb
@@ -124,7 +91,7 @@ ATOM     12  H           1      -3.009  -0.741  -1.467  1.00  0.00
 ATOM     13  H           1      -3.172  -1.337   0.206  1.00  0.00
 ```
 
-or on a different file like this:
+а для другого файла вот так:
 
 ```bash
 $ bash middle.sh pentane.pdb
@@ -140,24 +107,15 @@ ATOM     13  H           1      -1.183   0.500  -1.412  1.00  0.00
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Double-Quotes Around Arguments
+## Двойные кавычки вокруг аргументов
 
-For the same reason that we put the loop variable inside double-quotes,
-in case the filename happens to contain any spaces,
-we surround `$1` with double-quotes.
-
+По той же причине, почему мы использовали переменные цикла в двойных кавычках, в случае если имя файла содержит пробелы, мы используем двойные кавычки и вокруг переменной `$1`.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-Currently, we need to edit `middle.sh` each time we want to adjust the range of
-lines that is returned.
-Let's fix that by configuring our script to instead use three command-line arguments.
-After the first command-line argument (`$1`), each additional argument that we
-provide will be accessible via the special variables `$1`, `$2`, `$3`,
-which refer to the first, second, third command-line arguments, respectively.
+На данный момент нам нужно редактировать `middle.sh` каждый раз, когда мы хотим изменить диапазон строк, которые возвращаются. Давайте исправим это, настроив наш скрипт так, чтобы он использовал три аргумента командной строки. После первого аргумента командной строки (`$1`), каждый следующий аргумент будет доступен через специальные переменные `$1`, `$2`, `$3`, которые ссылаются на первый, второй, третий аргумент командной строки соответственно.
 
-Knowing this, we can use additional arguments to define the range of lines to
-be passed to `head` and `tail` respectively:
+Зная это, мы можем использовать дополнительные аргументы для задания диапазона строк, которые будут переданы в `head` и `tail`:
 
 ```bash
 $ nano middle.sh
@@ -167,7 +125,7 @@ $ nano middle.sh
 head -n "$2" "$1" | tail -n "$3"
 ```
 
-We can now run:
+Теперь можно выполнить:
 
 ```bash
 $ bash middle.sh pentane.pdb 15 5
@@ -181,8 +139,7 @@ ATOM     12  H           1      -0.048  -1.362  -0.205  1.00  0.00
 ATOM     13  H           1      -1.183   0.500  -1.412  1.00  0.00
 ```
 
-By changing the arguments to our command, we can change our script's
-behaviour:
+Изменяя аргументы в команде, мы можем менять поведение нашего скрипта:
 
 ```bash
 $ bash middle.sh pentane.pdb 20 5
@@ -196,59 +153,37 @@ ATOM     17  H           1      -3.393   0.254  -0.321  1.00  0.00
 TER      18              1
 ```
 
-This works,
-but it may take the next person who reads `middle.sh` a moment to figure out what it does.
-We can improve our script by adding some **comments** at the top:
+Это работает, но следующий человек, который откроет `middle.sh`, может не сразу понять, что он делает. Мы можем улучшить скрипт, добавив несколько **комментариев** в начале:
 
 ```bash
 $ nano middle.sh
 ```
 
 ```source
-# Select lines from the middle of a file.
-# Usage: bash middle.sh filename end_line num_lines
+# Выбор строк из середины файла.
+# Использование: bash middle.sh имя_файла номер_последней_строки количество_строк
 head -n "$2" "$1" | tail -n "$3"
 ```
 
-A comment starts with a `#` character and runs to the end of the line.
-The computer ignores comments,
-but they're invaluable for helping people (including your future self) understand and use scripts.
-The only caveat is that each time you modify the script,
-you should check that the comment is still accurate. An explanation that sends
-the reader in the wrong direction is worse than none at all.
+Комментарий начинается с символа `#` и продолжается до конца строки. Компьютер игнорирует комментарии, но они бесценны для того, чтобы помочь людям (включая вас в будущем) понять и использовать скрипты. Единственное предостережение: каждый раз, когда вы модифицируете скрипт, нужно проверить, чтобы комментарий оставался точным. Объяснение, которое уводит читателя в неправильном направлении, хуже, чем его отсутствие.
 
-What if we want to process many files in a single pipeline?
-For example, if we want to sort our `.pdb` files by length, we would type:
+Что, если мы хотим обработать несколько файлов в одном конвейере? Например, если мы хотим отсортировать наши `.pdb` файлы по длине, мы бы набрали:
 
 ```bash
 $ wc -l *.pdb | sort -n
 ```
 
-because `wc -l` lists the number of lines in the files
-(recall that `wc` stands for 'word count', adding the `-l` option means 'count lines' instead)
-and `sort -n` sorts things numerically.
-We could put this in a file,
-but then it would only ever sort a list of `.pdb` files in the current directory.
-If we want to be able to get a sorted list of other kinds of files,
-we need a way to get all those names into the script.
-We can't use `$1`, `$2`, and so on
-because we don't know how many files there are.
-Instead, we use the special variable `$@`,
-which means,
-'All of the command-line arguments to the shell script'.
-We also should put `$@` inside double-quotes
-to handle the case of arguments containing spaces
-(`"$@"` is special syntax and is equivalent to `"$1"` `"$2"` ...).
+потому что `wc -l` выводит количество строк в файлах (напомним, что `wc` означает 'подсчёт слов', добавление опции `-l` означает 'подсчёт строк') и `sort -n` сортирует всё в числовом порядке. Мы могли бы поместить это в файл, но тогда он будет работать только с `.pdb` файлами в текущей директории. Если мы хотим получить отсортированный список других типов файлов, нам нужно передать их имена в скрипт. Мы не можем использовать `$1`, `$2` и так далее, потому что не знаем, сколько файлов будет. Вместо этого мы используем специальную переменную `$@`, которая означает 'все аргументы командной строки для скрипта оболочки'. Мы также должны заключить `$@` в двойные кавычки чтобы обрабатывать случаи, когда в аргументах есть пробелы ("$@" — это специальный синтаксис, эквивалентный "$1" "$2" ...).
 
-Here's an example:
+Вот пример:
 
 ```bash
 $ nano sorted.sh
 ```
 
 ```source
-# Sort files by their length.
-# Usage: bash sorted.sh one_or_more_filenames
+# Сортировка файлов по их длине.
+# Использование: bash sorted.sh одно_или_несколько_имён_файлов
 wc -l "$@" | sort -n
 ```
 
@@ -271,9 +206,9 @@ $ bash sorted.sh *.pdb ../creatures/*.dat
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## List Unique Species
+## Список уникальных видов
 
-Leah has several hundred data files, each of which is formatted like this:
+У Лии есть несколько сотен файлов с данными, каждый из которых выглядит так:
 
 ```source
 2013-11-05,deer,5
@@ -286,31 +221,27 @@ Leah has several hundred data files, each of which is formatted like this:
 2013-11-07,bear,1
 ```
 
-An example of this type of file is given in
-`shell-lesson-data/exercise-data/animal-counts/animals.csv`.
+Пример такого типа файла находится в `shell-lesson-data/exercise-data/animal-counts/animals.csv`.
 
-We can use the command `cut -d , -f 2 animals.csv | sort | uniq` to produce
-the unique species in `animals.csv`.
-In order to avoid having to type out this series of commands every time,
-a scientist may choose to write a shell script instead.
+Мы можем использовать команду `cut -d , -f 2 animals.csv | sort | uniq`, чтобы вывести уникальные виды в файле `animals.csv`. Чтобы не вводить эту команду каждый раз, учёная может написать скрипт оболочки.
 
-Write a shell script called `species.sh` that takes any number of
-filenames as command-line arguments and uses a variation of the above command
-to print a list of the unique species appearing in each of those files separately.
+Напишите скрипт оболочки под названием `species.sh`, который принимает любое количество имён файлов в качестве аргументов командной строки и использует вариант этой команды для вывода списка уникальных видов, встречающихся в каждом из файлов отдельно.
 
 :::::::::::::::  solution
 
-## Solution
+## Решение
 
 ```bash
-# Script to find unique species in csv files where species is the second data field
-# This script accepts any number of file names as command line arguments
+# Скрипт для поиска уникальных видов в файлах CSV, где виды находятся во втором
+# столбце
+# Этот скрипт принимает любое количество имён файлов в качестве аргументов
+# командной строки
 
-# Loop over all files
+# Проход по всем файлам
 for file in $@
 do
     echo "Unique species in $file:"
-    # Extract species names
+    # Извлечение названий видов
     cut -d , -f 2 $file | sort | uniq
 done
 ```
@@ -319,19 +250,13 @@ done
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-Suppose we have just run a series of commands that did something useful --- for example,
-creating a graph we'd like to use in a paper.
-We'd like to be able to re-create the graph later if we need to,
-so we want to save the commands in a file.
-Instead of typing them in again
-(and potentially getting them wrong)
-we can do this:
+Предположим, что мы только что выполнили серию команд, которые сделали что-то полезное — например, создали график, который мы хотели бы использовать в статье. Мы хотим иметь возможность воссоздать этот график позже, если потребуется, поэтому хотим сохранить команды в файл. Вместо того чтобы набирать их снова (и, возможно, ошибаться), мы можем сделать так:
 
 ```bash
 $ history | tail -n 5 > redo-figure-3.sh
 ```
 
-The file `redo-figure-3.sh` now contains:
+Теперь файл `redo-figure-3.sh` содержит:
 
 ```source
 297 bash goostats.sh NENE01729B.txt stats-NENE01729B.txt
@@ -341,70 +266,52 @@ The file `redo-figure-3.sh` now contains:
 301 history | tail -n 5 > redo-figure-3.sh
 ```
 
-After a moment's work in an editor to remove the serial numbers on the commands,
-and to remove the final line where we called the `history` command,
-we have a completely accurate record of how we created that figure.
+Потратив минуту в редакторе, чтобы убрать порядковые номера команд и удалить последнюю строку, где была вызвана команда `history`, мы получаем точную запись того, как был создан этот график.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Why Record Commands in the History Before Running Them?
+## Зачем записывать команды в историю перед их выполнением?
 
-If you run the command:
+Если вы выполните команду:
 
 ```bash
 $ history | tail -n 5 > recent.sh
 ```
 
-the last command in the file is the `history` command itself, i.e.,
-the shell has added `history` to the command log before actually
-running it. In fact, the shell *always* adds commands to the log
-before running them. Why do you think it does this?
+последняя команда в файле будет командой `history`, т.е. оболочка добавила команду `history` в журнал команд до фактического её выполнения. На самом деле, оболочка всегда добавляет команды в журнал перед их выполнением. Как вы думаете, зачем она это делает?
 
 :::::::::::::::  solution
 
-## Solution
+## Решение
 
-If a command causes something to crash or hang, it might be useful
-to know what that command was, in order to investigate the problem.
-Were the command only be recorded after running it, we would not
-have a record of the last command run in the event of a crash.
-
-
+Если команда вызывает сбой или зависание, может быть полезно узнать, что это была за команда, чтобы расследовать проблему. Если бы команда записывалась в журнал только после её выполнения, мы бы не имели записи о последней выполненной команде в случае сбоя.
 
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-In practice, most people develop shell scripts by running commands
-at the shell prompt a few times
-to make sure they're doing the right thing,
-then saving them in a file for re-use.
-This style of work allows people to recycle
-what they discover about their data and their workflow with one call to `history`
-and a bit of editing to clean up the output
-and save it as a shell script.
+На практике большинство людей создают скрипты оболочки, выполняя команды в командной строке несколько раз, чтобы убедиться, что они работают правильно, а затем сохраняют их в файл для повторного использования. Такой стиль работы позволяет людям повторно использовать то, что они узнали о своих данных и рабочем процессе, с одной командой `history` и небольшим редактированием, чтобы очистить вывод и сохранить его как скрипт оболочки.
 
-## Nelle's Pipeline: Creating a Script
+## Конвейер Нелли: Создание скрипта
 
-Nelle's supervisor insisted that all her analytics must be reproducible.
-The easiest way to capture all the steps is in a script.
+Руководитель Нелли настаивает на том, что вся её аналитика должна быть воспроизводимой. Самый простой способ зафиксировать все шаги — это записать их в скрипт.
 
-First we return to Nelle's project directory:
+Сначала мы возвращаемся в проектную директорию Нелли:
 
 ```bash
 $ cd ../../north-pacific-gyre/
 ```
 
-She creates a file using `nano` ...
+Она создаёт файл, используя `nano` ...
 
 ```bash
 $ nano do-stats.sh
 ```
 
-...which contains the following:
+...в который она записывает следующее:
 
 ```bash
-# Calculate stats for data files.
+# Рассчитать статистику для файлов данных.
 for datafile in "$@"
 do
     echo $datafile
@@ -412,28 +319,24 @@ do
 done
 ```
 
-She saves this in a file called `do-stats.sh`
-so that she can now re-do the first stage of her analysis by typing:
+Она сохраняет этот файл под именем `do-stats.sh`, чтобы теперь можно было повторно выполнить первый этап её анализа, набрав:
 
 ```bash
 $ bash do-stats.sh NENE*A.txt NENE*B.txt
 ```
 
-She can also do this:
+Она также может выполнить:
 
 ```bash
 $ bash do-stats.sh NENE*A.txt NENE*B.txt | wc -l
 ```
 
-so that the output is just the number of files processed
-rather than the names of the files that were processed.
+чтобы вывести только количество обработанных файлов, а не имена обработанных файлов.
 
-One thing to note about Nelle's script is that
-it lets the person running it decide what files to process.
-She could have written it as:
+Одно из достоинств скрипта Нелли состоит в том, что он позволяет пользователю решить, какие файлы обрабатывать. Она могла бы написать его так:
 
 ```bash
-# Calculate stats for Site A and Site B data files.
+# Рассчитать статистику для файлов данных по типам A и B.
 for datafile in NENE*A.txt NENE*B.txt
 do
     echo $datafile
@@ -441,62 +344,46 @@ do
 done
 ```
 
-The advantage is that this always selects the right files:
-she doesn't have to remember to exclude the 'Z' files.
-The disadvantage is that it *always* selects just those files --- she can't run it on all files
-(including the 'Z' files),
-or on the 'G' or 'H' files her colleagues in Antarctica are producing,
-without editing the script.
-If she wanted to be more adventurous,
-she could modify her script to check for command-line arguments,
-and use `NENE*A.txt NENE*B.txt` if none were provided.
-Of course, this introduces another tradeoff between flexibility and complexity.
+Преимущество такого подхода в том, что он всегда выбирает правильные файлы: ей не нужно помнить об исключении файлов с буквой 'Z'. Недостаток же в том, что он всегда выбирает только эти файлы — она не сможет запустить его на всех файлах (включая файлы с буквой 'Z'), или на файлах с буквами 'G' или 'H', которые её коллеги из Антарктиды производят, без редактирования скрипта. Если бы она хотела более гибкий вариант, она могла бы изменить свой скрипт так, чтобы он проверял наличие аргументов командной строки, и использовал бы `NENE*A.txt NENE*B.txt`, если аргументы не указаны. Конечно, это вводит новый компромисс между гибкостью и сложностью.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Variables in Shell Scripts
+## Переменные в скриптах оболочки
 
-In the `alkanes` directory, imagine you have a shell script called `script.sh` containing the
-following commands:
+В директории `alkanes` представьте, что у вас есть скрипт под названием `script.sh`, который содержит следующие команды:
 
 ```bash
 head -n $2 $1
 tail -n $3 $1
 ```
 
-While you are in the `alkanes` directory, you type the following command:
+Находясь в директории `alkanes`, вы набираете следующую команду:
 
 ```bash
 $ bash script.sh '*.pdb' 1 1
 ```
 
-Which of the following outputs would you expect to see?
+Какой из следующих выводов вы ожидаете увидеть?
 
-1. All of the lines between the first and the last lines of each file ending in `.pdb`
-  in the `alkanes` directory
-2. The first and the last line of each file ending in `.pdb` in the `alkanes` directory
-3. The first and the last line of each file in the `alkanes` directory
-4. An error because of the quotes around `*.pdb`
+1. Все строки между первой и последней строками каждого файла с расширением `.pdb` в директории `alkanes`
+2. Первая и последняя строки каждого файла с расширением `.pdb` в директории `alkanes`
+3. Первая и последняя строки каждого файла в директории `alkanes`
+4. Ошибка из-за кавычек вокруг `*.pdb`
 
 :::::::::::::::  solution
 
-## Solution
+## Решение
 
-The correct answer is 2.
+Правильный ответ — 2.
 
-The special variables `$1`, `$2` and `$3` represent the command line arguments given to the
-script, such that the commands run are:
+Специальные переменные `$1`, `$2` и `$3` представляют аргументы командной строки, переданные скрипту, таким образом, команды, которые выполняются, будут следующими:
 
 ```bash
 $ head -n 1 cubane.pdb ethane.pdb octane.pdb pentane.pdb propane.pdb
 $ tail -n 1 cubane.pdb ethane.pdb octane.pdb pentane.pdb propane.pdb
 ```
 
-The shell does not expand `'*.pdb'` because it is enclosed by quote marks.
-As such, the first argument to the script is `'*.pdb'` which gets expanded within the
-script by `head` and `tail`.
-
-
+Оболочка не расширяет `'*.pdb'`, так как он заключён в кавычки. Таким образом, первый аргумент скрипта — это `'*.pdb'`, который будет расширен внутри скрипта перед вызовом команд `head` и `tail`.
 
 :::::::::::::::::::::::::
 
@@ -504,21 +391,17 @@ script by `head` and `tail`.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Find the Longest File With a Given Extension
+## Найдите самый длинный файл с заданным расширением
 
-Write a shell script called `longest.sh` that takes the name of a
-directory and a filename extension as its arguments, and prints
-out the name of the file with the most lines in that directory
-with that extension. For example:
+Напишите скрипт оболочки под названием `longest.sh`, который принимает в качестве аргументов имя директории и расширение файлов и выводит имя файла с наибольшим количеством строк в этой директории с указанным расширением. Например:
 
 ```bash
 $ bash longest.sh shell-lesson-data/exercise-data/alkanes pdb
 ```
 
-would print the name of the `.pdb` file in `shell-lesson-data/exercise-data/alkanes` that has
-the most lines.
+выведет имя файла с расширением `.pdb` в директории `shell-lesson-data/exercise-data/alkanes`, который содержит наибольшее количество строк.
 
-Feel free to test your script on another directory e.g.
+Не стесняйтесь протестировать свой скрипт на другой директории, например:
 
 ```bash
 $ bash longest.sh shell-lesson-data/exercise-data/writing txt
@@ -526,26 +409,24 @@ $ bash longest.sh shell-lesson-data/exercise-data/writing txt
 
 :::::::::::::::  solution
 
-## Solution
+## Решение
 
 ```bash
-# Shell script which takes two arguments:
-#    1. a directory name
-#    2. a file extension
-# and prints the name of the file in that directory
-# with the most lines which matches the file extension.
+# Скрипт, который принимает два аргумента:
+#    1. имя директории
+#    2. расширение файлов
+# и выводит имя файла, который:
+#    1. находится в указанной директории,
+#    2. имеет указанное расширение,
+#    3. содержит наибольшее количество строк.
+# .
 
 wc -l $1/*.$2 | sort -n | tail -n 2 | head -n 1
 ```
 
-The first part of the pipeline, `wc -l $1/*.$2 | sort -n`, counts
-the lines in each file and sorts them numerically (largest last). When
-there's more than one file, `wc` also outputs a final summary line,
-giving the total number of lines across *all* files.  We use `tail -n 2 | head -n 1` to throw away this last line.
+Первая часть конвейера, `wc -l $1/*.$2 | sort -n`, подсчитывает количество строк в каждом файле и сортирует их численно (от меньшего к большему). Когда файлов несколько, `wc` также выводит итоговую строку, показывающую общее количество строк по всем файлам. Мы используем `tail -n 2 | head -n 1`, чтобы отбросить эту последнюю строку.
 
-With `wc -l $1/*.$2 | sort -n | tail -n 1` we'll see the final summary
-line: we can build our pipeline up in pieces to be sure we understand
-the output.
+При использовании команды `wc -l $1/*.$2 | sort -n | tail -n 1` будет отображена итоговая строка: мы можем строить наш конвейер по частям, чтобы лучше понять его вывод.
 
 :::::::::::::::::::::::::
 
@@ -553,21 +434,17 @@ the output.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Script Reading Comprehension
+## Понимание скриптов
 
-For this question, consider the `shell-lesson-data/exercise-data/alkanes` directory once again.
-This contains a number of `.pdb` files in addition to any other files you
-may have created.
-Explain what each of the following three scripts would do when run as
-`bash script1.sh *.pdb`, `bash script2.sh *.pdb`, and `bash script3.sh *.pdb` respectively.
+Для этого задания рассмотрите директорию `shell-lesson-data/exercise-data/alkanes`. Она содержит несколько файлов с расширением `.pdb`, а также другие файлы, которые вы могли создать. Объясните, что делает каждый из трёх скриптов при запуске как `bash script1.sh *.pdb`, `bash script2.sh *.pdb` и `bash script3.sh *.pdb` соответственно.
 
 ```bash
-# Script 1
+# Скрипт 1
 echo *.*
 ```
 
 ```bash
-# Script 2
+# Скрипт 2
 for filename in $1 $2 $3
 do
     cat $filename
@@ -575,26 +452,21 @@ done
 ```
 
 ```bash
-# Script 3
+# Скрипт 3
 echo $@.pdb
 ```
 
 :::::::::::::::  solution
 
-## Solutions
+## Решение
 
-In each case, the shell expands the wildcard in `*.pdb` before passing the resulting
-list of file names as arguments to the script.
+В каждом случае оболочка расширяет подстановочный знак в `*.pdb` до того, как передаёт результат в качестве аргументов скрипту.
 
-Script 1 would print out a list of all files containing a dot in their name.
-The arguments passed to the script are not actually used anywhere in the script.
+Скрипт 1 выведет список всех файлов, содержащих точку в своём имени. Переданные аргументы в скрипте нигде не используются.
 
-Script 2 would print the contents of the first 3 files with a `.pdb` file extension.
-`$1`, `$2`, and `$3` refer to the first, second, and third argument respectively.
+Скрипт 2 выведет содержимое первых 3 файлов с расширением `.pdb`. `$1`, `$2` и `$3` относятся к первому, второму и третьему аргументам соответственно.
 
-Script 3 would print all the arguments to the script (i.e. all the `.pdb` files),
-followed by `.pdb`.
-`$@` refers to *all* the arguments given to a shell script.
+Скрипт 3 выведет все аргументы скрипта (т.е. все файлы с расширением `.pdb`), а затем добавит `.pdb` к каждому из них. `$@` относится ко всем аргументам, переданным в скрипт оболочки.
 
 ```output
 cubane.pdb ethane.pdb methane.pdb octane.pdb pentane.pdb propane.pdb.pdb
@@ -606,13 +478,12 @@ cubane.pdb ethane.pdb methane.pdb octane.pdb pentane.pdb propane.pdb.pdb
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Debugging Scripts
+## Отладка скриптов
 
-Suppose you have saved the following script in a file called `do-errors.sh`
-in Nelle's `north-pacific-gyre` directory:
+Предположим, вы сохранили следующий скрипт в файле под названием `do-errors.sh` в директории Нелли `north-pacific-gyre`:
 
 ```bash
-# Calculate stats for data files.
+# Рассчитать статистику для файлов данных.
 for datafile in "$@"
 do
     echo $datfile
@@ -620,49 +491,37 @@ do
 done
 ```
 
-When you run it from the `north-pacific-gyre` directory:
+Когда вы запускаете его из директории `north-pacific-gyre`:
 
 ```bash
 $ bash do-errors.sh NENE*A.txt NENE*B.txt
 ```
 
-the output is blank.
-To figure out why, re-run the script using the `-x` option:
+вывод окажется пустым. Чтобы выяснить причину, запустите скрипт с опцией -x:
 
 ```bash
 $ bash -x do-errors.sh NENE*A.txt NENE*B.txt
 ```
 
-What is the output showing you?
-Which line is responsible for the error?
+Что показывает вывод? Какая строка отвечает за ошибку?
 
 :::::::::::::::  solution
 
-## Solution
+## Решение
 
-The `-x` option causes `bash` to run in debug mode.
-This prints out each command as it is run, which will help you to locate errors.
-In this example, we can see that `echo` isn't printing anything. We have made a typo
-in the loop variable name, and the variable `datfile` doesn't exist, hence returning
-an empty string.
-
-
+Опция `-x` заставляет `bash` работать в режиме отладки. Она выводит каждую команду по мере её выполнения, что поможет найти ошибки. В данном примере мы видим, что команда `echo` ничего не выводит. Мы допустили опечатку в названии переменной в цикле, и переменная `datfile` не существует, поэтому возвращается пустая строка.
 
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-
-
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Save commands in files (usually called shell scripts) for re-use.
-- `bash [filename]` runs the commands saved in a file.
-- `$@` refers to all of a shell script's command-line arguments.
-- `$1`, `$2`, etc., refer to the first command-line argument, the second command-line argument, etc.
-- Place variables in quotes if the values might have spaces in them.
-- Letting users decide what files to process is more flexible and more consistent with built-in Unix commands.
+- Сохраняйте команды в файлах (обычно называемых shell-скриптами) для повторного использования.
+- Команда `bash [имя_файла]` выполняет команды, сохранённые в файле.
+- Переменная `$@` ссылается на все аргументы командной строки для shell-скрипта.
+- Переменные `$1`, `$2` и т.д. ссылаются на первый, второй и последующие аргументы командной строки соответственно.
+- Заключайте переменные в кавычки, если их значения могут содержать пробелы.
+- Предоставление пользователям возможности выбирать файлы для обработки делает скрипты более гибкими и согласуется с встроенными командами Unix.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
