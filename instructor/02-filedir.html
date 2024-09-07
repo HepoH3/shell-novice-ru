@@ -375,7 +375,7 @@
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Введение в файловую систему и навигация по ней в оболочке (освещено в
 разделе <a href="02-filedir.html">Навигация по файлам и каталогам</a>)
@@ -408,7 +408,11 @@
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">$</span> pwd</span></code></pre>
 </div>
-<pre class="вывод"><code>/Users/nelle</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>/Users/nelle</code></pre>
+</div>
 <p>В этих листингах, ответом компьютера является
 <code>/Users/nelle</code> — <strong>домашний каталог</strong>:</p>
 <div id="вариации-домашнего-каталога" class="callout">
@@ -501,8 +505,12 @@ Windows он может немного отличаться.) В будущих 
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">$</span> ls</span></code></pre>
 </div>
-<pre class="вывод"><code>Applications Documents    Library      Music        Public
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Applications Documents    Library      Music        Public
 Desktop      Downloads    Movies       Pictures</code></pre>
+</div>
 <blockquote>
 <p>[!Note]<br>
 Ваши результаты могут немного отличаться в зависимости от вашей
@@ -527,8 +535,12 @@ Desktop      Downloads    Movies       Pictures</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-F</span></span></code></pre>
 </div>
-<pre class="вывод"><code>Applications/ Documents/    Library/      Music/        Public/
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Applications/ Documents/    Library/      Music/        Public/
 Desktop/      Downloads/    Movies/       Pictures/</code></pre>
+</div>
 <p>Вывод показывает, что домашний каталог содержит только
 <strong>подкаталоги</strong>. Любые имена в выводе без
 классификационного символа — это <strong>файлы</strong> в текущем
@@ -595,7 +607,10 @@ Desktop/      Downloads/    Movies/       Pictures/</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">--help</span></span></code></pre>
 </div>
-<pre class="вывод"><code>Usage: ls [OPTION]... [FILE]...
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Usage: ls [OPTION]... [FILE]...
 List information about the FILEs (the current directory by default).
 Sort entries alphabetically if neither -cftuvSUX nor --sort is specified.
 
@@ -620,6 +635,7 @@ Mandatory arguments to long options are mandatory for short options, too.
   -f                         do not sort, enable -aU, disable -ls --color
   -F, --classify             append indicator (one of */=&gt;@|) to entries
 ...        ...        ...</code></pre>
+</div>
 <div id="когда-использовать-короткие-и-длинные-опции" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -740,7 +756,7 @@ read”, что на сленге означает: “многа букаф, н
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Решение </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Опция <code>-l</code> заставляет команду <code>ls</code> использовать
 формат длинного (<strong>l</strong>ong) списка, показывая не только
@@ -775,7 +791,7 @@ read”, что на сленге означает: “многа букаф, н
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Решение </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>При использовании опций <code>-rt</code>, самый недавний измененный
 файл будет отображен последним . Это может быть очень полезно для поиска
@@ -801,7 +817,11 @@ read”, что на сленге означает: “многа букаф, н
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-F</span> Desktop</span></code></pre>
 </div>
-<pre class="вывод"><code>shell-lesson-data/</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>shell-lesson-data/</code></pre>
+</div>
 <p>Обратите внимание, что если каталог с именем <code>Desktop</code> не
 существует в вашем текущем рабочем каталоге, эта команда вернёт ошибку.
 Обычно каталог <code>Desktop</code> существует в домашнем каталоге,
@@ -829,7 +849,11 @@ read”, что на сленге означает: “многа букаф, н
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-F</span> Desktop/shell-lesson-data</span></code></pre>
 </div>
-<pre class="вывод"><code>exercise-data/  north-pacific-gyre/</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>exercise-data/  north-pacific-gyre/</code></pre>
+</div>
 <p>Во-вторых, мы можем сменить наше местоположение на другой каталог,
 чтобы больше не находиться в домашнем каталоге.</p>
 <p>Команда для смены местоположения — это <code>cd</code>, за которой
@@ -866,13 +890,21 @@ read”, что на сленге означает: “многа букаф, н
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="ex">$</span> pwd</span></code></pre>
 </div>
-<pre class="вывод"><code>/Users/nelle/Desktop/shell-lesson-data/exercise-data</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>/Users/nelle/Desktop/shell-lesson-data/exercise-data</code></pre>
+</div>
 <div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-F</span></span></code></pre>
 </div>
-<pre class="вывод"><code>alkanes/  animal-counts/  creatures/  numbers.txt  writing/</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>alkanes/  animal-counts/  creatures/  numbers.txt  writing/</code></pre>
+</div>
 <p>Теперь мы знаем, как спуститься по дереву каталогов (то есть как
 войти в подкаталог), но как подняться вверх (то есть как выйти из
 каталога и войти в его родительский каталог)? Мы могли бы попробовать
@@ -909,7 +941,11 @@ read”, что на сленге означает: “многа букаф, н
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="ex">$</span> pwd</span></code></pre>
 </div>
-<pre class="вывод"><code>/Users/nelle/Desktop/shell-lesson-data</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>/Users/nelle/Desktop/shell-lesson-data</code></pre>
+</div>
 <p>Специальный каталог <code>..</code> обычно не отображается, когда мы
 выполняем <code>ls</code>. Если мы хотим его увидеть, мы можем добавить
 опцию <code>-a</code> к <code>ls -F</code>:</p>
@@ -918,7 +954,11 @@ read”, что на сленге означает: “многа букаф, н
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-F</span> <span class="at">-a</span></span></code></pre>
 </div>
-<pre class="вывод"><code>./  ../  exercise-data/  north-pacific-gyre/</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>./  ../  exercise-data/  north-pacific-gyre/</code></pre>
+</div>
 <p><code>-a</code> означает ‘показать все’ (show <strong>a</strong>ll),
 включая скрытые файлы. Эта опция сообщает команде <code>ls</code>
 показывать нам имена файлов и каталогов, которые начинаются с
@@ -964,7 +1004,11 @@ read”, что на сленге означает: “многа букаф, н
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" tabindex="-1"></a><span class="ex">$</span> pwd</span></code></pre>
 </div>
-<pre class="вывод"><code>/Users/nelle</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>/Users/nelle</code></pre>
+</div>
 <p>Оказывается, что команда <code>cd</code> без аргументов вернёт вас в
 домашний каталог, что очень полезно, если вы потерялись в своей файловой
 системе.</p>
@@ -1005,7 +1049,11 @@ read”, что на сленге означает: “многа букаф, н
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" tabindex="-1"></a><span class="ex">$</span> pwd</span></code></pre>
 </div>
-<pre class="вывод"><code>/Users/nelle/Desktop/shell-lesson-data/exercise-data</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>/Users/nelle/Desktop/shell-lesson-data/exercise-data</code></pre>
+</div>
 <div class="codewrapper sourceCode" id="cb36">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1089,7 +1137,7 @@ read”, что на сленге означает: “многа букаф, н
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li>Нет: <code>.</code> обозначает текущий каталог.</li>
 <li>Нет: <code>/</code> обозначает корневой каталог.</li>
@@ -1137,7 +1185,7 @@ read”, что на сленге означает: “многа букаф, н
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Решение </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li>Нет: каталог <code>backup</code> существует в
 <code>/Users</code>.</li>
@@ -1162,7 +1210,11 @@ read”, что на сленге означает: “многа букаф, н
 <code>pwd</code> выводит <code>/Users/backup</code>, и опция
 <code>-r</code> заставляет <code>ls</code> отображать содержимое в
 обратном порядке, какая команда приведёт к следующему выводу:</p>
-<pre class="вывод"><code>pnas_sub/ pnas_final/ original/</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>pnas_sub/ pnas_final/ original/</code></pre>
+</div>
 <figure><img src="../fig/filesystem-challenge.svg" alt="Дерево каталогов ниже директории Users, где “/Users” содержит каталоги “backup” и “thing”; “/Users/backup” содержит “original”, “pnas_final” и “pnas_sub”; “/Users/thing” содержит “backup”; а “/Users/thing/backup” содержит “2012-12-01”, “2013-01-08” и “2013-01-27”" class="figure mx-auto d-block"><div class="figcaption">Дерево каталогов ниже директории Users, где
 “/Users” содержит каталоги “backup” и “thing”; “/Users/backup” содержит
 “original”, “pnas_final” и “pnas_sub”; “/Users/thing” содержит “backup”;
@@ -1179,7 +1231,7 @@ read”, что на сленге означает: “многа букаф, н
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Решение </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li>Нет: <code>pwd</code> — это не имя каталога.</li>
 <li>Да: ls без каталога, переданного в качестве аргумента выводит файлы
@@ -1227,8 +1279,12 @@ read”, что на сленге означает: “многа букаф, н
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" tabindex="-1"></a><span class="ex">$</span> cd ~/Desktop/shell-lesson-data</span>
 <span id="cb42-2"><a href="#cb42-2" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-s</span> exercise-data</span></code></pre>
 </div>
-<pre class="вывод"><code>total 28
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>total 28
  4 animal-counts   4 creatures  12 numbers.txt   4 alkanes   4 writing</code></pre>
+</div>
 <p>Обратите внимание, что размеры, возвращаемые командой
 <code>ls -s</code>, указаны в <em>блоках</em>. Эти блоки могут быть
 определены по-разному в зависимости от операционной системы, поэтому вы
@@ -1238,7 +1294,11 @@ read”, что на сленге означает: “многа букаф, н
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb44-1"><a href="#cb44-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-S</span> exercise-data</span></code></pre>
 </div>
-<pre class="вывод"><code>animal-counts  creatures  alkanes  writing  numbers.txt</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>animal-counts  creatures  alkanes  writing  numbers.txt</code></pre>
+</div>
 <p>Таким образом, команда <code>ls -F /</code> из примера выше выведет
 список файлов и каталогов в корневом каталоге <code>/</code>. Пример
 возможного вывода для этой команды:</p>
@@ -1247,9 +1307,13 @@ read”, что на сленге означает: “многа букаф, н
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-F</span> /</span></code></pre>
 </div>
-<pre class="вывод"><code>Applications/         System/
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Applications/         System/
 Library/              Users/
 Network/              Volumes/</code></pre>
+</div>
 <div class="section level3">
 <h3 id="работа-нелли-организация-файлов">Работа Нелли: Организация файлов<a class="anchor" aria-label="anchor" href="#%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D0%BD%D0%B5%D0%BB%D0%BB%D0%B8-%D0%BE%D1%80%D0%B3%D0%B0%D0%BD%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2"></a></h3>
 <p>Зная все это о файлах и каталогах, Нелли готова организовать файлы,

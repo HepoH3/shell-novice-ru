@@ -387,15 +387,23 @@ Protein Data Bank, простом текстовом формате, котор�
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">$</span> ls</span></code></pre>
 </div>
-<pre class="вывод"><code>cubane.pdb    methane.pdb    pentane.pdb
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>cubane.pdb    methane.pdb    pentane.pdb
 ethane.pdb    octane.pdb     propane.pdb</code></pre>
+</div>
 <p>Запустим пример команды:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">$</span> wc cubane.pdb</span></code></pre>
 </div>
-<pre class="вывод"><code>20  156 1158 cubane.pdb</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>20  156 1158 cubane.pdb</code></pre>
+</div>
 <p>wc — это команда “word count” (подсчёт слов): она считает количество
 строк, слов и символов в файлах (возвращая значения в таком порядке
 слева направо).</p>
@@ -408,13 +416,17 @@ ethane.pdb    octane.pdb     propane.pdb</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">$</span> wc <span class="pp">*</span>.pdb</span></code></pre>
 </div>
-<pre class="вывод"><code>  20  156  1158  cubane.pdb
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>  20  156  1158  cubane.pdb
   12  84   622   ethane.pdb
    9  57   422   methane.pdb
   30  246  1828  octane.pdb
   21  165  1226  pentane.pdb
   15  111  825   propane.pdb
  107  819  6081  total</code></pre>
+</div>
 <p>Обратите внимание, что <code>wc *.pdb</code> также показывает общее
 количество строк в последней строке вывода.</p>
 <p>Если мы запустим <code>wc -l</code> вместо обычного <code>wc</code>,
@@ -424,13 +436,17 @@ ethane.pdb    octane.pdb     propane.pdb</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="ex">$</span> wc <span class="at">-l</span> <span class="pp">*</span>.pdb</span></code></pre>
 </div>
-<pre class="вывод"><code>  20  cubane.pdb
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>  20  cubane.pdb
   12  ethane.pdb
    9  methane.pdb
   30  octane.pdb
   21  pentane.pdb
   15  propane.pdb
  107  total</code></pre>
+</div>
 <p>С командой <code>wc</code> можно также использовать опции
 <code>-m</code> и <code>-w</code>, чтобы показать только количество
 символов или слов соответственно.</p>
@@ -483,7 +499,11 @@ ethane.pdb    octane.pdb     propane.pdb</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="ex">$</span> ls lengths.txt</span></code></pre>
 </div>
-<pre class="вывод"><code><span><span class="va">lengths.txt</span></span></code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">lengths.txt</span></span></code></pre>
+</div>
 <p>Теперь мы можем вывести содержимое файла <code>lengths.txt</code> на
 экран, используя команду <code>cat lengths.txt</code>. Команда cat
 получила своё название от “con<strong>cat</strong>enate”
@@ -495,13 +515,17 @@ ethane.pdb    octane.pdb     propane.pdb</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="ex">$</span> cat lengths.txt</span></code></pre>
 </div>
-<pre class="вывод"><code>  20  cubane.pdb
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>  20  cubane.pdb
   12  ethane.pdb
    9  methane.pdb
   30  octane.pdb
   21  pentane.pdb
   15  propane.pdb
  107  total</code></pre>
+</div>
 <div id="постраничный-вывод" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -539,18 +563,26 @@ ethane.pdb    octane.pdb     propane.pdb</code></pre>
 <span><span class="fl">6</span></span></code></pre>
 <p>Если мы запустим команду <code>sort</code>, передав её имя этого
 файла, результат будет следующим:</p>
-<pre class="вывод"><code><span><span class="fl">10</span></span>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="fl">10</span></span>
 <span><span class="fl">19</span></span>
 <span><span class="fl">2</span></span>
 <span><span class="fl">22</span></span>
 <span><span class="fl">6</span></span></code></pre>
+</div>
 <p>Если мы запустим <code>sort -n</code> на том же файле, результат
 будет следующим:</p>
-<pre class="вывод"><code><span><span class="fl">2</span></span>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="fl">2</span></span>
 <span><span class="fl">6</span></span>
 <span><span class="fl">10</span></span>
 <span><span class="fl">19</span></span>
 <span><span class="fl">22</span></span></code></pre>
+</div>
 <p>Объясните, почему опция <code>-n</code> даёт такой результат.</p>
 </div>
 </div>
@@ -577,13 +609,17 @@ ethane.pdb    octane.pdb     propane.pdb</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="ex">$</span> sort <span class="at">-n</span> lengths.txt</span></code></pre>
 </div>
-<pre class="вывод"><code>  9  methane.pdb
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>  9  methane.pdb
  12  ethane.pdb
  15  propane.pdb
  20  cubane.pdb
  21  pentane.pdb
  30  octane.pdb
 107  total</code></pre>
+</div>
 <p>Мы можем поместить отсортированный список строк в другой временный
 файл под названием <code>sorted-lengths.txt</code>, добавив
 <code>&gt; sorted-lengths.txt</code> после команды, как мы сделали с
@@ -597,7 +633,11 @@ ethane.pdb    octane.pdb     propane.pdb</code></pre>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="ex">$</span> sort <span class="at">-n</span> lengths.txt <span class="op">&gt;</span> sorted-lengths.txt</span>
 <span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a><span class="ex">$</span> head <span class="at">-n</span> 1 sorted-lengths.txt</span></code></pre>
 </div>
-<pre class="вывод"><code>  9  methane.pdb</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>  9  methane.pdb</code></pre>
+</div>
 <p>Использование опции <code>-n 1</code> с командой <code>head</code>
 указывает, что мы хотим получить только первую строку файла;
 <code>-n 20</code> даст первые 20 строк и так далее. Поскольку файл
@@ -640,7 +680,11 @@ ethane.pdb    octane.pdb     propane.pdb</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="ex">$</span> echo The echo command prints text</span></code></pre>
 </div>
-<pre class="вывод"><code>The echo command prints text</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>The echo command prints text</code></pre>
+</div>
 <p>Теперь протестируйте следующие команды, чтобы выявить разницу между
 двумя операторами:</p>
 <div class="codewrapper sourceCode" id="cb25">
@@ -740,7 +784,11 @@ ethane.pdb    octane.pdb     propane.pdb</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="ex">$</span> sort <span class="at">-n</span> lengths.txt <span class="kw">|</span> <span class="fu">head</span> <span class="at">-n</span> 1</span></code></pre>
 </div>
-<pre class="вывод"><code>  9  methane.pdb</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>  9  methane.pdb</code></pre>
+</div>
 <p>Вертикальная черта, <code>|</code>, между двумя командами называется
 <strong>каналом</strong> (<strong>pipe</strong>). Она сообщает оболочке,
 что мы хотим использовать вывод команды слева в качестве ввода для
@@ -760,13 +808,17 @@ ethane.pdb    octane.pdb     propane.pdb</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a><span class="ex">$</span> wc <span class="at">-l</span> <span class="pp">*</span>.pdb <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-n</span></span></code></pre>
 </div>
-<pre class="вывод"><code>   9 methane.pdb
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>   9 methane.pdb
   12 ethane.pdb
   15 propane.pdb
   20 cubane.pdb
   21 pentane.pdb
   30 octane.pdb
  107 total</code></pre>
+</div>
 <p>Затем мы можем передать этот вывод через другой канал в команду
 <code>head</code>, так что полная последовательность будет выглядеть
 так:</p>
@@ -775,7 +827,11 @@ ethane.pdb    octane.pdb     propane.pdb</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" tabindex="-1"></a><span class="ex">$</span> wc <span class="at">-l</span> <span class="pp">*</span>.pdb <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-n</span> <span class="kw">|</span> <span class="fu">head</span> <span class="at">-n</span> 1</span></code></pre>
 </div>
-<pre class="вывод"><code>   9  methane.pdb</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>   9  methane.pdb</code></pre>
+</div>
 <p>Это похоже на математическую запись, когда функции вкладываются друг
 в друга, например, log(3x), где говорится: “логарифм от трёх,
 помноженных на x”. В нашем случае алгоритм выглядит так: “head от sort
@@ -913,7 +969,10 @@ head -n 1” создаёт конвейер, где вывод команды �
 указать запятую в качестве символа-разделителя. Мы также использовали
 опцию <code>-f</code>, чтобы указать, что мы хотим извлечь второй
 столбец. Это даст следующий вывод:</p>
-<pre class="вывод"><code><span><span class="va">deer</span></span>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">deer</span></span>
 <span><span class="va">rabbit</span></span>
 <span><span class="va">raccoon</span></span>
 <span><span class="va">rabbit</span></span>
@@ -921,6 +980,7 @@ head -n 1” создаёт конвейер, где вывод команды �
 <span><span class="va">fox</span></span>
 <span><span class="va">rabbit</span></span>
 <span><span class="va">bear</span></span></code></pre>
+</div>
 <p>Команда <code>uniq</code> фильтрует соседние повторяющиеся строки в
 файле. Как можно расширить этот конвейер (с помощью <code>uniq</code> и
 другой команды), чтобы узнать, какие животные содержатся в файле (без
@@ -953,11 +1013,15 @@ head -n 1” создаёт конвейер, где вывод команды �
 <div class="callout-content">
 <p>Файл <code>animals.csv</code> содержит 8 строк данных в следующем
 формате:</p>
-<pre class="вывод"><code>2012-11-05,deer,5
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>2012-11-05,deer,5
 2012-11-05,rabbit,22
 2012-11-05,raccoon,7
 2012-11-06,rabbit,19
 ...</code></pre>
+</div>
 <p>Команда <code>uniq</code> имеет опцию <code>-c</code>, которая
 выводит количество вхождений каждой строки во входных данных.
 Предположим, что текущий каталог — это
@@ -999,24 +1063,32 @@ head -n 1” создаёт конвейер, где вывод команды �
 <span id="cb41-2"><a href="#cb41-2" tabindex="-1"></a><span class="ex">$</span> wc <span class="at">-l</span> <span class="pp">*</span>.txt</span></code></pre>
 </div>
 <p>Вывод состоит из 18 строк, которые выглядят так:</p>
-<pre class="вывод"><code>300 NENE01729A.txt
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>300 NENE01729A.txt
 300 NENE01729B.txt
 300 NENE01736A.txt
 300 NENE01751A.txt
 300 NENE01751B.txt
 300 NENE01812A.txt
 ... ...</code></pre>
+</div>
 <p>Затем она вводит:</p>
 <div class="codewrapper sourceCode" id="cb43">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" tabindex="-1"></a><span class="ex">$</span> wc <span class="at">-l</span> <span class="pp">*</span>.txt <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-n</span> <span class="kw">|</span> <span class="fu">head</span> <span class="at">-n</span> 5</span></code></pre>
 </div>
-<pre class="вывод"><code> 240 NENE02018B.txt
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code> 240 NENE02018B.txt
  300 NENE01729A.txt
  300 NENE01729B.txt
  300 NENE01736A.txt
  300 NENE01751A.txt</code></pre>
+</div>
 <p>Ой, один из файлов на 60 строк короче остальных. Когда она проверила
 его, она вспомнила, что провела этот анализ в 8 утра в понедельник —
 кто-то, вероятно, пользовался машиной на выходных, и она забыла сбросить
@@ -1027,11 +1099,15 @@ head -n 1” создаёт конвейер, где вывод команды �
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" tabindex="-1"></a><span class="ex">$</span> wc <span class="at">-l</span> <span class="pp">*</span>.txt <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-n</span> <span class="kw">|</span> <span class="fu">tail</span> <span class="at">-n</span> 5</span></code></pre>
 </div>
-<pre class="вывод"><code> 300 NENE02040B.txt
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code> 300 NENE02040B.txt
  300 NENE02040Z.txt
  300 NENE02043A.txt
  300 NENE02043B.txt
 5040 total</code></pre>
+</div>
 <p>Эти числа выглядят нормально — но что делает ‘Z’ в третьей строке с
 конца? Все её образцы должны быть помечены как ‘A’ или ‘B’; по правилам
 её лаборатории, буква ‘Z’ используется для обозначения образцов с
@@ -1042,7 +1118,11 @@ head -n 1” создаёт конвейер, где вывод команды �
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="pp">*</span>Z.txt</span></code></pre>
 </div>
-<pre class="вывод"><code>NENE01971Z.txt    NENE02040Z.txt</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>NENE01971Z.txt    NENE02040Z.txt</code></pre>
+</div>
 <p>Действительно, когда она проверила журнал на своём ноутбуке,
 оказалось, что для этих образцов не была записана глубина. Поскольку
 слишком поздно получать эту информацию каким-либо другим способом, ей

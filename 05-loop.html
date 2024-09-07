@@ -414,12 +414,16 @@
 <span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="op">&gt;</span>     head <span class="ex">-n</span> 2 <span class="va">$filename</span> <span class="kw">|</span> <span class="fu">tail</span> <span class="at">-n</span> 1</span>
 <span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="op">&gt;</span> done</span></code></pre>
 </div>
-<pre class="вывод"><code>basilisk.dat
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>basilisk.dat
 CLASSIFICATION: basiliscus vulgaris
 minotaur.dat
 CLASSIFICATION: bos hominus
 unicorn.dat
 CLASSIFICATION: equus monoceros</code></pre>
+</div>
 <div id="следите-за-приглашением" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -543,7 +547,10 @@ CLASSIFICATION: equus monoceros</code></pre>
 <span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="op">&gt;</span>     echo <span class="va">$loop_variable</span></span>
 <span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="op">&gt;</span> done</span></code></pre>
 </div>
-<pre class="вывод"><code><span><span class="fl">0</span></span>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="fl">0</span></span>
 <span><span class="fl">1</span></span>
 <span><span class="fl">2</span></span>
 <span><span class="fl">3</span></span>
@@ -553,6 +560,7 @@ CLASSIFICATION: equus monoceros</code></pre>
 <span><span class="fl">7</span></span>
 <span><span class="fl">8</span></span>
 <span><span class="fl">9</span></span></code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -567,7 +575,11 @@ CLASSIFICATION: equus monoceros</code></pre>
 <p>Это упражнение относится к каталогу
 <code>shell-lesson-data/exercise-data/alkanes</code>. Команда
 <code>ls *.pdb</code> выводит следующий результат:</p>
-<pre class="вывод"><code>cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb</code></pre>
+</div>
 <p>Каков результат выполнения следующего кода?</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -610,21 +622,29 @@ CLASSIFICATION: equus monoceros</code></pre>
 <span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a><span class="op">&gt;</span>     ls <span class="ex">cubane.pdb</span>  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb</span>
 <span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a><span class="op">&gt;</span> done</span></code></pre>
 </div>
-<pre class="вывод"><code>cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
 cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
 cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
 cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
 cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
 cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb</code></pre>
+</div>
 <p>Во втором блоке кода на каждой итерации цикла выводится разный файл.
 Значение переменной <code>datafile</code> вычисляется с использованием
 <code>$datafile</code> и затем выводится с помощью <code>ls</code>.</p>
-<pre class="вывод"><code><span><span class="va">cubane.pdb</span></span>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">cubane.pdb</span></span>
 <span><span class="va">ethane.pdb</span></span>
 <span><span class="va">methane.pdb</span></span>
 <span><span class="va">octane.pdb</span></span>
 <span><span class="va">pentane.pdb</span></span>
 <span><span class="va">propane.pdb</span></span></code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -836,7 +856,11 @@ cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb</code>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="ex">$</span> echo hello there</span></code></pre>
 </div>
 <p>выведет:</p>
-<pre class="вывод"><code>hello there</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>hello there</code></pre>
+</div>
 <p>В данном случае, поскольку оболочка расширяет <code>$filename</code>
 до имени файла, <code>echo</code> <code>$filename</code> выводит имя
 файла. Обратите внимание, что мы не можем записать это так:</p>
@@ -894,13 +918,17 @@ head: cannot open ‘purple unicorn.dat' for reading: No such file or directory<
 выше цикле, чтобы увидеть, как кавычки влияют на пробелы. Обратите
 внимание, что при выполнении кода в каталоге <code>creatures</code> мы
 получаем результат для файла <code>unicorn.dat</code>:</p>
-<pre class="вывод"><code>head: cannot open ‘red' for reading: No such file or directory
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>head: cannot open ‘red' for reading: No such file or directory
 head: cannot open ‘dragon.dat' for reading: No such file or directory
 head: cannot open ‘purple' for reading: No such file or directory
 CGGTACCGAA
 AAGGGTCGCG
 CAAGTGTTCC
 ...</code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -999,12 +1027,16 @@ original-basilisk.dat”, затем “cp minotaur.dat original-minotaur.dat”
 <span id="cb34-5"><a href="#cb34-5" tabindex="-1"></a><span class="op">&gt;</span>     echo <span class="va">$datafile</span></span>
 <span id="cb34-6"><a href="#cb34-6" tabindex="-1"></a><span class="op">&gt;</span> done</span></code></pre>
 </div>
-<pre class="вывод"><code><span><span class="va">NENE01729A.txt</span></span>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">NENE01729A.txt</span></span>
 <span><span class="va">NENE01729B.txt</span></span>
 <span><span class="va">NENE01736A.txt</span></span>
 <span><span class="va">...</span></span>
 <span><span class="va">NENE02043A.txt</span></span>
 <span><span class="va">NENE02043B.txt</span></span></code></pre>
+</div>
 <p>Следующим её шагом будет решение о том, как назвать файлы, которые
 создаст программа анализа <code>goostats.sh</code>. Добавление префикса
 к имени каждого входного файла словом <code>stats</code> кажется простым
@@ -1017,12 +1049,16 @@ original-basilisk.dat”, затем “cp minotaur.dat original-minotaur.dat”
 <span id="cb36-3"><a href="#cb36-3" tabindex="-1"></a><span class="op">&gt;</span>     echo <span class="va">$datafile</span> stats-<span class="va">$datafile</span></span>
 <span id="cb36-4"><a href="#cb36-4" tabindex="-1"></a><span class="op">&gt;</span> done</span></code></pre>
 </div>
-<pre class="вывод"><code>NENE01729A.txt stats-NENE01729A.txt
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>NENE01729A.txt stats-NENE01729A.txt
 NENE01729B.txt stats-NENE01729B.txt
 NENE01736A.txt stats-NENE01736A.txt
 ...
 NENE02043A.txt stats-NENE02043A.txt
 NENE02043B.txt stats-NENE02043B.txt</code></pre>
+</div>
 <p>Она ещё не запускала <code>goostats.sh</code>, но теперь уверена, что
 сможет выбрать правильные файлы и сгенерировать правильные имена
 выходных файлов.</p>
@@ -1071,10 +1107,14 @@ NENE02043B.txt stats-NENE02043B.txt</code></pre>
 </div>
 <p>Теперь при выполнении программы выводится одна строка каждые пять
 секунд:</p>
-<pre class="вывод"><code><span><span class="va">NENE01729A.txt</span></span>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">NENE01729A.txt</span></span>
 <span><span class="va">NENE01729B.txt</span></span>
 <span><span class="va">NENE01736A.txt</span></span>
 <span><span class="va">...</span></span></code></pre>
+</div>
 <p>1518 умножить на 5 секунд, разделить на 60 — это означает, что её
 скрипт будет выполняться около двух часов. В качестве последней проверки
 она открывает другое окно терминала, заходит в каталог
@@ -1099,12 +1139,16 @@ NENE02043B.txt stats-NENE02043B.txt</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" tabindex="-1"></a><span class="ex">$</span> history <span class="kw">|</span> <span class="fu">tail</span> <span class="at">-n</span> 5</span></code></pre>
 </div>
-<pre class="вывод"><code>456  for datafile in NENE*A.txt NENE*B.txt; do   echo $datafile stats-$datafile; done
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>456  for datafile in NENE*A.txt NENE*B.txt; do   echo $datafile stats-$datafile; done
 457  for datafile in NENE*A.txt NENE*B.txt; do echo $datafile stats-$datafile; done
 458  for datafile in NENE*A.txt NENE*B.txt; do bash goostats.sh $datafile stats-$datafile; done
 459  for datafile in NENE*A.txt NENE*B.txt; do echo $datafile; bash goostats.sh $datafile
 stats-$datafile; done
 460  history | tail -n 5</code></pre>
+</div>
 <p>она может снова запустить <code>goostats.sh</code> для файлов, просто
 введя <code>!459</code>.</p>
 </div>

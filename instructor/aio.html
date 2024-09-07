@@ -502,8 +502,12 @@
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">$</span> ls</span></code></pre>
 </div>
-<pre class="вывод"><code>Desktop     Downloads   Movies      Pictures
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Desktop     Downloads   Movies      Pictures
 Documents   Library     Music       Public</code></pre>
+</div>
 <div id="команда-не-найдена" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -518,7 +522,11 @@ Documents   Library     Music       Public</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">$</span> ks</span></code></pre>
 </div>
-<pre class="вывод"><code>ks: command not found</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>ks: command not found</code></pre>
+</div>
 <p>Это может произойти, если команда введена неправильно или
 соответствующая программа не установлена.</p>
 </div>
@@ -632,7 +640,7 @@ Documents   Library     Music       Public</code></pre>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Введение в файловую систему и навигация по ней в оболочке (освещено в
 разделе <a href="02-filedir.html">Навигация по файлам и каталогам</a>)
@@ -665,7 +673,11 @@ Documents   Library     Music       Public</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">$</span> pwd</span></code></pre>
 </div>
-<pre class="вывод"><code>/Users/nelle</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>/Users/nelle</code></pre>
+</div>
 <p>В этих листингах, ответом компьютера является
 <code>/Users/nelle</code> — <strong>домашний каталог</strong>:</p>
 <div id="вариации-домашнего-каталога" class="callout">
@@ -760,8 +772,12 @@ Windows он может немного отличаться.) В будущих 
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">$</span> ls</span></code></pre>
 </div>
-<pre class="вывод"><code>Applications Documents    Library      Music        Public
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Applications Documents    Library      Music        Public
 Desktop      Downloads    Movies       Pictures</code></pre>
+</div>
 <blockquote>
 <p>[!Note]<br>
 Ваши результаты могут немного отличаться в зависимости от вашей
@@ -788,8 +804,12 @@ Desktop      Downloads    Movies       Pictures</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-F</span></span></code></pre>
 </div>
-<pre class="вывод"><code>Applications/ Documents/    Library/      Music/        Public/
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Applications/ Documents/    Library/      Music/        Public/
 Desktop/      Downloads/    Movies/       Pictures/</code></pre>
+</div>
 <p>Вывод показывает, что домашний каталог содержит только
 <strong>подкаталоги</strong>. Любые имена в выводе без
 классификационного символа — это <strong>файлы</strong> в текущем
@@ -862,7 +882,10 @@ Desktop/      Downloads/    Movies/       Pictures/</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">--help</span></span></code></pre>
 </div>
-<pre class="вывод"><code>Usage: ls [OPTION]... [FILE]...
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Usage: ls [OPTION]... [FILE]...
 List information about the FILEs (the current directory by default).
 Sort entries alphabetically if neither -cftuvSUX nor --sort is specified.
 
@@ -887,6 +910,7 @@ Mandatory arguments to long options are mandatory for short options, too.
   -f                         do not sort, enable -aU, disable -ls --color
   -F, --classify             append indicator (one of */=&gt;@|) to entries
 ...        ...        ...</code></pre>
+</div>
 <div id="когда-использовать-короткие-и-длинные-опции" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -1011,7 +1035,7 @@ read”, что на сленге означает: “многа букаф, н
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Решение </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Опция <code>-l</code> заставляет команду <code>ls</code> использовать
 формат длинного (<strong>l</strong>ong) списка, показывая не только
@@ -1046,7 +1070,7 @@ read”, что на сленге означает: “многа букаф, н
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Решение </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>При использовании опций <code>-rt</code>, самый недавний измененный
 файл будет отображен последним . Это может быть очень полезно для поиска
@@ -1073,7 +1097,11 @@ read”, что на сленге означает: “многа букаф, н
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-F</span> Desktop</span></code></pre>
 </div>
-<pre class="вывод"><code>shell-lesson-data/</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>shell-lesson-data/</code></pre>
+</div>
 <p>Обратите внимание, что если каталог с именем <code>Desktop</code> не
 существует в вашем текущем рабочем каталоге, эта команда вернёт ошибку.
 Обычно каталог <code>Desktop</code> существует в домашнем каталоге,
@@ -1101,7 +1129,11 @@ read”, что на сленге означает: “многа букаф, н
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-F</span> Desktop/shell-lesson-data</span></code></pre>
 </div>
-<pre class="вывод"><code>exercise-data/  north-pacific-gyre/</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>exercise-data/  north-pacific-gyre/</code></pre>
+</div>
 <p>Во-вторых, мы можем сменить наше местоположение на другой каталог,
 чтобы больше не находиться в домашнем каталоге.</p>
 <p>Команда для смены местоположения — это <code>cd</code>, за которой
@@ -1138,13 +1170,21 @@ read”, что на сленге означает: “многа букаф, н
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="ex">$</span> pwd</span></code></pre>
 </div>
-<pre class="вывод"><code>/Users/nelle/Desktop/shell-lesson-data/exercise-data</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>/Users/nelle/Desktop/shell-lesson-data/exercise-data</code></pre>
+</div>
 <div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-F</span></span></code></pre>
 </div>
-<pre class="вывод"><code>alkanes/  animal-counts/  creatures/  numbers.txt  writing/</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>alkanes/  animal-counts/  creatures/  numbers.txt  writing/</code></pre>
+</div>
 <p>Теперь мы знаем, как спуститься по дереву каталогов (то есть как
 войти в подкаталог), но как подняться вверх (то есть как выйти из
 каталога и войти в его родительский каталог)? Мы могли бы попробовать
@@ -1181,7 +1221,11 @@ read”, что на сленге означает: “многа букаф, н
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="ex">$</span> pwd</span></code></pre>
 </div>
-<pre class="вывод"><code>/Users/nelle/Desktop/shell-lesson-data</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>/Users/nelle/Desktop/shell-lesson-data</code></pre>
+</div>
 <p>Специальный каталог <code>..</code> обычно не отображается, когда мы
 выполняем <code>ls</code>. Если мы хотим его увидеть, мы можем добавить
 опцию <code>-a</code> к <code>ls -F</code>:</p>
@@ -1190,7 +1234,11 @@ read”, что на сленге означает: “многа букаф, н
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-F</span> <span class="at">-a</span></span></code></pre>
 </div>
-<pre class="вывод"><code>./  ../  exercise-data/  north-pacific-gyre/</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>./  ../  exercise-data/  north-pacific-gyre/</code></pre>
+</div>
 <p><code>-a</code> означает ‘показать все’ (show <strong>a</strong>ll),
 включая скрытые файлы. Эта опция сообщает команде <code>ls</code>
 показывать нам имена файлов и каталогов, которые начинаются с
@@ -1236,7 +1284,11 @@ read”, что на сленге означает: “многа букаф, н
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" tabindex="-1"></a><span class="ex">$</span> pwd</span></code></pre>
 </div>
-<pre class="вывод"><code>/Users/nelle</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>/Users/nelle</code></pre>
+</div>
 <p>Оказывается, что команда <code>cd</code> без аргументов вернёт вас в
 домашний каталог, что очень полезно, если вы потерялись в своей файловой
 системе.</p>
@@ -1277,7 +1329,11 @@ read”, что на сленге означает: “многа букаф, н
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" tabindex="-1"></a><span class="ex">$</span> pwd</span></code></pre>
 </div>
-<pre class="вывод"><code>/Users/nelle/Desktop/shell-lesson-data/exercise-data</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>/Users/nelle/Desktop/shell-lesson-data/exercise-data</code></pre>
+</div>
 <div class="codewrapper sourceCode" id="cb36">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1364,7 +1420,7 @@ read”, что на сленге означает: “многа букаф, н
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Нет: <code>.</code> обозначает текущий каталог.</li>
@@ -1417,7 +1473,7 @@ read”, что на сленге означает: “многа букаф, н
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Решение </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Нет: каталог <code>backup</code> существует в
@@ -1444,7 +1500,11 @@ read”, что на сленге означает: “многа букаф, н
 <code>pwd</code> выводит <code>/Users/backup</code>, и опция
 <code>-r</code> заставляет <code>ls</code> отображать содержимое в
 обратном порядке, какая команда приведёт к следующему выводу:</p>
-<pre class="вывод"><code>pnas_sub/ pnas_final/ original/</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>pnas_sub/ pnas_final/ original/</code></pre>
+</div>
 <figure><img src="../fig/filesystem-challenge.svg" alt="Дерево каталогов ниже директории Users, где “/Users” содержит каталоги “backup” и “thing”; “/Users/backup” содержит “original”, “pnas_final” и “pnas_sub”; “/Users/thing” содержит “backup”; а “/Users/thing/backup” содержит “2012-12-01”, “2013-01-08” и “2013-01-27”" class="figure mx-auto d-block"><div class="figcaption">Дерево каталогов ниже директории Users, где
 “/Users” содержит каталоги “backup” и “thing”; “/Users/backup” содержит
 “original”, “pnas_final” и “pnas_sub”; “/Users/thing” содержит “backup”;
@@ -1463,7 +1523,7 @@ read”, что на сленге означает: “многа букаф, н
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Решение </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Нет: <code>pwd</code> — это не имя каталога.</li>
@@ -1515,8 +1575,12 @@ read”, что на сленге означает: “многа букаф, н
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" tabindex="-1"></a><span class="ex">$</span> cd ~/Desktop/shell-lesson-data</span>
 <span id="cb42-2"><a href="#cb42-2" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-s</span> exercise-data</span></code></pre>
 </div>
-<pre class="вывод"><code>total 28
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>total 28
  4 animal-counts   4 creatures  12 numbers.txt   4 alkanes   4 writing</code></pre>
+</div>
 <p>Обратите внимание, что размеры, возвращаемые командой
 <code>ls -s</code>, указаны в <em>блоках</em>. Эти блоки могут быть
 определены по-разному в зависимости от операционной системы, поэтому вы
@@ -1526,7 +1590,11 @@ read”, что на сленге означает: “многа букаф, н
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb44-1"><a href="#cb44-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-S</span> exercise-data</span></code></pre>
 </div>
-<pre class="вывод"><code>animal-counts  creatures  alkanes  writing  numbers.txt</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>animal-counts  creatures  alkanes  writing  numbers.txt</code></pre>
+</div>
 <p>Таким образом, команда <code>ls -F /</code> из примера выше выведет
 список файлов и каталогов в корневом каталоге <code>/</code>. Пример
 возможного вывода для этой команды:</p>
@@ -1535,9 +1603,13 @@ read”, что на сленге означает: “многа букаф, н
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-F</span> /</span></code></pre>
 </div>
-<pre class="вывод"><code>Applications/         System/
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Applications/         System/
 Library/              Users/
 Network/              Volumes/</code></pre>
+</div>
 <div class="section level3">
 <h3 id="работа-нелли-организация-файлов">Работа Нелли: Организация файлов<a class="anchor" aria-label="anchor" href="#%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D0%BD%D0%B5%D0%BB%D0%BB%D0%B8-%D0%BE%D1%80%D0%B3%D0%B0%D0%BD%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2"></a>
 </h3>
@@ -1696,7 +1768,11 @@ Network/              Volumes/</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">$</span> pwd</span></code></pre>
 </div>
-<pre class="вывод"><code>/Users/nelle/Desktop/shell-lesson-data</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>/Users/nelle/Desktop/shell-lesson-data</code></pre>
+</div>
 <p>Далее перейдём в каталог <code>exercise-data/writing</code> и
 посмотрим, что в нём содержится:</p>
 <div class="codewrapper sourceCode" id="cb3">
@@ -1705,7 +1781,11 @@ Network/              Volumes/</code></pre>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">$</span> cd exercise-data/writing/</span>
 <span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-F</span></span></code></pre>
 </div>
-<pre class="вывод"><code>haiku.txt  LittleWomen.txt</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>haiku.txt  LittleWomen.txt</code></pre>
+</div>
 </div>
 <div class="section level3">
 <h3 id="создание-каталога">Создание каталога<a class="anchor" aria-label="anchor" href="#%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%D0%B0"></a>
@@ -1729,7 +1809,11 @@ Network/              Volumes/</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-F</span></span></code></pre>
 </div>
-<pre class="вывод"><code>haiku.txt  LittleWomen.txt  thesis/</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>haiku.txt  LittleWomen.txt  thesis/</code></pre>
+</div>
 <p>Поскольку мы только что создали каталог <code>thesis</code>, в нём
 пока ничего нет:</p>
 <div class="codewrapper sourceCode" id="cb8">
@@ -1754,12 +1838,16 @@ Network/              Volumes/</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-FR</span> ../project</span></code></pre>
 </div>
-<pre class="вывод"><code>../project/:
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>../project/:
 data/  results/
 
 ../project/data:
 
 ../project/results:</code></pre>
+</div>
 <div id="два-способа-сделать-одно-и-то-же" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -1822,7 +1910,7 @@ data/  results/
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Учащиеся иногда могут застрять в текстовых редакторах командной
 строки, таких как Vim, Emacs или Nano. Закрытие и повторное открытие
@@ -1923,7 +2011,11 @@ thrive’</div>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="ex">$</span> ls</span></code></pre>
 </div>
-<pre class="вывод"><code><span><span class="va">draft.txt</span></span></code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">draft.txt</span></span></code></pre>
+</div>
 <div id="создание-файлов-другим-способом" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1954,7 +2046,7 @@ thrive’</div>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Решение </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li><p>Команда <code>touch</code> создает новый файл под названием
@@ -2061,7 +2153,11 @@ thrive’</div>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="ex">$</span> ls thesis</span></code></pre>
 </div>
-<pre class="вывод"><code><span><span class="va">quotes.txt</span></span></code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">quotes.txt</span></span></code></pre>
+</div>
 <p>Будьте осторожны при указании имени целевого файла, так как команда
 <code>mv</code> без лишних слов перезапишет любой существующий файл с
 тем же именем, что может привести к потере данных. По умолчанию
@@ -2091,7 +2187,11 @@ thrive’</div>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="ex">$</span> ls thesis</span></code></pre>
 </div>
-<pre class="вывод"><code>$</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>$</code></pre>
+</div>
 <p>Кроме того, мы можем убедиться, что файл quotes.txt больше не
 находится в каталоге thesis, пытаясь вывести его с помощью
 <code>ls</code> в явном виде:</p>
@@ -2116,7 +2216,11 @@ thrive’</div>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="ex">$</span> ls quotes.txt</span></code></pre>
 </div>
-<pre class="вывод"><code><span><span class="va">quotes.txt</span></span></code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">quotes.txt</span></span></code></pre>
+</div>
 <div id="перемещение-файлов-в-новую-папку" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -2151,7 +2255,7 @@ thrive’</div>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Решение </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb30">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2179,7 +2283,11 @@ thrive’</div>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" tabindex="-1"></a><span class="ex">$</span> cp quotes.txt thesis/quotations.txt</span>
 <span id="cb31-2"><a href="#cb31-2" tabindex="-1"></a><span class="ex">$</span> ls quotes.txt thesis/quotations.txt</span></code></pre>
 </div>
-<pre class="вывод"><code>quotes.txt   thesis/quotations.txt</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>quotes.txt   thesis/quotations.txt</code></pre>
+</div>
 <p>Мы также можем скопировать каталог со всем его содержимым, используя
 опцию <a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BA%D1%83%D1%80%D1%81%D0%B8%D1%8F" class="external-link">рекурсии</a>
 <code>-r</code>, например, для создания резервной копии каталога:</p>
@@ -2195,11 +2303,15 @@ thrive’</div>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" tabindex="-1"></a><span class="ex">$</span> ls thesis thesis_backup</span></code></pre>
 </div>
-<pre class="вывод"><code><span><span class="va">thesis</span><span class="op">:</span></span>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">thesis</span><span class="op">:</span></span>
 <span><span class="va">quotations.txt</span></span>
 <span></span>
 <span><span class="va">thesis_backup</span><span class="op">:</span></span>
 <span><span class="va">quotations.txt</span></span></code></pre>
+</div>
 <p>Важно включить флаг <code>-r</code>. Если вы хотите скопировать
 каталог и не укажете эту опцию, вы увидите сообщение, что каталог
 пропущен, потому что <code>-r</code> не указано.</p>
@@ -2237,7 +2349,7 @@ thrive’</div>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Решение </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Нет. Хотя это создаст файл с правильным именем, файл с неправильным
@@ -2268,13 +2380,21 @@ thrive’</div>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" tabindex="-1"></a><span class="ex">$</span> pwd</span></code></pre>
 </div>
-<pre class="вывод"><code>/Users/jamie/data</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>/Users/jamie/data</code></pre>
+</div>
 <div class="codewrapper sourceCode" id="cb39">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" tabindex="-1"></a><span class="ex">$</span> ls</span></code></pre>
 </div>
-<pre class="вывод"><code><span><span class="va">proteins.dat</span></span></code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">proteins.dat</span></span></code></pre>
+</div>
 <div class="codewrapper sourceCode" id="cb41">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2297,7 +2417,7 @@ thrive’</div>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Решение </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>Мы начинаем в каталоге <code>/Users/jamie/data</code> и создаём новую
 папку под названием <code>recombined</code>. Вторая строка перемещает
@@ -2386,9 +2506,13 @@ thrive’</div>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Решение </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
-<pre class="вывод"><code>rm: remove regular file 'thesis_backup/quotations.txt'? y</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>rm: remove regular file 'thesis_backup/quotations.txt'? y</code></pre>
+</div>
 <p>Опция <code>-i</code> перед каждым удалением запрашивает
 подтверждение (используйте <kbd>Y</kbd>, чтобы подтвердить удаление, или
 <kbd>N</kbd>, чтобы сохранить файл). Поскольку в Unix-оболочке нет
@@ -2459,7 +2583,11 @@ thrive’</div>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb50-1"><a href="#cb50-1" tabindex="-1"></a><span class="ex">$</span> cd creatures</span>
 <span id="cb50-2"><a href="#cb50-2" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-F</span></span></code></pre>
 </div>
-<pre class="вывод"><code>basilisk.dat  minotaur.dat  unicorn.dat</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>basilisk.dat  minotaur.dat  unicorn.dat</code></pre>
+</div>
 <div class="codewrapper sourceCode" id="cb52">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2473,7 +2601,7 @@ thrive’</div>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution6" aria-expanded="false" aria-controls="collapseSolution6">
   <h4 class="accordion-header" id="headingSolution6"> Решение </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
 <div class="accordion-body">
 <p>Если команде <code>cp</code> передаются несколько имён файлов, а
 затем имя каталога (т.е. каталог назначения должен быть последним
@@ -2559,7 +2687,7 @@ thrive’</div>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution7" aria-expanded="false" aria-controls="collapseSolution7">
   <h4 class="accordion-header" id="headingSolution7"> Решение </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
 <div class="accordion-body">
 <p>Решением является вариант №3.</p>
 <ol style="list-style-type: decimal">
@@ -2684,7 +2812,7 @@ thrive’</div>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution8" aria-expanded="false" aria-controls="collapseSolution8">
   <h4 class="accordion-header" id="headingSolution8"> Решение </h4>
 </button>
-<div id="collapseSolution8" class="accordion-collapse collapse" data-bs-parent="#accordionSolution8" aria-labelledby="headingSolution8">
+<div id="collapseSolution8" class="accordion-collapse collapse" aria-labelledby="headingSolution8" data-bs-parent="#accordionSolution8">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb57">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2711,7 +2839,11 @@ thrive’</div>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb58-1"><a href="#cb58-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-F</span></span></code></pre>
 </div>
-<pre class="вывод"><code>analyzed/  fructose.dat    raw/   sucrose.dat</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>analyzed/  fructose.dat    raw/   sucrose.dat</code></pre>
+</div>
 <p>Файлы <code>fructose.dat</code> и <code>sucrose.dat</code> содержат
 результаты её анализа данных. Какие команды, рассмотренные в этом уроке,
 она должна выполнить, чтобы получить следующий результат?</p>
@@ -2720,13 +2852,21 @@ thrive’</div>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb60-1"><a href="#cb60-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-F</span></span></code></pre>
 </div>
-<pre class="вывод"><code>analyzed/   raw/</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>analyzed/   raw/</code></pre>
+</div>
 <div class="codewrapper sourceCode" id="cb62">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb62-1"><a href="#cb62-1" tabindex="-1"></a><span class="ex">$</span> ls analyzed</span></code></pre>
 </div>
-<pre class="вывод"><code>fructose.dat    sucrose.dat</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>fructose.dat    sucrose.dat</code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -2735,7 +2875,7 @@ thrive’</div>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution9" aria-expanded="false" aria-controls="collapseSolution9">
   <h4 class="accordion-header" id="headingSolution9"> Решение </h4>
 </button>
-<div id="collapseSolution9" class="accordion-collapse collapse" data-bs-parent="#accordionSolution9" aria-labelledby="headingSolution9">
+<div id="collapseSolution9" class="accordion-collapse collapse" aria-labelledby="headingSolution9" data-bs-parent="#accordionSolution9">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb64">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2768,10 +2908,14 @@ thrive’</div>
 скопировать структуру каталогов из папки <code>2016-05-18</code> в папку
 <code>2016-05-20</code>, чтобы ваша окончательная структура каталогов
 выглядела так:</p>
-<pre class="вывод"><code>2016-05-20/
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>2016-05-20/
 └── data
    ├── processed
    └── raw</code></pre>
+</div>
 <p>Какой из следующих наборов команд позволит достичь этой цели? Что
 делают остальные команды?</p>
 <div class="codewrapper sourceCode" id="cb66">
@@ -2819,7 +2963,7 @@ thrive’</div>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution10" aria-expanded="false" aria-controls="collapseSolution10">
   <h4 class="accordion-header" id="headingSolution10"> Решение </h4>
 </button>
-<div id="collapseSolution10" class="accordion-collapse collapse" data-bs-parent="#accordionSolution10" aria-labelledby="headingSolution10">
+<div id="collapseSolution10" class="accordion-collapse collapse" aria-labelledby="headingSolution10" data-bs-parent="#accordionSolution10">
 <div class="accordion-body">
 <p>Первые два набора команд достигают цели.</p>
 <p>Третий набор команд вызовет ошибку, так как по умолчанию команда
@@ -2931,15 +3075,23 @@ Protein Data Bank, простом текстовом формате, котор�
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">$</span> ls</span></code></pre>
 </div>
-<pre class="вывод"><code>cubane.pdb    methane.pdb    pentane.pdb
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>cubane.pdb    methane.pdb    pentane.pdb
 ethane.pdb    octane.pdb     propane.pdb</code></pre>
+</div>
 <p>Запустим пример команды:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">$</span> wc cubane.pdb</span></code></pre>
 </div>
-<pre class="вывод"><code>20  156 1158 cubane.pdb</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>20  156 1158 cubane.pdb</code></pre>
+</div>
 <p>wc — это команда “word count” (подсчёт слов): она считает количество
 строк, слов и символов в файлах (возвращая значения в таком порядке
 слева направо).</p>
@@ -2952,13 +3104,17 @@ ethane.pdb    octane.pdb     propane.pdb</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">$</span> wc <span class="pp">*</span>.pdb</span></code></pre>
 </div>
-<pre class="вывод"><code>  20  156  1158  cubane.pdb
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>  20  156  1158  cubane.pdb
   12  84   622   ethane.pdb
    9  57   422   methane.pdb
   30  246  1828  octane.pdb
   21  165  1226  pentane.pdb
   15  111  825   propane.pdb
  107  819  6081  total</code></pre>
+</div>
 <p>Обратите внимание, что <code>wc *.pdb</code> также показывает общее
 количество строк в последней строке вывода.</p>
 <p>Если мы запустим <code>wc -l</code> вместо обычного <code>wc</code>,
@@ -2968,13 +3124,17 @@ ethane.pdb    octane.pdb     propane.pdb</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="ex">$</span> wc <span class="at">-l</span> <span class="pp">*</span>.pdb</span></code></pre>
 </div>
-<pre class="вывод"><code>  20  cubane.pdb
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>  20  cubane.pdb
   12  ethane.pdb
    9  methane.pdb
   30  octane.pdb
   21  pentane.pdb
   15  propane.pdb
  107  total</code></pre>
+</div>
 <p>С командой <code>wc</code> можно также использовать опции
 <code>-m</code> и <code>-w</code>, чтобы показать только количество
 символов или слов соответственно.</p>
@@ -3029,7 +3189,11 @@ ethane.pdb    octane.pdb     propane.pdb</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="ex">$</span> ls lengths.txt</span></code></pre>
 </div>
-<pre class="вывод"><code><span><span class="va">lengths.txt</span></span></code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">lengths.txt</span></span></code></pre>
+</div>
 <p>Теперь мы можем вывести содержимое файла <code>lengths.txt</code> на
 экран, используя команду <code>cat lengths.txt</code>. Команда cat
 получила своё название от “con<strong>cat</strong>enate”
@@ -3041,13 +3205,17 @@ ethane.pdb    octane.pdb     propane.pdb</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="ex">$</span> cat lengths.txt</span></code></pre>
 </div>
-<pre class="вывод"><code>  20  cubane.pdb
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>  20  cubane.pdb
   12  ethane.pdb
    9  methane.pdb
   30  octane.pdb
   21  pentane.pdb
   15  propane.pdb
  107  total</code></pre>
+</div>
 <div id="постраничный-вывод" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -3087,18 +3255,26 @@ ethane.pdb    octane.pdb     propane.pdb</code></pre>
 <span><span class="fl">6</span></span></code></pre>
 <p>Если мы запустим команду <code>sort</code>, передав её имя этого
 файла, результат будет следующим:</p>
-<pre class="вывод"><code><span><span class="fl">10</span></span>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="fl">10</span></span>
 <span><span class="fl">19</span></span>
 <span><span class="fl">2</span></span>
 <span><span class="fl">22</span></span>
 <span><span class="fl">6</span></span></code></pre>
+</div>
 <p>Если мы запустим <code>sort -n</code> на том же файле, результат
 будет следующим:</p>
-<pre class="вывод"><code><span><span class="fl">2</span></span>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="fl">2</span></span>
 <span><span class="fl">6</span></span>
 <span><span class="fl">10</span></span>
 <span><span class="fl">19</span></span>
 <span><span class="fl">22</span></span></code></pre>
+</div>
 <p>Объясните, почему опция <code>-n</code> даёт такой результат.</p>
 </div>
 </div>
@@ -3125,13 +3301,17 @@ ethane.pdb    octane.pdb     propane.pdb</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="ex">$</span> sort <span class="at">-n</span> lengths.txt</span></code></pre>
 </div>
-<pre class="вывод"><code>  9  methane.pdb
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>  9  methane.pdb
  12  ethane.pdb
  15  propane.pdb
  20  cubane.pdb
  21  pentane.pdb
  30  octane.pdb
 107  total</code></pre>
+</div>
 <p>Мы можем поместить отсортированный список строк в другой временный
 файл под названием <code>sorted-lengths.txt</code>, добавив
 <code>&gt; sorted-lengths.txt</code> после команды, как мы сделали с
@@ -3145,7 +3325,11 @@ ethane.pdb    octane.pdb     propane.pdb</code></pre>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="ex">$</span> sort <span class="at">-n</span> lengths.txt <span class="op">&gt;</span> sorted-lengths.txt</span>
 <span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a><span class="ex">$</span> head <span class="at">-n</span> 1 sorted-lengths.txt</span></code></pre>
 </div>
-<pre class="вывод"><code>  9  methane.pdb</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>  9  methane.pdb</code></pre>
+</div>
 <p>Использование опции <code>-n 1</code> с командой <code>head</code>
 указывает, что мы хотим получить только первую строку файла;
 <code>-n 20</code> даст первые 20 строк и так далее. Поскольку файл
@@ -3188,7 +3372,11 @@ ethane.pdb    octane.pdb     propane.pdb</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="ex">$</span> echo The echo command prints text</span></code></pre>
 </div>
-<pre class="вывод"><code>The echo command prints text</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>The echo command prints text</code></pre>
+</div>
 <p>Теперь протестируйте следующие команды, чтобы выявить разницу между
 двумя операторами:</p>
 <div class="codewrapper sourceCode" id="cb25">
@@ -3292,7 +3480,11 @@ ethane.pdb    octane.pdb     propane.pdb</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="ex">$</span> sort <span class="at">-n</span> lengths.txt <span class="kw">|</span> <span class="fu">head</span> <span class="at">-n</span> 1</span></code></pre>
 </div>
-<pre class="вывод"><code>  9  methane.pdb</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>  9  methane.pdb</code></pre>
+</div>
 <p>Вертикальная черта, <code>|</code>, между двумя командами называется
 <strong>каналом</strong> (<strong>pipe</strong>). Она сообщает оболочке,
 что мы хотим использовать вывод команды слева в качестве ввода для
@@ -3314,13 +3506,17 @@ ethane.pdb    octane.pdb     propane.pdb</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a><span class="ex">$</span> wc <span class="at">-l</span> <span class="pp">*</span>.pdb <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-n</span></span></code></pre>
 </div>
-<pre class="вывод"><code>   9 methane.pdb
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>   9 methane.pdb
   12 ethane.pdb
   15 propane.pdb
   20 cubane.pdb
   21 pentane.pdb
   30 octane.pdb
  107 total</code></pre>
+</div>
 <p>Затем мы можем передать этот вывод через другой канал в команду
 <code>head</code>, так что полная последовательность будет выглядеть
 так:</p>
@@ -3329,7 +3525,11 @@ ethane.pdb    octane.pdb     propane.pdb</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" tabindex="-1"></a><span class="ex">$</span> wc <span class="at">-l</span> <span class="pp">*</span>.pdb <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-n</span> <span class="kw">|</span> <span class="fu">head</span> <span class="at">-n</span> 1</span></code></pre>
 </div>
-<pre class="вывод"><code>   9  methane.pdb</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>   9  methane.pdb</code></pre>
+</div>
 <p>Это похоже на математическую запись, когда функции вкладываются друг
 в друга, например, log(3x), где говорится: “логарифм от трёх,
 помноженных на x”. В нашем случае алгоритм выглядит так: “head от sort
@@ -3471,7 +3671,10 @@ head -n 1” создаёт конвейер, где вывод команды �
 указать запятую в качестве символа-разделителя. Мы также использовали
 опцию <code>-f</code>, чтобы указать, что мы хотим извлечь второй
 столбец. Это даст следующий вывод:</p>
-<pre class="вывод"><code><span><span class="va">deer</span></span>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">deer</span></span>
 <span><span class="va">rabbit</span></span>
 <span><span class="va">raccoon</span></span>
 <span><span class="va">rabbit</span></span>
@@ -3479,6 +3682,7 @@ head -n 1” создаёт конвейер, где вывод команды �
 <span><span class="va">fox</span></span>
 <span><span class="va">rabbit</span></span>
 <span><span class="va">bear</span></span></code></pre>
+</div>
 <p>Команда <code>uniq</code> фильтрует соседние повторяющиеся строки в
 файле. Как можно расширить этот конвейер (с помощью <code>uniq</code> и
 другой команды), чтобы узнать, какие животные содержатся в файле (без
@@ -3511,11 +3715,15 @@ head -n 1” создаёт конвейер, где вывод команды �
 <div class="callout-content">
 <p>Файл <code>animals.csv</code> содержит 8 строк данных в следующем
 формате:</p>
-<pre class="вывод"><code>2012-11-05,deer,5
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>2012-11-05,deer,5
 2012-11-05,rabbit,22
 2012-11-05,raccoon,7
 2012-11-06,rabbit,19
 ...</code></pre>
+</div>
 <p>Команда <code>uniq</code> имеет опцию <code>-c</code>, которая
 выводит количество вхождений каждой строки во входных данных.
 Предположим, что текущий каталог — это
@@ -3561,24 +3769,32 @@ head -n 1” создаёт конвейер, где вывод команды �
 <span id="cb41-2"><a href="#cb41-2" tabindex="-1"></a><span class="ex">$</span> wc <span class="at">-l</span> <span class="pp">*</span>.txt</span></code></pre>
 </div>
 <p>Вывод состоит из 18 строк, которые выглядят так:</p>
-<pre class="вывод"><code>300 NENE01729A.txt
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>300 NENE01729A.txt
 300 NENE01729B.txt
 300 NENE01736A.txt
 300 NENE01751A.txt
 300 NENE01751B.txt
 300 NENE01812A.txt
 ... ...</code></pre>
+</div>
 <p>Затем она вводит:</p>
 <div class="codewrapper sourceCode" id="cb43">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" tabindex="-1"></a><span class="ex">$</span> wc <span class="at">-l</span> <span class="pp">*</span>.txt <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-n</span> <span class="kw">|</span> <span class="fu">head</span> <span class="at">-n</span> 5</span></code></pre>
 </div>
-<pre class="вывод"><code> 240 NENE02018B.txt
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code> 240 NENE02018B.txt
  300 NENE01729A.txt
  300 NENE01729B.txt
  300 NENE01736A.txt
  300 NENE01751A.txt</code></pre>
+</div>
 <p>Ой, один из файлов на 60 строк короче остальных. Когда она проверила
 его, она вспомнила, что провела этот анализ в 8 утра в понедельник —
 кто-то, вероятно, пользовался машиной на выходных, и она забыла сбросить
@@ -3589,11 +3805,15 @@ head -n 1” создаёт конвейер, где вывод команды �
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" tabindex="-1"></a><span class="ex">$</span> wc <span class="at">-l</span> <span class="pp">*</span>.txt <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-n</span> <span class="kw">|</span> <span class="fu">tail</span> <span class="at">-n</span> 5</span></code></pre>
 </div>
-<pre class="вывод"><code> 300 NENE02040B.txt
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code> 300 NENE02040B.txt
  300 NENE02040Z.txt
  300 NENE02043A.txt
  300 NENE02043B.txt
 5040 total</code></pre>
+</div>
 <p>Эти числа выглядят нормально — но что делает ‘Z’ в третьей строке с
 конца? Все её образцы должны быть помечены как ‘A’ или ‘B’; по правилам
 её лаборатории, буква ‘Z’ используется для обозначения образцов с
@@ -3604,7 +3824,11 @@ head -n 1” создаёт конвейер, где вывод команды �
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="pp">*</span>Z.txt</span></code></pre>
 </div>
-<pre class="вывод"><code>NENE01971Z.txt    NENE02040Z.txt</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>NENE01971Z.txt    NENE02040Z.txt</code></pre>
+</div>
 <p>Действительно, когда она проверила журнал на своём ноутбуке,
 оказалось, что для этих образцов не была записана глубина. Поскольку
 слишком поздно получать эту информацию каким-либо другим способом, ей
@@ -3778,12 +4002,16 @@ NENE<em>A.txt NENE</em>B.txt.</p>
 <span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="op">&gt;</span>     head <span class="ex">-n</span> 2 <span class="va">$filename</span> <span class="kw">|</span> <span class="fu">tail</span> <span class="at">-n</span> 1</span>
 <span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="op">&gt;</span> done</span></code></pre>
 </div>
-<pre class="вывод"><code>basilisk.dat
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>basilisk.dat
 CLASSIFICATION: basiliscus vulgaris
 minotaur.dat
 CLASSIFICATION: bos hominus
 unicorn.dat
 CLASSIFICATION: equus monoceros</code></pre>
+</div>
 <div id="следите-за-приглашением" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -3907,7 +4135,10 @@ CLASSIFICATION: equus monoceros</code></pre>
 <span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="op">&gt;</span>     echo <span class="va">$loop_variable</span></span>
 <span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="op">&gt;</span> done</span></code></pre>
 </div>
-<pre class="вывод"><code><span><span class="fl">0</span></span>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="fl">0</span></span>
 <span><span class="fl">1</span></span>
 <span><span class="fl">2</span></span>
 <span><span class="fl">3</span></span>
@@ -3917,6 +4148,7 @@ CLASSIFICATION: equus monoceros</code></pre>
 <span><span class="fl">7</span></span>
 <span><span class="fl">8</span></span>
 <span><span class="fl">9</span></span></code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -3931,7 +4163,11 @@ CLASSIFICATION: equus monoceros</code></pre>
 <p>Это упражнение относится к каталогу
 <code>shell-lesson-data/exercise-data/alkanes</code>. Команда
 <code>ls *.pdb</code> выводит следующий результат:</p>
-<pre class="вывод"><code>cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb</code></pre>
+</div>
 <p>Каков результат выполнения следующего кода?</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3974,21 +4210,29 @@ CLASSIFICATION: equus monoceros</code></pre>
 <span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a><span class="op">&gt;</span>     ls <span class="ex">cubane.pdb</span>  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb</span>
 <span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a><span class="op">&gt;</span> done</span></code></pre>
 </div>
-<pre class="вывод"><code>cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
 cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
 cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
 cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
 cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb
 cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb</code></pre>
+</div>
 <p>Во втором блоке кода на каждой итерации цикла выводится разный файл.
 Значение переменной <code>datafile</code> вычисляется с использованием
 <code>$datafile</code> и затем выводится с помощью <code>ls</code>.</p>
-<pre class="вывод"><code><span><span class="va">cubane.pdb</span></span>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">cubane.pdb</span></span>
 <span><span class="va">ethane.pdb</span></span>
 <span><span class="va">methane.pdb</span></span>
 <span><span class="va">octane.pdb</span></span>
 <span><span class="va">pentane.pdb</span></span>
 <span><span class="va">propane.pdb</span></span></code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -4208,7 +4452,11 @@ cubane.pdb  ethane.pdb  methane.pdb  octane.pdb  pentane.pdb  propane.pdb</code>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="ex">$</span> echo hello there</span></code></pre>
 </div>
 <p>выведет:</p>
-<pre class="вывод"><code>hello there</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>hello there</code></pre>
+</div>
 <p>В данном случае, поскольку оболочка расширяет <code>$filename</code>
 до имени файла, <code>echo</code> <code>$filename</code> выводит имя
 файла. Обратите внимание, что мы не можем записать это так:</p>
@@ -4266,13 +4514,17 @@ head: cannot open ‘purple unicorn.dat' for reading: No such file or directory<
 выше цикле, чтобы увидеть, как кавычки влияют на пробелы. Обратите
 внимание, что при выполнении кода в каталоге <code>creatures</code> мы
 получаем результат для файла <code>unicorn.dat</code>:</p>
-<pre class="вывод"><code>head: cannot open ‘red' for reading: No such file or directory
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>head: cannot open ‘red' for reading: No such file or directory
 head: cannot open ‘dragon.dat' for reading: No such file or directory
 head: cannot open ‘purple' for reading: No such file or directory
 CGGTACCGAA
 AAGGGTCGCG
 CAAGTGTTCC
 ...</code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -4375,12 +4627,16 @@ original-basilisk.dat”, затем “cp minotaur.dat original-minotaur.dat”
 <span id="cb34-5"><a href="#cb34-5" tabindex="-1"></a><span class="op">&gt;</span>     echo <span class="va">$datafile</span></span>
 <span id="cb34-6"><a href="#cb34-6" tabindex="-1"></a><span class="op">&gt;</span> done</span></code></pre>
 </div>
-<pre class="вывод"><code><span><span class="va">NENE01729A.txt</span></span>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">NENE01729A.txt</span></span>
 <span><span class="va">NENE01729B.txt</span></span>
 <span><span class="va">NENE01736A.txt</span></span>
 <span><span class="va">...</span></span>
 <span><span class="va">NENE02043A.txt</span></span>
 <span><span class="va">NENE02043B.txt</span></span></code></pre>
+</div>
 <p>Следующим её шагом будет решение о том, как назвать файлы, которые
 создаст программа анализа <code>goostats.sh</code>. Добавление префикса
 к имени каждого входного файла словом <code>stats</code> кажется простым
@@ -4393,12 +4649,16 @@ original-basilisk.dat”, затем “cp minotaur.dat original-minotaur.dat”
 <span id="cb36-3"><a href="#cb36-3" tabindex="-1"></a><span class="op">&gt;</span>     echo <span class="va">$datafile</span> stats-<span class="va">$datafile</span></span>
 <span id="cb36-4"><a href="#cb36-4" tabindex="-1"></a><span class="op">&gt;</span> done</span></code></pre>
 </div>
-<pre class="вывод"><code>NENE01729A.txt stats-NENE01729A.txt
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>NENE01729A.txt stats-NENE01729A.txt
 NENE01729B.txt stats-NENE01729B.txt
 NENE01736A.txt stats-NENE01736A.txt
 ...
 NENE02043A.txt stats-NENE02043A.txt
 NENE02043B.txt stats-NENE02043B.txt</code></pre>
+</div>
 <p>Она ещё не запускала <code>goostats.sh</code>, но теперь уверена, что
 сможет выбрать правильные файлы и сгенерировать правильные имена
 выходных файлов.</p>
@@ -4447,10 +4707,14 @@ NENE02043B.txt stats-NENE02043B.txt</code></pre>
 </div>
 <p>Теперь при выполнении программы выводится одна строка каждые пять
 секунд:</p>
-<pre class="вывод"><code><span><span class="va">NENE01729A.txt</span></span>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">NENE01729A.txt</span></span>
 <span><span class="va">NENE01729B.txt</span></span>
 <span><span class="va">NENE01736A.txt</span></span>
 <span><span class="va">...</span></span></code></pre>
+</div>
 <p>1518 умножить на 5 секунд, разделить на 60 — это означает, что её
 скрипт будет выполняться около двух часов. В качестве последней проверки
 она открывает другое окно терминала, заходит в каталог
@@ -4475,12 +4739,16 @@ NENE02043B.txt stats-NENE02043B.txt</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" tabindex="-1"></a><span class="ex">$</span> history <span class="kw">|</span> <span class="fu">tail</span> <span class="at">-n</span> 5</span></code></pre>
 </div>
-<pre class="вывод"><code>456  for datafile in NENE*A.txt NENE*B.txt; do   echo $datafile stats-$datafile; done
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>456  for datafile in NENE*A.txt NENE*B.txt; do   echo $datafile stats-$datafile; done
 457  for datafile in NENE*A.txt NENE*B.txt; do echo $datafile stats-$datafile; done
 458  for datafile in NENE*A.txt NENE*B.txt; do bash goostats.sh $datafile stats-$datafile; done
 459  for datafile in NENE*A.txt NENE*B.txt; do echo $datafile; bash goostats.sh $datafile
 stats-$datafile; done
 460  history | tail -n 5</code></pre>
+</div>
 <p>она может снова запустить <code>goostats.sh</code> для файлов, просто
 введя <code>!459</code>.</p>
 </div>
@@ -4741,11 +5009,15 @@ stats-$datafile; done
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">$</span> bash middle.sh</span></code></pre>
 </div>
-<pre class="вывод"><code>ATOM      9  H           1      -4.502   0.681   0.785  1.00  0.00
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>ATOM      9  H           1      -4.502   0.681   0.785  1.00  0.00
 ATOM     10  H           1      -5.254  -0.243  -0.537  1.00  0.00
 ATOM     11  H           1      -4.357   1.252  -0.895  1.00  0.00
 ATOM     12  H           1      -3.009  -0.741  -1.467  1.00  0.00
 ATOM     13  H           1      -3.172  -1.337   0.206  1.00  0.00</code></pre>
+</div>
 <p>И действительно, вывод нашего скрипта точно такой же, как если бы мы
 запустили этот конвейер напрямую.</p>
 <div id="текст-против-чего-то-другого" class="callout">
@@ -4791,22 +5063,30 @@ LibreOffice Writer, “текстовыми редакторами”, но на
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="ex">$</span> bash middle.sh octane.pdb</span></code></pre>
 </div>
-<pre class="вывод"><code>ATOM      9  H           1      -4.502   0.681   0.785  1.00  0.00
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>ATOM      9  H           1      -4.502   0.681   0.785  1.00  0.00
 ATOM     10  H           1      -5.254  -0.243  -0.537  1.00  0.00
 ATOM     11  H           1      -4.357   1.252  -0.895  1.00  0.00
 ATOM     12  H           1      -3.009  -0.741  -1.467  1.00  0.00
 ATOM     13  H           1      -3.172  -1.337   0.206  1.00  0.00</code></pre>
+</div>
 <p>а для другого файла вот так:</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="ex">$</span> bash middle.sh pentane.pdb</span></code></pre>
 </div>
-<pre class="вывод"><code>ATOM      9  H           1       1.324   0.350  -1.332  1.00  0.00
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>ATOM      9  H           1       1.324   0.350  -1.332  1.00  0.00
 ATOM     10  H           1       1.271   1.378   0.122  1.00  0.00
 ATOM     11  H           1      -0.074  -0.384   1.288  1.00  0.00
 ATOM     12  H           1      -0.048  -1.362  -0.205  1.00  0.00
 ATOM     13  H           1      -1.183   0.500  -1.412  1.00  0.00</code></pre>
+</div>
 <div id="двойные-кавычки-вокруг-аргументов" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -4843,11 +5123,15 @@ ATOM     13  H           1      -1.183   0.500  -1.412  1.00  0.00</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="ex">$</span> bash middle.sh pentane.pdb 15 5</span></code></pre>
 </div>
-<pre class="вывод"><code>ATOM      9  H           1       1.324   0.350  -1.332  1.00  0.00
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>ATOM      9  H           1       1.324   0.350  -1.332  1.00  0.00
 ATOM     10  H           1       1.271   1.378   0.122  1.00  0.00
 ATOM     11  H           1      -0.074  -0.384   1.288  1.00  0.00
 ATOM     12  H           1      -0.048  -1.362  -0.205  1.00  0.00
 ATOM     13  H           1      -1.183   0.500  -1.412  1.00  0.00</code></pre>
+</div>
 <p>Изменяя аргументы в команде, мы можем менять поведение нашего
 скрипта:</p>
 <div class="codewrapper sourceCode" id="cb15">
@@ -4855,11 +5139,15 @@ ATOM     13  H           1      -1.183   0.500  -1.412  1.00  0.00</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="ex">$</span> bash middle.sh pentane.pdb 20 5</span></code></pre>
 </div>
-<pre class="вывод"><code>ATOM     14  H           1      -1.259   1.420   0.112  1.00  0.00
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>ATOM     14  H           1      -1.259   1.420   0.112  1.00  0.00
 ATOM     15  H           1      -2.608  -0.407   1.130  1.00  0.00
 ATOM     16  H           1      -2.540  -1.303  -0.404  1.00  0.00
 ATOM     17  H           1      -3.393   0.254  -0.321  1.00  0.00
 TER      18              1</code></pre>
+</div>
 <p>Это работает, но следующий человек, который откроет
 <code>middle.sh</code>, может не сразу понять, что он делает. Мы можем
 улучшить скрипт, добавив несколько <strong>комментариев</strong> в
@@ -4914,7 +5202,10 @@ wc -l "$@" | sort -n</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="ex">$</span> bash sorted.sh <span class="pp">*</span>.pdb ../creatures/<span class="pp">*</span>.dat</span></code></pre>
 </div>
-<pre class="вывод"><code>9 methane.pdb
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>9 methane.pdb
 12 ethane.pdb
 15 propane.pdb
 20 cubane.pdb
@@ -4924,6 +5215,7 @@ wc -l "$@" | sort -n</code></pre>
 163 ../creatures/minotaur.dat
 163 ../creatures/unicorn.dat
 596 total</code></pre>
+</div>
 <div id="список-уникальных-видов" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -4961,7 +5253,7 @@ wc -l "$@" | sort -n</code></pre>
   Решение
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5031,7 +5323,7 @@ wc -l "$@" | sort -n</code></pre>
   Решение
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Если команда вызывает сбой или зависание, может быть полезно узнать,
 что это была за команда, чтобы расследовать проблему. Если бы команда
@@ -5162,7 +5454,7 @@ wc -l "$@" | sort -n</code></pre>
   Решение
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Правильный ответ — 2.</p>
 <p>Специальные переменные <code>$1</code>, <code>$2</code> и
@@ -5219,7 +5511,7 @@ wc -l "$@" | sort -n</code></pre>
   Решение
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb40">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5294,7 +5586,7 @@ wc -l "$@" | sort -n</code></pre>
   Решение
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <p>В каждом случае оболочка расширяет подстановочный знак в
 <code>*.pdb</code> до того, как передаёт результат в качестве аргументов
@@ -5308,7 +5600,11 @@ wc -l "$@" | sort -n</code></pre>
 <code>.pdb</code>), а затем добавит <code>.pdb</code> к каждому из них.
 <code>$@</code> относится ко всем аргументам, переданным в скрипт
 оболочки.</p>
-<pre class="вывод"><code>cubane.pdb ethane.pdb methane.pdb octane.pdb pentane.pdb propane.pdb.pdb</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>cubane.pdb ethane.pdb methane.pdb octane.pdb pentane.pdb propane.pdb.pdb</code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -5358,7 +5654,7 @@ wc -l "$@" | sort -n</code></pre>
   Решение
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
 <div class="accordion-body">
 <p>Опция <code>-x</code> заставляет <code>bash</code> работать в режиме
 отладки. Она выводит каждую команду по мере её выполнения, что поможет
@@ -5458,7 +5754,10 @@ expression/print’, что описывает частую последоват
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="ex">$</span> cd Desktop/shell-lesson-data/exercise-data/writing</span>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="ex">$</span> cat haiku.txt</span></code></pre>
 </div>
-<pre class="вывод"><code>The Tao that is seen
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>The Tao that is seen
 Is not the true Tao, until
 You bring fresh toner.
 
@@ -5469,15 +5768,20 @@ and the presence of absence:
 Yesterday it worked
 Today it is not working
 Software is like that.</code></pre>
+</div>
 <p>Найдём строки, содержащие слово ‘not’:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">$</span> grep not haiku.txt</span></code></pre>
 </div>
-<pre class="вывод"><code>Is not the true Tao, until
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Is not the true Tao, until
 "My Thesis" not found
 Today it is not working</code></pre>
+</div>
 <p>Здесь <code>not</code> — это шаблон, по которому мы ищем. Команда
 <code>grep</code> ищет в файле строки, соответствующие указанному
 шаблону. Чтобы её использовать, напишите <code>grep</code>, затем
@@ -5494,8 +5798,12 @@ Today it is not working</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">$</span> grep The haiku.txt</span></code></pre>
 </div>
-<pre class="вывод"><code>The Tao that is seen
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>The Tao that is seen
 "My Thesis" not found.</code></pre>
+</div>
 <p>На этот раз выводятся две строки, содержащие символы ‘The’, одна из
 которых содержит шаблон поиска внутри более длинного слова —
 ‘Thesis’.</p>
@@ -5509,7 +5817,11 @@ Today it is not working</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="ex">$</span> grep <span class="at">-w</span> The haiku.txt</span></code></pre>
 </div>
-<pre class="вывод"><code>The Tao that is seen</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>The Tao that is seen</code></pre>
+</div>
 <p>Обратите внимание, что граница слова включает начало и конец строки,
 а не только пробелы вокруг букв. Иногда нам нужно искать не отдельное
 слово, а фразу. Это также можно сделать с помощью <code>grep</code>,
@@ -5519,7 +5831,11 @@ Today it is not working</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="ex">$</span> grep <span class="at">-w</span> <span class="st">"is not"</span> haiku.txt</span></code></pre>
 </div>
-<pre class="вывод"><code>Today it is not working</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Today it is not working</code></pre>
+</div>
 <p>Мы уже видели, что необязательно заключать одиночные слова в кавычки,
 но это полезно при поиске нескольких слов. Это также облегчает различие
 между искомым шаблоном или фразой и файлом, в котором выполняется поиск.
@@ -5531,9 +5847,13 @@ Today it is not working</code></pre>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="ex">$</span> grep <span class="at">-n</span> <span class="st">"it"</span> haiku.txt</span></code></pre>
 </div>
-<pre class="вывод"><code>5:With searching comes loss
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>5:With searching comes loss
 9:Yesterday it worked
 10:Today it is not working</code></pre>
+</div>
 <p>Здесь видно, что строки 5, 9 и 10 содержат последовательность
 ‘it’.</p>
 <p>Мы можем комбинировать опции (т.е. флаги), как и с другими
@@ -5545,8 +5865,12 @@ Unix-командами. Например, давайте найдём стро�
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="ex">$</span> grep <span class="at">-n</span> <span class="at">-w</span> <span class="st">"the"</span> haiku.txt</span></code></pre>
 </div>
-<pre class="вывод"><code>2:Is not the true Tao, until
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>2:Is not the true Tao, until
 6:and the presence of absence:</code></pre>
+</div>
 <p>Теперь используем опцию <code>-i</code>, чтобы сделать наш поиск
 нечувствительным к регистру:</p>
 <div class="codewrapper sourceCode" id="cb15">
@@ -5554,9 +5878,13 @@ Unix-командами. Например, давайте найдём стро�
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="ex">$</span> grep <span class="at">-n</span> <span class="at">-w</span> <span class="at">-i</span> <span class="st">"the"</span> haiku.txt</span></code></pre>
 </div>
-<pre class="вывод"><code>1:The Tao that is seen
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>1:The Tao that is seen
 2:Is not the true Tao, until
 6:and the presence of absence:</code></pre>
+</div>
 <p>Далее используем опцию <code>-v</code>, чтобы инвертировать наш
 поиск, т.е. вывести строки, которые не содержат слово ‘the’.</p>
 <div class="codewrapper sourceCode" id="cb17">
@@ -5564,7 +5892,10 @@ Unix-командами. Например, давайте найдём стро�
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="ex">$</span> grep <span class="at">-n</span> <span class="at">-w</span> <span class="at">-v</span> <span class="st">"the"</span> haiku.txt</span></code></pre>
 </div>
-<pre class="вывод"><code>1:The Tao that is seen
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>1:The Tao that is seen
 3:You bring fresh toner.
 4:
 5:With searching comes loss
@@ -5573,6 +5904,7 @@ Unix-командами. Например, давайте найдём стро�
 9:Yesterday it worked
 10:Today it is not working
 11:Software is like that.</code></pre>
+</div>
 <p>Если использовать опцию <code>-r</code> (рекурсивно),
 <code>grep</code> может искать шаблон в файлах и подкаталогах.</p>
 <p>Попробуем найти шаблон <code>Yesterday</code> рекурсивно в каталоге
@@ -5582,10 +5914,14 @@ Unix-командами. Например, давайте найдём стро�
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="ex">$</span> grep <span class="at">-r</span> Yesterday .</span></code></pre>
 </div>
-<pre class="вывод"><code>./LittleWomen.txt:"Yesterday, when Aunt was asleep and I was trying to be as still as a
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>./LittleWomen.txt:"Yesterday, when Aunt was asleep and I was trying to be as still as a
 ./LittleWomen.txt:Yesterday at dinner, when an Austrian officer stared at us and then
 ./LittleWomen.txt:Yesterday was a quiet day spent in teaching, sewing, and writing in my
 ./haiku.txt:Yesterday it worked</code></pre>
+</div>
 <p>У команды <code>grep</code> есть много других опций. Чтобы узнать,
 какие именно, можно ввести:</p>
 <div class="codewrapper sourceCode" id="cb21">
@@ -5593,7 +5929,10 @@ Unix-командами. Например, давайте найдём стро�
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="ex">$</span> grep <span class="at">--help</span></span></code></pre>
 </div>
-<pre class="вывод"><code>Usage: grep [OPTION]... PATTERN [FILE]...
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Usage: grep [OPTION]... PATTERN [FILE]...
 Search for PATTERN in each FILE or standard input.
 PATTERN is, by default, a basic regular expression (BRE).
 Example: grep -i 'hello world' menu.h main.c
@@ -5612,6 +5951,7 @@ Regexp selection and interpretation:
 
 Miscellaneous:
 ...        ...        ...</code></pre>
+</div>
 <div id="использование-grep" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -5621,7 +5961,11 @@ Miscellaneous:
 </h3>
 <div class="callout-content">
 <p>Какая команда приведёт к следующему результату:</p>
-<pre class="вывод"><code>and the presence of absence:</code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>and the presence of absence:</code></pre>
+</div>
 <ol style="list-style-type: decimal">
 <li><code>grep "of" haiku.txt</code></li>
 <li><code>grep -E "of" haiku.txt</code></li>
@@ -5664,9 +6008,13 @@ Miscellaneous:
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="ex">$</span> grep <span class="at">-E</span> <span class="st">"^.o"</span> haiku.txt</span></code></pre>
 </div>
-<pre class="вывод"><code>You bring fresh toner.
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>You bring fresh toner.
 Today it is not working
 Software is like that.</code></pre>
+</div>
 <p>Мы используем опцию <code>-E</code> и заключаем шаблон в кавычки,
 чтобы оболочка не пыталась его интерпретировать. (Если бы в шаблоне был
 символ <code>*</code>, оболочка попыталась бы его развернуть до
@@ -5805,7 +6153,10 @@ VANITY FAIR’). Если вы хотите учитывать и такие с�
 опций. Чтобы показать, как работают самые простые из них, мы
 воспользуемся деревом директорий
 <code>shell-lesson-data/exercise-data</code>, показанным ниже.</p>
-<pre class="вывод"><code>.
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>.
 ├── animal-counts/
 │   └── animals.csv
 ├── creatures/
@@ -5823,6 +6174,7 @@ VANITY FAIR’). Если вы хотите учитывать и такие с�
 └── writing/
     ├── haiku.txt
     └── LittleWomen.txt</code></pre>
+</div>
 <p>Директория <code>exercise-data</code> содержит один файл
 <code>numbers.txt</code> и четыре каталога: <code>animal-counts</code>,
 <code>creatures</code>, <code>alkanes</code> и <code>writing</code>,
@@ -5835,7 +6187,10 @@ VANITY FAIR’). Если вы хотите учитывать и такие с�
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" tabindex="-1"></a><span class="ex">$</span> find .</span></code></pre>
 </div>
-<pre class="вывод"><code><span><span class="va">.</span></span>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">.</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">writing</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">writing</span><span class="op">/</span><span class="va">LittleWomen.txt</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">writing</span><span class="op">/</span><span class="va">haiku.txt</span></span>
@@ -5853,6 +6208,7 @@ VANITY FAIR’). Если вы хотите учитывать и такие с�
 <span><span class="va">.</span><span class="op">/</span><span class="va">alkanes</span><span class="op">/</span><span class="va">pentane.pdb</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">alkanes</span><span class="op">/</span><span class="va">methane.pdb</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">alkanes</span><span class="op">/</span><span class="va">cubane.pdb</span></span></code></pre>
+</div>
 <p><code>.</code> означает текущую рабочую директорию, откуда мы и
 начнём наш поиск. Результат работы команды <code>find</code> — это
 список всех файлов и директорий в текущей рабочей директории. Это может
@@ -5868,11 +6224,15 @@ VANITY FAIR’). Если вы хотите учитывать и такие с�
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" tabindex="-1"></a><span class="ex">$</span> find . <span class="at">-type</span> d</span></code></pre>
 </div>
-<pre class="вывод"><code><span><span class="va">.</span></span>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">.</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">writing</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">creatures</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">animal</span><span class="op">-</span><span class="va">counts</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">alkanes</span></span></code></pre>
+</div>
 <p>Заметьте, что объекты, найденные <code>find</code>, не выводятся в
 каком-либо определённом порядке. Если изменить <code>-type d</code> на
 <code>-type f</code>, то будет выведен список всех файлов:</p>
@@ -5881,7 +6241,10 @@ VANITY FAIR’). Если вы хотите учитывать и такие с�
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" tabindex="-1"></a><span class="ex">$</span> find . <span class="at">-type</span> f</span></code></pre>
 </div>
-<pre class="вывод"><code><span><span class="va">.</span><span class="op">/</span><span class="va">writing</span><span class="op">/</span><span class="va">LittleWomen.txt</span></span>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">.</span><span class="op">/</span><span class="va">writing</span><span class="op">/</span><span class="va">LittleWomen.txt</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">writing</span><span class="op">/</span><span class="va">haiku.txt</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">creatures</span><span class="op">/</span><span class="va">basilisk.dat</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">creatures</span><span class="op">/</span><span class="va">unicorn.dat</span></span>
@@ -5894,13 +6257,18 @@ VANITY FAIR’). Если вы хотите учитывать и такие с�
 <span><span class="va">.</span><span class="op">/</span><span class="va">alkanes</span><span class="op">/</span><span class="va">pentane.pdb</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">alkanes</span><span class="op">/</span><span class="va">methane.pdb</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">alkanes</span><span class="op">/</span><span class="va">cubane.pdb</span></span></code></pre>
+</div>
 <p>Теперь попробуем найти файлы по имени:</p>
 <div class="codewrapper sourceCode" id="cb40">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" tabindex="-1"></a><span class="ex">$</span> find . <span class="at">-name</span> <span class="pp">*</span>.txt</span></code></pre>
 </div>
-<pre class="вывод"><code><span><span class="va">.</span><span class="op">/</span><span class="va">numbers.txt</span></span></code></pre>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">.</span><span class="op">/</span><span class="va">numbers.txt</span></span></code></pre>
+</div>
 <p>Мы ожидали найти все текстовые файлы, но был выведен только
 <code>./numbers.txt</code>. Проблема в том, что оболочка разворачивает
 подстановочные символы, такие как <code>*</code>, <em>до того</em>, как
@@ -5923,9 +6291,13 @@ VANITY FAIR’). Если вы хотите учитывать и такие с�
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" tabindex="-1"></a><span class="ex">$</span> find . <span class="at">-name</span> <span class="st">"*.txt"</span></span></code></pre>
 </div>
-<pre class="вывод"><code><span><span class="va">.</span><span class="op">/</span><span class="va">writing</span><span class="op">/</span><span class="va">LittleWomen.txt</span></span>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">.</span><span class="op">/</span><span class="va">writing</span><span class="op">/</span><span class="va">LittleWomen.txt</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">writing</span><span class="op">/</span><span class="va">haiku.txt</span></span>
 <span><span class="va">.</span><span class="op">/</span><span class="va">numbers.txt</span></span></code></pre>
+</div>
 <div id="сравнение-ls-и-find" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -5956,10 +6328,14 @@ VANITY FAIR’). Если вы хотите учитывать и такие с�
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" tabindex="-1"></a><span class="ex">$</span> wc <span class="at">-l</span> <span class="va">$(</span><span class="fu">find</span> . <span class="at">-name</span> <span class="st">"*.txt"</span><span class="va">)</span></span></code></pre>
 </div>
-<pre class="вывод"><code>  21022 ./writing/LittleWomen.txt
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>  21022 ./writing/LittleWomen.txt
      11 ./writing/haiku.txt
       5 ./numbers.txt
   21038 total</code></pre>
+</div>
 <p>Когда оболочка выполняет эту команду, первое, что она делает, — это
 запускает всё, что находится внутри <code>$()</code>. Затем она заменяет
 выражение <code>$()</code> на результат этой команды. Так как результат
@@ -5986,8 +6362,12 @@ VANITY FAIR’). Если вы хотите учитывать и такие с�
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb48-1"><a href="#cb48-1" tabindex="-1"></a><span class="ex">$</span> grep <span class="st">"searching"</span> <span class="va">$(</span><span class="fu">find</span> . <span class="at">-name</span> <span class="st">"*.txt"</span><span class="va">)</span></span></code></pre>
 </div>
-<pre class="вывод"><code>./writing/LittleWomen.txt:sitting on the top step, affected to be searching for her book, but was
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>./writing/LittleWomen.txt:sitting on the top step, affected to be searching for her book, but was
 ./writing/haiku.txt:With searching comes loss</code></pre>
+</div>
 <div id="поиск-и-исключение" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
