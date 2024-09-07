@@ -33,7 +33,7 @@ exercises: 20
 $ pwd
 ```
 
-```вывод
+```output
 /Users/nelle/Desktop/shell-lesson-data
 ```
 
@@ -44,7 +44,7 @@ $ cd exercise-data/writing/
 $ ls -F
 ```
 
-```вывод
+```output
 haiku.txt  LittleWomen.txt
 ```
 
@@ -62,7 +62,7 @@ $ mkdir thesis
 $ ls -F
 ```
 
-```вывод
+```output
 haiku.txt  LittleWomen.txt  thesis/
 ```
 
@@ -84,7 +84,7 @@ $ mkdir -p ../project/data ../project/results
 $ ls -FR ../project
 ```
 
-```вывод
+```output
 ../project/:
 data/  results/
 
@@ -179,7 +179,7 @@ $ nano draft.txt
 $ ls
 ```
 
-```вывод
+```output
 draft.txt
 ```
 
@@ -251,7 +251,7 @@ $ mv thesis/draft.txt thesis/quotes.txt
 $ ls thesis
 ```
 
-```вывод
+```output
 quotes.txt
 ```
 
@@ -271,7 +271,7 @@ $ mv thesis/quotes.txt .
 $ ls thesis
 ```
 
-```вывод
+```output
 $
 ```
 
@@ -291,7 +291,7 @@ ls: cannot access 'thesis/quotes.txt': No such file or directory
 $ ls quotes.txt
 ```
 
-```вывод
+```output
 quotes.txt
 ```
 
@@ -338,7 +338,7 @@ $ cp quotes.txt thesis/quotations.txt
 $ ls quotes.txt thesis/quotations.txt
 ```
 
-```вывод
+```output
 quotes.txt   thesis/quotations.txt
 ```
 
@@ -354,7 +354,7 @@ $ cp -r thesis thesis_backup
 $ ls thesis thesis_backup
 ```
 
-```вывод
+```output
 thesis:
 quotations.txt
 
@@ -405,7 +405,7 @@ cp: -r not specified; omitting directory 'thesis'
 $ pwd
 ```
 
-```вывод
+```output
 /Users/jamie/data
 ```
 
@@ -413,7 +413,7 @@ $ pwd
 $ ls
 ```
 
-```вывод
+```output
 proteins.dat
 ```
 
@@ -480,7 +480,7 @@ ls: cannot access 'quotes.txt': No such file or directory
 
 ## Решение
 
-```вывод
+```output
 rm: remove regular file 'thesis_backup/quotations.txt'? y
 ```
 
@@ -534,7 +534,7 @@ $ cd creatures
 $ ls -F
 ```
 
-```вывод
+```output
 basilisk.dat  minotaur.dat  unicorn.dat
 ```
 
@@ -714,7 +714,7 @@ $ cp *-23-dataset* send_to_bob/all_datasets_created_on_a_23rd/
 $ ls -F
 ```
 
-```вывод
+```output
 analyzed/  fructose.dat    raw/   sucrose.dat
 ```
 
@@ -724,7 +724,7 @@ analyzed/  fructose.dat    raw/   sucrose.dat
 $ ls -F
 ```
 
-```вывод
+```output
 analyzed/   raw/
 ```
 
@@ -732,7 +732,7 @@ analyzed/   raw/
 $ ls analyzed
 ```
 
-```вывод
+```output
 fructose.dat    sucrose.dat
 ```
 
@@ -758,7 +758,7 @@ mv *.dat analyzed
 
 Предположим, что предыдущий эксперимент находится в каталоге `2016-05-18`, который содержит папку `data`, которая, в свою очередь, содержит папки с именами `raw` и `processed`, в которых находятся файлы данных. Цель — скопировать структуру каталогов из папки `2016-05-18` в папку `2016-05-20`, чтобы ваша окончательная структура каталогов выглядела так:
 
-```вывод
+```output
 2016-05-20/
 └── data
    ├── processed

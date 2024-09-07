@@ -47,7 +47,7 @@ head -n 15 octane.pdb | tail -n 5
 $ bash middle.sh
 ```
 
-```вывод
+```output
 ATOM      9  H           1      -4.502   0.681   0.785  1.00  0.00
 ATOM     10  H           1      -5.254  -0.243  -0.537  1.00  0.00
 ATOM     11  H           1      -4.357   1.252  -0.895  1.00  0.00
@@ -83,7 +83,7 @@ head -n 15 "$1" | tail -n 5
 $ bash middle.sh octane.pdb
 ```
 
-```вывод
+```output
 ATOM      9  H           1      -4.502   0.681   0.785  1.00  0.00
 ATOM     10  H           1      -5.254  -0.243  -0.537  1.00  0.00
 ATOM     11  H           1      -4.357   1.252  -0.895  1.00  0.00
@@ -97,7 +97,7 @@ ATOM     13  H           1      -3.172  -1.337   0.206  1.00  0.00
 $ bash middle.sh pentane.pdb
 ```
 
-```вывод
+```output
 ATOM      9  H           1       1.324   0.350  -1.332  1.00  0.00
 ATOM     10  H           1       1.271   1.378   0.122  1.00  0.00
 ATOM     11  H           1      -0.074  -0.384   1.288  1.00  0.00
@@ -131,7 +131,7 @@ head -n "$2" "$1" | tail -n "$3"
 $ bash middle.sh pentane.pdb 15 5
 ```
 
-```вывод
+```output
 ATOM      9  H           1       1.324   0.350  -1.332  1.00  0.00
 ATOM     10  H           1       1.271   1.378   0.122  1.00  0.00
 ATOM     11  H           1      -0.074  -0.384   1.288  1.00  0.00
@@ -145,7 +145,7 @@ ATOM     13  H           1      -1.183   0.500  -1.412  1.00  0.00
 $ bash middle.sh pentane.pdb 20 5
 ```
 
-```вывод
+```output
 ATOM     14  H           1      -1.259   1.420   0.112  1.00  0.00
 ATOM     15  H           1      -2.608  -0.407   1.130  1.00  0.00
 ATOM     16  H           1      -2.540  -1.303  -0.404  1.00  0.00
@@ -191,7 +191,7 @@ wc -l "$@" | sort -n
 $ bash sorted.sh *.pdb ../creatures/*.dat
 ```
 
-```вывод
+```output
 9 methane.pdb
 12 ethane.pdb
 15 propane.pdb
@@ -468,7 +468,7 @@ echo $@.pdb
 
 Скрипт 3 выведет все аргументы скрипта (т.е. все файлы с расширением `.pdb`), а затем добавит `.pdb` к каждому из них. `$@` относится ко всем аргументам, переданным в скрипт оболочки.
 
-```вывод
+```output
 cubane.pdb ethane.pdb methane.pdb octane.pdb pentane.pdb propane.pdb.pdb
 ```
 

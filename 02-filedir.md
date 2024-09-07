@@ -39,7 +39,7 @@ exercises: 10
 $ pwd
 ```
 
-```вывод
+```output
 /Users/nelle
 ```
 
@@ -94,7 +94,7 @@ $ pwd
 $ ls
 ```
 
-```вывод
+```output
 Applications Documents    Library      Music        Public
 Desktop      Downloads    Movies       Pictures
 ```
@@ -114,7 +114,7 @@ Desktop      Downloads    Movies       Pictures
 $ ls -F
 ```
 
-```вывод
+```output
 Applications/ Documents/    Library/      Music/        Public/
 Desktop/      Downloads/    Movies/       Pictures/
 ```
@@ -163,7 +163,7 @@ Desktop/      Downloads/    Movies/       Pictures/
 $ ls --help
 ```
 
-```вывод
+```output
 Usage: ls [OPTION]... [FILE]...
 List information about the FILEs (the current directory by default).
 Sort entries alphabetically if neither -cftuvSUX nor --sort is specified.
@@ -291,7 +291,7 @@ GNU предоставляет ссылки на свои [руководств�
 $ ls -F Desktop
 ```
 
-```вывод
+```output
 shell-lesson-data/
 ```
 
@@ -309,7 +309,7 @@ shell-lesson-data/
 $ ls -F Desktop/shell-lesson-data
 ```
 
-```вывод
+```output
 exercise-data/  north-pacific-gyre/
 ```
 
@@ -333,7 +333,7 @@ $ cd exercise-data
 $ pwd
 ```
 
-```вывод
+```output
 /Users/nelle/Desktop/shell-lesson-data/exercise-data
 ```
 
@@ -341,7 +341,7 @@ $ pwd
 $ ls -F
 ```
 
-```вывод
+```output
 alkanes/  animal-counts/  creatures/  numbers.txt  writing/
 ```
 
@@ -371,7 +371,7 @@ $ cd ..
 $ pwd
 ```
 
-```вывод
+```output
 /Users/nelle/Desktop/shell-lesson-data
 ```
 
@@ -381,7 +381,7 @@ $ pwd
 $ ls -F -a
 ```
 
-```вывод
+```output
 ./  ../  exercise-data/  north-pacific-gyre/
 ```
 
@@ -409,7 +409,7 @@ $ cd
 $ pwd
 ```
 
-```вывод
+```output
 /Users/nelle
 ```
 
@@ -435,7 +435,7 @@ $ cd Desktop/shell-lesson-data/exercise-data
 $ pwd
 ```
 
-```вывод
+```output
 /Users/nelle/Desktop/shell-lesson-data/exercise-data
 ```
 
@@ -547,7 +547,7 @@ $ cd -
 
 Используя диаграмму файловой системы ниже, ответьте: если команда `pwd` выводит `/Users/backup`, и опция `-r` заставляет `ls` отображать содержимое в обратном порядке, какая команда приведёт к следующему выводу:
 
-```вывод
+```output
 pnas_sub/ pnas_final/ original/
 ```
 
@@ -592,7 +592,7 @@ $ cd ~/Desktop/shell-lesson-data
 $ ls -s exercise-data
 ```
 
-```вывод
+```output
 total 28
  4 animal-counts   4 creatures  12 numbers.txt   4 alkanes   4 writing
 ```
@@ -603,7 +603,7 @@ total 28
 $ ls -S exercise-data
 ```
 
-```вывод
+```output
 animal-counts  creatures  alkanes  writing  numbers.txt
 ```
 
@@ -613,7 +613,7 @@ animal-counts  creatures  alkanes  writing  numbers.txt
 $ ls -F /
 ```
 
-```вывод
+```output
 Applications/         System/
 Library/              Users/
 Network/              Volumes/

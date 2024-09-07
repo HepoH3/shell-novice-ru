@@ -59,7 +59,7 @@ nelle@localhost $
 $ ls
 ```
 
-```вывод
+```output
 Desktop     Downloads   Movies      Pictures
 Documents   Library     Music       Public
 ```
@@ -74,7 +74,7 @@ Documents   Library     Music       Public
 $ ks
 ```
 
-```вывод
+```output
 ks: command not found
 ```
 
