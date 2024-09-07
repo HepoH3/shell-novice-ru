@@ -2,31 +2,18 @@
 site: sandpaper::sandpaper_site
 ---
 
-The Unix shell has been around longer than most of its users
-have been alive. It has survived because it's a powerful tool that
-allows users to perform complex and powerful tasks, often with just
-a few keystrokes or lines of code. It helps users automate repetitive
-tasks and easily combine smaller tasks into larger, more powerful workflows.
+Unix-оболочка существует дольше, чем живет большинство ее пользователей. Она сохраняет свою популярность благодаря тому, что является мощным инструментом, позволяющим выполнять сложные и эффективные задачи, зачастую всего лишь с несколькими нажатиями клавиш или строками кода. Она помогает автоматизировать повторяющиеся задачи и легко объединять небольшие задачи в более мощные рабочие процессы.
 
-Use of the shell is fundamental to a wide range of advanced computing
-tasks, including high-performance computing. These lessons will introduce
-you to this powerful tool.
+Использование оболочки является основой для широкого круга продвинутых вычислительных
+задач, включая высокопроизводительные вычисления. Эти уроки познакомят
+вас с этим мощным инструментом.
 
 ::::::::::::::::::::::::::::::::::::::::::  prereq
 
-## Prerequisites
+## Требования
 
-This lesson guides you through the basics of file systems and the
-shell. If you have stored files on a computer at all and recognize
-the word "file" and either "directory" or "folder" (two common words
-for the same thing), you're ready for this lesson.
+Этот урок проведет вас через основы файловых систем и оболочки. Если вы когда-либо сохраняли файлы на компьютере и знаете такие термины, как "файл" и "директория" или "папка" (два распространенных слова для обозначения одного и того же), то вы готовы к этому уроку.
 
-If you're already comfortable manipulating files and directories,
-searching for files with `grep` and `find`, and writing simple loops
-and scripts, you probably want to explore the next lesson:
-[shell-extras](https://carpentries-incubator.github.io/shell-extras/).
-
+Если вы уже уверенно управляете файлами и директориями, ищете файлы с помощью команд `grep` и `find`, а также пишете простые циклы и скрипты, вам, вероятно, стоит перейти к следующему уроку: [shell-extras](https://carpentries-incubator.github.io/shell-extras/).
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
